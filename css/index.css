@@ -1,0 +1,40 @@
+#div-name {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#header-name {
+    text-align: center;
+}
+
+#div-nav {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#ul-nav {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px;
+}
+
+.li-nav {
+    display: inline;
+}
+
+.li-nav:not(:last-child) {
+    padding-right: 20px;
+}
+
+.li-nav:not(:first-child) {
+    padding-left: 20px;
+}
+
+#div-content-area {
+    max-width: 75%;
+    height: 1000px;
+    margin: 0 auto;
+    border-style: dashed;
+}
