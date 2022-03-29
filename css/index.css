@@ -1,15 +1,45 @@
-#div-name {
+@font-face {
+    font-family: "Space Mono";
+    src: url("../fonts/Space_Mono/SpaceMono-Regular.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Space Mono";
+    background-color: transparent !important;
+    background-image: linear-gradient(to top, #200933, #3d0b43);
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.yellow-text-with-shadow {
+    color: #ffcc00;
+    text-shadow: 0 0 2px #100c0f, 0 0 3px #ffaa0099, 0 0 5px #ffaa0099, 0 0 10px #ffaa0099;
+}
+
+.magenta-text-with-shadow {
+    color: #fc199a;
+    text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 10px #fc199a, 0 0 2px #fc199a;
+}
+
+.div-container {
     max-width: 50%;
     margin: 0 auto;
 }
 
 #header-name {
     text-align: center;
-}
-
-#div-nav {
-    max-width: 50%;
-    margin: 0 auto;
+    margin-bottom: 0.5em;
+    
 }
 
 #ul-nav {
@@ -32,9 +62,22 @@
     padding-left: 20px;
 }
 
+.li-nav:hover {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
 #div-content-area {
     max-width: 75%;
     height: 1000px;
     margin: 0 auto;
     border-style: dashed;
+    border-width: 0.1px;
+}
+
+.h2-subsection {
+    text-align: center;
 }
