@@ -24,6 +24,11 @@ html * {
     font-size: 5vw;
 }
 
+#name-page-title-zone {
+    padding-top: 30px;
+    text-align: center;
+}
+
 #typed-name {
     max-width: 50%;
     overflow: hidden;
