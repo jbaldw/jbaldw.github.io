@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "SpaceMono";
+    src: url("../fonts/Space_Mono/SpaceMono-Regular.ttf");
+}
+
+html * {
+    font-family: "SpaceMono";
+}
+
+.div-content-center {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 100px;
+}
