@@ -5,7 +5,7 @@
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 53% }
+    to { width: 190% }
 }
 
 @keyframes blink {
@@ -21,14 +21,15 @@ html * {
     width: 50%;
     margin: auto;
     text-align: center;
-    font-size: 100px;
+    font-size: 5vw;
 }
 
 #typed-name {
+    max-width: 50%;
     overflow: hidden;
     border-right: .15em solid rgb(30, 175, 30);
     color:rgb(30, 175, 30);
     white-space: nowrap;
-    animation: typing 1.8s steps(18, end) forwards,
+    animation: typing 5s steps(80, end) forwards,
                blink .8s infinite;
 }
