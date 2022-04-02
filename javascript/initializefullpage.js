@@ -6,7 +6,7 @@ new fullpage('#fullpage', {
     loopTop: true,
     loopBottom: true,
     // Design
-    sectionsColor: ['#2274AF', '#F75C03', '#F1C40F', '#D90368'],
+    sectionsColor: ['black', '#2274AF', '#F75C03', '#F1C40F', '#D90368'],
     // Navigation
     navigation: true,
     navitgationPosition: 'right',
