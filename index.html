@@ -8,21 +8,27 @@
     <!-- Stylesheets -->
     
     <!-- JavaScript -->
-    
+    <!-- unpkg -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- Initialize Barba -->
+    <script src="./javascript/init-barba.js"></script>
   </head>
 
-  <body>
-    <main>
-      <header>
-        <h1>Joshua Baldwin</h1>
-        <h2>Computer Science, MS</h2>
-        <ul>
-          <li><a href="./html/about.html">About</a></li>
-          <li><a href="./html/projects.html">Projects</a></li>
-          <li><a href="./html/resume.html">Resume</a></li>
-          <li><a href="./html/contact.html">Contact</a></li>
-        </ul>
-      </header>
+  <body data-barba="wrapper">
+    <header>
+      <h1>Joshua Baldwin</h1>
+      <h2>Computer Science, MS</h2>
+      <ul>
+        <li><a href="./html/about.html">About</a></li>
+        <li><a href="./html/projects.html">Projects</a></li>
+        <li><a href="./html/resume.html">Resume</a></li>
+        <li><a href="./html/contact.html">Contact</a></li>
+      </ul>
+    </header>
+    <main data-barba="container" data-barba-namespace="home">
+      <p>Home</p>
     </main>
   </body>
 </html>
