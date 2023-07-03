@@ -55,6 +55,10 @@ p {
     padding: 0 3em;
 }
 
+#typed-name-container {
+    background-image: linear-gradient(128deg,#5f6266,#000);
+}
+
 #aboutme {
     background-image: linear-gradient(128deg,#40afff,#3f61ff);
 }
