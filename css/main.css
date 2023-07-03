@@ -58,3 +58,7 @@ p {
 #aboutme {
     background-image: linear-gradient(128deg,#40afff,#3f61ff);
 }
+
+#skills {
+    background-image: linear-gradient(128deg,#ff9a3f,#ff4b40);
+}
