@@ -81,3 +81,11 @@ a {
 .h2-subsection {
     text-align: center;
 }
+
+.intro {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 50%;
+    padding: 0 3em;
+}
