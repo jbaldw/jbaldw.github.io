@@ -38,3 +38,23 @@ html * {
     animation: typing 5s steps(80, end) forwards,
                blink .8s infinite;
 }
+
+h1 {
+    font-size: 4em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.intro {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 50%;
+    padding: 0 3em;
+}
+
+#aboutme {
+    background-color: rgb(73, 173, 245);
+}

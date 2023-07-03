@@ -21,13 +21,6 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    font-size: 4em;
-}
-
-p {
-    font-size: 1.5em;
-}
 
 .yellow-text-with-shadow {
     color: #ffcc00;
@@ -90,14 +83,3 @@ p {
     text-align: center;
 }
 
-.intro {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    width: 50%;
-    padding: 0 3em;
-}
-
-#aboutme {
-    background-color: rgb(73, 173, 245);
-}
