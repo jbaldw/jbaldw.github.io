@@ -6,5 +6,4 @@ document.querySelector('.front').addEventListener('click', function () {
 });
 
 // Autoplay audio on page load
-document.querySelector('.audio').attributes.removeNamedItem('muted');
 document.querySelector('.audio').play();
