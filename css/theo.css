@@ -1,0 +1,42 @@
+body {
+    background-color: #1d1d1d;
+}
+
+.flip-card-style {
+    height: 680px;
+    width: 480px;
+}
+
+.flip-card-style:hover {
+    cursor: pointer;
+}
+
+.front, .back {
+    background: linear-gradient(290.7deg, rgb(133, 255, 159) 2.3%, rgb(0, 172, 249) 100.2%);
+}
+
+.click-me {
+    text-decoration: none;
+}
+
+/* Center the flip card in middle of the screen */
+.flip-card-style, .twenty-one-years-later, .spongebob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.click-me {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spongebob-dancing {
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
