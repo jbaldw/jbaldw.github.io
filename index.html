@@ -107,7 +107,7 @@ Downloads PDF file
           </div>
         </div>
         <p class="text-subtext font-body text-base leading-relaxed mb-6">
-          A modular, server-authoritative pet system inspired by <em>Adopt Me!</em> by Uplift Games. Combines physics-based constraint follower logic, lifecycle need state machines, and real-time client UI sync.
+          A modular, server-authoritative pet system inspired by <em>Adopt Me!</em> by Uplift Games. Features constraint-based physics following, lifecycle need loops, interactive stations, and real-time client UI synchronization.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -116,31 +116,31 @@ Downloads PDF file
               <span class="text-accent">✦</span> Physics Following Engine
             </h4>
             <p class="text-xs text-subtext leading-relaxed">
-              <code class="text-accent font-mono">PetManager.luau</code> assigns network ownership to the client for smooth local physics while driving loose-follow constraints via <code class="text-accent font-mono">AlignPosition</code> and <code class="text-accent font-mono">AlignOrientation</code>.
+              Uses Roblox physics constraints (<code class="text-accent font-mono">AlignPosition</code> &amp; <code class="text-accent font-mono">AlignOrientation</code>) with network ownership assignment for smooth local movement.
             </p>
           </div>
           <div class="bg-white/5 border border-accent/10 rounded-xl p-4">
             <h4 class="text-sm font-semibold text-maintext mb-1 flex items-center gap-2">
-              <span class="text-accent">✦</span> Lifecycle Needs Engine
+              <span class="text-accent">✦</span> Lifecycle Needs System
             </h4>
             <p class="text-xs text-subtext leading-relaxed">
-              <code class="text-accent font-mono">PetNeedsService.luau</code> implements an asynchronous state machine triggering random pet needs on interval timers, synchronized using Roblox Attributes (<code class="text-accent font-mono">CurrentNeed</code>).
+              An asynchronous state machine that triggers random pet needs over time, synchronized seamlessly between server and client.
             </p>
           </div>
           <div class="bg-white/5 border border-accent/10 rounded-xl p-4">
             <h4 class="text-sm font-semibold text-maintext mb-1 flex items-center gap-2">
-              <span class="text-accent">✦</span> Interactive Station Service
+              <span class="text-accent">✦</span> Interactive Stations &amp; Currency
             </h4>
             <p class="text-xs text-subtext leading-relaxed">
-              <code class="text-accent font-mono">StationService.luau</code> validates interactions from <code class="text-accent font-mono">ProximityPrompt</code> stations (Food Bowl, Bed, Bathtub), clears active pet needs, and triggers reward events.
+              Proximity-prompt stations (eating, sleeping, bathing) that validate interactions, fulfill active pet needs, and award player currency.
             </p>
           </div>
           <div class="bg-white/5 border border-accent/10 rounded-xl p-4">
             <h4 class="text-sm font-semibold text-maintext mb-1 flex items-center gap-2">
-              <span class="text-accent">✦</span> Leaderstats &amp; Rewards
+              <span class="text-accent">✦</span> Server-Authoritative Architecture
             </h4>
             <p class="text-xs text-subtext leading-relaxed">
-              <code class="text-accent font-mono">LeaderStatsService.luau</code> manages player leaderstats, currency reward distribution on fulfilled pet needs, and persistent player state.
+              Modular Luau service architecture keeping player leaderstats, currency rewards, and pet state secure and synchronized.
             </p>
           </div>
         </div>
