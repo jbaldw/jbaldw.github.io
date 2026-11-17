@@ -313,8 +313,7 @@
       <h1>Joshua's Christmas Wishlist</h1>
       <div class="year">~ 2026 ~</div>
       <p class="tagline">
-        I've been (mostly) nice this year. Here's everything on my list, sorted from stocking stuffers
-        all the way up to full-blown Christmas miracles. Click a gift to shake it! 🎁
+        This is a list of items I wouldn't mind receiving for Christmas. No pressure to get anything on this list, hopefully it can give you some ideas. The links to finding the items are AI-generated, so don't rely on them solely for pricing. Amazon often has them cheaper.
       </p>
       <div class="countdown" id="countdown" aria-live="polite">
         <div class="cd-box"><div class="cd-num" id="cd-d">--</div><div class="cd-lbl">Days</div></div>
@@ -322,7 +321,6 @@
         <div class="cd-box"><div class="cd-num" id="cd-m">--</div><div class="cd-lbl">Mins</div></div>
         <div class="cd-box"><div class="cd-num" id="cd-s">--</div><div class="cd-lbl">Secs</div></div>
       </div>
-      <div class="cd-caption" id="cd-caption">until Christmas morning</div>
     </header>
 
     <main id="tiers"></main>
@@ -346,13 +344,7 @@
     </svg>
   </div>
   <footer>
-    <div>Made with ❤️, cocoa and a little JavaScript by <strong>Joshua Baldwin</strong>. Merry Christmas &amp; Happy Holidays! 🎄</div>
-    <div class="credits">
-      Product images belong to their respective retailers and brands (LEGO via Brickset, VIZ Media, Bandai, UNTUCKit, NVIDIA, IKEA, Limitless TCG).
-      Photos from <a href="https://unsplash.com" rel="noopener">Unsplash</a> and
-      <a href="https://commons.wikimedia.org" rel="noopener">Wikimedia Commons</a>
-      (Northern lights over Mývatn by Giles Laurent, CC BY-SA 4.0). Music: public-domain carols, synthesized live in your browser.
-    </div>
+    <div>Made with love by <strong>Joshua Baldwin</strong>. Merry Christmas &amp; Happy Holidays! 🎄</div>
   </footer>
 
   <div class="controls">
@@ -369,72 +361,54 @@
 
     const TIERS = [
       {
-        name: "The Stocking Stuffers", sub: "Tier 1 · Realistic & Fun", emoji: "🧦",
+        name: "Stocking Stuffers", sub: "Tier 1 · Realistic and Fun", emoji: "🧦",
         paper: "#d62839", ribbon: "#ffd76a",
         items: [
           {
             title: "LEGO Shrek, Donkey & Puss in Boots",
-            note: "Set 72423: 1,403 pieces of swamp-dwelling glory. Comes with a “Beware Ogre!” sign.",
+            note: "Set 72423: Looks really clean and fun to build.",
             img: "https://images.brickset.com/sets/large/72423-1.jpg", fit: "contain",
             link: "https://www.lego.com/en-us/product/72423", fallback: "🧱"
           },
           {
             title: "LEGO One Piece: Battle at Drum Castle",
-            note: "Set 75645: a 1,038-piece Drum Island fortress with Luffy, Nami, Sanji, Vivi, Chopper and Wapol.",
+            note: "Set 75645: The only One Piece Lego set I don't have yet.",
             img: "https://images.brickset.com/sets/large/75645-1.jpg", fit: "contain",
             link: "https://www.lego.com/en-us/product/75645", fallback: "🏰"
           },
           {
             title: "One Piece Manga Box Set",
-            note: "Box Set 1: East Blue & Baroque Works, Volumes 1–23. Time for a full reread!",
+            note: "Box Set 1: East Blue & Baroque Works, Volumes 1–23.",
             img: "https://shop.viz.com/cdn/shop/files/9781421560748_1.jpg?v=1743521690", fit: "contain",
             link: "https://shop.viz.com/products/one-piece-box-set-1-east-blue-and-baroque-works-volumes-1-23-with-premium", fallback: "📚"
           },
           {
             title: "One Piece Merch",
-            note: "Figures, hoodies, straw hats, posters… if it has the Straw Hat crew on it, I'm in.",
+            note: "Literally anythin One Piece-related.",
             img: unsplash("1765633358974-cde0829a0e42"),
             link: "https://shop.viz.com/collections/one-piece", fallback: "👒"
           },
           {
             title: "One Piece Trading Cards",
-            note: "Booster packs or a box of OP-18 “The Dominance of God.” Ripping packs on Christmas morning sounds great.",
+            note: "Booster packs or a box of OP-18 “The Dominance of God.”",
             img: "https://gatheringgames.co.uk/cdn/shop/files/one-piece-card-game-the-dominance-of-god-booster-box-op-18-4297426.webp?v=1794411446", fit: "contain",
             link: "https://en.onepiece-cardgame.com/products/", fallback: "🃏"
           },
           {
             title: "Wrinkle-Free, Untuckable Business Shirts",
-            note: "Super nice shirts that look sharp untucked and come out of the dryer ready to go.",
+            note: "Super nice shirts that look good untucked and come out of the dryer ready to go.",
             img: "https://www.untuckit.com/cdn/shop/files/DURIF-UNTUCKIT-01096Blu-WF-CHECK-BLUE-4_grande.jpg?v=1743089061", fit: "contain",
             link: "https://www.untuckit.com/search?q=wrinkle-free", fallback: "👔"
           },
           {
             title: "New Clothes",
-            note: "A wardrobe refresh: comfy, stylish, anything that fits. Gift cards to a favorite store work great too.",
+            note: "Gift cards to get some new clothes. I love Old Navy and Target brands.",
             img: unsplash("1441984904996-e0b6ba687e04"), fallback: "🧥", chip: "Gift cards welcome"
           }
         ]
       },
       {
-        name: "Santa's Workshop", sub: "Tier 2 · Big-Ticket Tech & Hobbies", emoji: "🛠️",
-        paper: "#1f7a4d", ribbon: "#f7fbff",
-        items: [
-          {
-            title: "NVIDIA Blackwell GPU",
-            note: "A GeForce RTX 50-series card to power game dev, AI experiments and very shiny frames.",
-            img: "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/rtx-5090/geforce-rtx-5090-learn-more-og-1200x630.jpg",
-            link: "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/", fallback: "🖥️"
-          },
-          {
-            title: "Shelving & Bookcases for the Office",
-            note: "Somewhere to put all the LEGO, manga and cards from Tier 1 😄",
-            img: "https://www.ikea.com/global/assets/range-categorisation/images/billy-bookcases-58288.jpeg",
-            link: "https://www.ikea.com/us/en/cat/bookcases-10382/", fallback: "📚"
-          }
-        ]
-      },
-      {
-        name: "The Elves' Fix-It List", sub: "Tier 3 · Practical Home Maintenance & Repairs", emoji: "🔧",
+        name: "Santa's Workshop", sub: "Tier 2 · Practical Home Maintenance and Repairs", emoji: "🔧",
         paper: "#2457a6", ribbon: "#d62839",
         items: [
           {
@@ -444,7 +418,7 @@
           },
           {
             title: "Backyard Fence Gate Repair",
-            note: "A gate that swings, latches and stays closed. Revolutionary.",
+            note: "A gate that swings, latches and stays closed.",
             img: unsplash("1656483461011-a20df474deae"), fallback: "🚪", chip: "Repair fund"
           },
           {
@@ -455,34 +429,46 @@
         ]
       },
       {
-        name: "Christmas Miracles", sub: "Tier 4 · Major Life Upgrades & Bucket List Experiences", emoji: "🌟",
+        name: "Christmas Miracles", sub: "Tier 3 · Major Life Upgrades, Repairs, & Bucket List Experiences", emoji: "🌟",
         paper: "#6b2fa3", ribbon: "#ffd76a",
         items: [
           {
             title: "Electric Car",
-            note: "Quiet, quick and never visiting a gas station again. Santa's sleigh went electric, why not me?",
+            note: "I'm envious of Mom's new car.",
             img: unsplash("1593941707882-a5bba14938c7"), fallback: "⚡", chip: "Dream big"
           },
           {
             title: "Bathroom Remodel",
-            note: "Fresh tile, a modern vanity and a shower worth getting up for.",
+            note: "Fresh tile, a modern vanity, shower, and sliding door.",
             img: unsplash("1584622650111-993a426fbf0a"), fallback: "🛁", chip: "Dream big"
           },
           {
             title: "Nico Robin Manga Rare (OP-18)",
-            note: "OP18-031: the manga-panel alt art of Robin from OP-18. The chase card of my dreams. ✨",
+            note: "OP18-031: the manga-panel alt art of Robin from OP-18, The Dominance of God.",
             img: "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP18/OP18-031_p2_EN.webp", fit: "contain",
             link: "https://onepiece.limitlesstcg.com/cards/OP18-031", fallback: "🌸"
           },
           {
             title: "A Trip for Two: Iceland, Japan or the UK",
-            note: "Northern lights, Mt. Fuji or Big Ben. Any of the three would be the trip of a lifetime.",
+            note: "Northern lights, Mt. Fuji, or Big Ben. Mikayla and I wanna go out of the country.",
             slides: [
               { label: "Iceland 🇮🇸", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/039_Northern_lights_over_M%C3%BDvatn_%28Iceland%29_Photo_by_Giles_Laurent.jpg/960px-039_Northern_lights_over_M%C3%BDvatn_%28Iceland%29_Photo_by_Giles_Laurent.jpg" },
               { label: "Japan 🇯🇵", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/12-Chureito-pagoda-and-Mount-Fuji-Japan_%2829677439878%29.jpg/960px-12-Chureito-pagoda-and-Mount-Fuji-Japan_%2829677439878%29.jpg" },
               { label: "United Kingdom 🇬🇧", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Big_Ben_and_Westminster_Bridge_at_dusk_2017-unsplash.jpg/960px-Big_Ben_and_Westminster_Bridge_at_dusk_2017-unsplash.jpg" }
             ],
             fallback: "✈️", chip: "Bucket list"
+          },
+		  {
+            title: "NVIDIA RTX PRO 6000 Blackwell (Workstation / Max-Q Editions)",
+            note: "An RTX PRO 6000 Blackwell card with 96 GB of memory to power development and AI.",
+            img: "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/rtx-pro-6000-blackwell-workstation-edition/nvidia-geforce-rtx-pro-6000-og-1200x630.jpg",
+            link: "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/", fallback: "🖥️"
+          },
+          {
+            title: "Shelving & Bookcases for the Office",
+            note: "Somewhere to put all the LEGO, manga and cards from Tier 1.",
+            img: "https://www.ikea.com/global/assets/range-categorisation/images/billy-bookcases-58288.jpeg",
+            link: "https://www.ikea.com/us/en/cat/bookcases-10382/", fallback: "📚"
           }
         ]
       }
