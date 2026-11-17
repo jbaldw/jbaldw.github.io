@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Christmas Wishlist 2026 | Joshua Baldwin</title>
+  <meta name="description" content="Joshua Baldwin's 2026 Christmas Wishlist.">
+  <meta name="theme-color" content="#0b1530">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎄</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --night: #0b1530;
+      --night-2: #142453;
+      --snow: #f7fbff;
+      --gold: #ffd76a;
+      --gold-deep: #e8a317;
+      --red: #d62839;
+      --red-deep: #9e1b2a;
+      --green: #1f7a4d;
+      --green-deep: #0f4d2f;
+      --ink: #1c2233;
+      --card: #fffdf7;
+      --muted: #5d6680;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Nunito", system-ui, sans-serif;
+      color: var(--snow);
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(80, 200, 160, .18), transparent 60%),
+        radial-gradient(900px 500px at 10% 0%, rgba(120, 90, 220, .18), transparent 60%),
+        linear-gradient(180deg, var(--night) 0%, var(--night-2) 55%, #1d3166 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+
+    /* ---------- sky layers ---------- */
+    #stars, #snow { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    #stars { z-index: 0; }
+    #snow { z-index: 50; }
+    .aurora {
+      position: fixed; inset: -20% -10% auto -10%; height: 70vh; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(40% 50% at 30% 50%, rgba(64, 255, 170, .22), transparent 70%),
+        radial-gradient(35% 45% at 65% 40%, rgba(90, 180, 255, .18), transparent 70%),
+        radial-gradient(30% 40% at 85% 60%, rgba(190, 110, 255, .15), transparent 70%);
+      filter: blur(30px);
+      animation: aurora 18s ease-in-out infinite alternate;
+    }
+    @keyframes aurora {
+      0% { transform: translateX(-4%) skewY(-2deg); opacity: .8; }
+      100% { transform: translateX(4%) skewY(2deg); opacity: 1; }
+    }
+    .moon {
+      position: fixed; top: 70px; right: 7vw; width: 90px; height: 90px; border-radius: 50%; z-index: 0;
+      background: radial-gradient(circle at 35% 35%, #fffef2, #f4ecc8 60%, #d9cf9f);
+      box-shadow: 0 0 60px 20px rgba(255, 248, 210, .25);
+    }
+    .sleigh {
+      position: fixed; top: 16vh; left: -320px; z-index: 1; font-size: 34px; white-space: nowrap; pointer-events: none;
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, .5));
+      animation: sleigh 26s linear infinite;
+      animation-delay: 4s;
+    }
+    @keyframes sleigh {
+      0% { transform: translate(0, 0) rotate(-4deg); }
+      25% { transform: translate(35vw, -30px) rotate(-2deg); }
+      50% { transform: translate(70vw, 10px) rotate(-5deg); }
+      70%, 100% { transform: translate(calc(100vw + 360px), -40px) rotate(-3deg); }
+    }
+
+    /* ---------- string lights ---------- */
+    .lights {
+      position: fixed; top: 0; left: 0; right: 0; height: 60px; z-index: 40; pointer-events: none;
+    }
+    .lights svg { position: absolute; inset: 0; width: 100%; height: 60px; }
+    .bulb {
+      position: absolute; width: 12px; height: 20px; border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      transform-origin: 50% 0;
+      animation: twinkle 1.6s ease-in-out infinite alternate;
+    }
+    .bulb::before {
+      content: ""; position: absolute; top: -6px; left: 2px; width: 8px; height: 7px; border-radius: 2px; background: #2f3a2f;
+    }
+    @keyframes twinkle {
+      0% { opacity: .35; filter: brightness(.7); box-shadow: none; }
+      100% { opacity: 1; filter: brightness(1.15); box-shadow: 0 4px 18px 4px currentColor; }
+    }
+
+    /* ---------- layout ---------- */
+    .page { position: relative; z-index: 10; max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+    .back {
+      display: inline-flex; align-items: center; gap: 6px; margin-top: 72px;
+      font-weight: 700; font-size: 14px; text-decoration: none; opacity: .85;
+      padding: 8px 14px; border-radius: 999px; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .15);
+      transition: background .2s, opacity .2s;
+    }
+    .back:hover { opacity: 1; background: rgba(255, 255, 255, .16); }
+
+    header.hero { text-align: center; padding: 40px 0 30px; }
+    .eyebrow { letter-spacing: .3em; text-transform: uppercase; font-weight: 800; font-size: 13px; color: var(--gold); }
+    h1 {
+      font-family: "Mountains of Christmas", cursive; font-weight: 700; margin: 8px 0 4px;
+      font-size: clamp(48px, 9vw, 108px); line-height: 1;
+      background: linear-gradient(100deg, #fff6d5 0%, var(--gold) 30%, #fff 45%, var(--gold) 60%, var(--gold-deep) 100%);
+      background-size: 250% 100%;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: shimmer 6s linear infinite;
+      filter: drop-shadow(0 4px 18px rgba(255, 200, 80, .35));
+    }
+    @keyframes shimmer { to { background-position: -250% 0; } }
+    .year {
+      display: inline-block; font-family: "Mountains of Christmas", cursive; font-weight: 700; font-size: clamp(28px, 5vw, 48px);
+      color: #fff; text-shadow: 0 0 12px rgba(255, 80, 100, .8), 0 0 30px rgba(255, 60, 80, .5);
+    }
+    .tagline { max-width: 620px; margin: 14px auto 0; color: #cfd8ff; font-size: 17px; line-height: 1.6; }
+
+    .countdown { display: flex; justify-content: center; gap: 12px; margin: 30px 0 6px; flex-wrap: wrap; }
+    .cd-box {
+      min-width: 86px; padding: 12px 10px 10px; border-radius: 16px; text-align: center;
+      background: linear-gradient(180deg, var(--red) 0%, var(--red-deep) 100%);
+      border: 2px solid rgba(255, 255, 255, .25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .35), inset 0 2px 0 rgba(255, 255, 255, .25);
+      position: relative;
+    }
+    .cd-box::after {
+      content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 10px; transform: translateX(-50%);
+      background: linear-gradient(180deg, var(--gold), var(--gold-deep)); opacity: .9; border-radius: 2px; z-index: 0;
+    }
+    .cd-num, .cd-lbl { position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0, 0, 0, .5); }
+    .cd-num { font-size: 34px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+    .cd-lbl { font-size: 11px; letter-spacing: .15em; text-transform: uppercase; font-weight: 800; margin-top: 4px; }
+    .cd-caption { text-align: center; color: #b9c4ee; font-size: 14px; }
+
+    /* ---------- tiers ---------- */
+    .tier { margin: 80px 0 0; }
+    .tier-head { text-align: center; margin-bottom: 32px; }
+    .tier-badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px;
+      font-size: 12px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase;
+      background: rgba(255, 215, 106, .12); color: var(--gold); border: 1px solid rgba(255, 215, 106, .35);
+    }
+    .tier h2 {
+      font-family: "Mountains of Christmas", cursive; font-weight: 700; font-size: clamp(36px, 6vw, 60px);
+      margin: 10px 0 2px; color: #fff; text-shadow: 0 0 20px rgba(255, 255, 255, .25);
+    }
+    .tier-sub { color: #b9c4ee; margin: 0; }
+    .garland { display: block; width: min(420px, 90%); height: 26px; margin: 12px auto 0; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 26px; }
+
+    /* ---------- gift cards ---------- */
+    .gift {
+      position: relative; border-radius: 22px; background: var(--card); color: var(--ink);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
+      transform-style: preserve-3d; transition: transform .25s ease, box-shadow .25s ease;
+      overflow: hidden; display: flex; flex-direction: column;
+    }
+    .gift:hover { box-shadow: 0 26px 60px rgba(0, 0, 0, .45), 0 0 0 3px rgba(255, 215, 106, .6); }
+    .gift .media {
+      position: relative; aspect-ratio: 4 / 3; overflow: hidden; cursor: pointer;
+      background: radial-gradient(circle at 50% 40%, #ffffff 0%, #eef2fb 70%, #dfe6f5 100%);
+    }
+    .gift .media img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .5s ease;
+    }
+    .gift .media img.contain { object-fit: contain; padding: 14px; }
+    .gift:hover .media img { transform: scale(1.06); }
+    .gift .media .fallback {
+      position: absolute; inset: 0; display: none; place-items: center; font-size: 64px;
+    }
+    .gift .media.broken img { display: none; }
+    .gift .media.broken .fallback { display: grid; }
+    .slides img { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease, transform .5s ease; }
+    .slides img.on { opacity: 1; }
+    .slide-label {
+      position: absolute; left: 12px; bottom: 10px; z-index: 2; font-size: 12px; font-weight: 800;
+      background: rgba(11, 21, 48, .75); color: #fff; padding: 4px 10px; border-radius: 999px;
+    }
+
+    .tag-ribbon {
+      position: absolute; top: 14px; right: -34px; z-index: 3; transform: rotate(35deg);
+      background: var(--red); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .08em;
+      padding: 4px 40px; box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    }
+    .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .body h3 { margin: 0; font-size: 19px; line-height: 1.25; }
+    .body p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.5; flex: 1; }
+    .actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 6px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-weight: 800; font-size: 13px;
+      padding: 8px 14px; border-radius: 999px; color: #fff;
+      background: linear-gradient(180deg, #2a9d63, var(--green-deep));
+      box-shadow: 0 4px 10px rgba(15, 77, 47, .35);
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.1); }
+    .chip {
+      font-size: 12px; font-weight: 800; padding: 6px 12px; border-radius: 999px;
+      background: #fff1d6; color: #9a5b00; border: 1px dashed #e8a317;
+    }
+
+    /* wrapping paper that unwraps on scroll */
+    .wrap {
+      position: absolute; inset: 0; z-index: 5; pointer-events: none; display: flex;
+    }
+    .wrap .half {
+      flex: 1; transition: transform 1s cubic-bezier(.7, 0, .3, 1);
+      background:
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, .14) 0 12px, transparent 12px 24px),
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, .3) 2px, transparent 3px) 0 0 / 28px 28px,
+        var(--paper, var(--red));
+    }
+    .wrap .half.l { box-shadow: inset -6px 0 0 var(--ribbon, var(--gold)); }
+    .wrap .half.r { box-shadow: inset 6px 0 0 var(--ribbon, var(--gold)); }
+    .wrap .ribbon-h {
+      position: absolute; left: 0; right: 0; top: 50%; height: 12px; transform: translateY(-50%);
+      background: var(--ribbon, var(--gold)); transition: opacity .4s ease;
+    }
+    .wrap .bow {
+      position: absolute; left: 50%; top: 50%; font-size: 54px; transform: translate(-50%, -55%);
+      transition: transform .6s ease, opacity .6s ease; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .3));
+    }
+    .gift.open .wrap .half.l { transform: translateX(-102%); }
+    .gift.open .wrap .half.r { transform: translateX(102%); }
+    .gift.open .wrap .ribbon-h { opacity: 0; }
+    .gift.open .wrap .bow { transform: translate(-50%, -260%) scale(1.4) rotate(20deg); opacity: 0; }
+
+    /* ---------- controls ---------- */
+    .controls {
+      position: fixed; right: 16px; bottom: 16px; z-index: 60; display: flex; flex-direction: column; gap: 10px; align-items: flex-end;
+    }
+    .ctrl {
+      display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer; font: inherit; font-weight: 800; font-size: 14px;
+      padding: 12px 18px; border-radius: 999px; color: #fff;
+      background: linear-gradient(180deg, var(--red), var(--red-deep));
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .4), inset 0 2px 0 rgba(255, 255, 255, .25);
+      transition: transform .15s ease;
+    }
+    .ctrl:hover { transform: translateY(-2px); }
+    .ctrl.alt { background: linear-gradient(180deg, #2a9d63, var(--green-deep)); }
+    .ctrl .eq { display: inline-flex; gap: 2px; align-items: flex-end; height: 14px; }
+    .ctrl .eq i { width: 3px; background: #fff; border-radius: 2px; height: 4px; }
+    .ctrl.playing .eq i { animation: eq .6s ease-in-out infinite alternate; }
+    .ctrl.playing .eq i:nth-child(2) { animation-delay: .2s; }
+    .ctrl.playing .eq i:nth-child(3) { animation-delay: .4s; }
+    @keyframes eq { from { height: 3px; } to { height: 14px; } }
+    .now-playing {
+      font-size: 12px; font-weight: 700; color: #dfe6ff; background: rgba(11, 21, 48, .8); padding: 6px 12px; border-radius: 999px;
+      opacity: 0; transform: translateY(6px); transition: opacity .3s, transform .3s;
+    }
+    .now-playing.show { opacity: 1; transform: none; }
+
+    /* ---------- footer / ground ---------- */
+    .ground { position: relative; z-index: 5; margin-top: 110px; height: 220px; }
+    .ground svg { position: absolute; bottom: 0; width: 100%; height: 220px; }
+    footer {
+      position: relative; z-index: 10; background: #eef4ff; color: var(--muted); text-align: center;
+      padding: 10px 16px 40px; font-size: 13px; line-height: 1.7;
+    }
+    footer strong { color: var(--ink); }
+    footer .credits { max-width: 760px; margin: 8px auto 0; font-size: 12px; opacity: .85; }
+
+    .sparkle {
+      position: fixed; pointer-events: none; z-index: 70; width: 8px; height: 8px; border-radius: 50%;
+      background: radial-gradient(circle, #fff, var(--c, #ffd76a) 60%, transparent 70%);
+      animation: spark var(--d, .8s) ease-out forwards;
+    }
+    @keyframes spark {
+      from { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+      to { transform: translate(calc(-50% + var(--x, 0px)), calc(-50% + var(--y, 20px))) scale(0); opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .moon { width: 60px; height: 60px; top: 70px; }
+      .cd-box { min-width: 70px; }
+      .cd-num { font-size: 26px; }
+      .controls { right: 12px; bottom: 12px; flex-direction: row-reverse; flex-wrap: wrap; justify-content: flex-start; }
+      .now-playing { flex-basis: 100%; text-align: center; }
+      .ctrl { padding: 10px 14px; font-size: 13px; }
+      footer { padding-bottom: 96px; }
+      .back { margin-top: 64px; }
+      .sleigh { font-size: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .wrap { display: none; }
+      .sleigh { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="moon" aria-hidden="true"></div>
+  <div class="sleigh" aria-hidden="true">🦌 🦌 🦌 🛷🎅✨</div>
+  <div class="lights" id="lights" aria-hidden="true"></div>
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <div class="page">
+    <a class="back" href="/">← Back to jbaldw.github.io</a>
+
+    <header class="hero">
+      <div class="eyebrow">✦ Dear Santa ✦</div>
+      <h1>Joshua's Christmas Wishlist</h1>
+      <div class="year">~ 2026 ~</div>
+      <p class="tagline">
+        I've been (mostly) nice this year. Here's everything on my list, sorted from stocking stuffers
+        all the way up to full-blown Christmas miracles. Click a gift to shake it! 🎁
+      </p>
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="cd-box"><div class="cd-num" id="cd-d">--</div><div class="cd-lbl">Days</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-h">--</div><div class="cd-lbl">Hours</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-m">--</div><div class="cd-lbl">Mins</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-s">--</div><div class="cd-lbl">Secs</div></div>
+      </div>
+      <div class="cd-caption" id="cd-caption">until Christmas morning</div>
+    </header>
+
+    <main id="tiers"></main>
+  </div>
+
+  <div class="ground" aria-hidden="true">
+    <svg viewBox="0 0 1440 220" preserveAspectRatio="none">
+      <path d="M0 120 Q 180 60 360 110 T 720 100 T 1080 90 T 1440 110 V220 H0Z" fill="#c9d8f2"/>
+      <g fill="#0f4d2f">
+        <path d="M140 110 l26 -60 l26 60z M146 80 l20 -44 l20 44z"/>
+        <path d="M1180 96 l30 -70 l30 70z M1186 62 l24 -50 l24 50z"/>
+        <path d="M1260 104 l20 -46 l20 46z"/>
+        <path d="M60 116 l18 -40 l18 40z"/>
+      </g>
+      <g fill="#ffffff" opacity=".9">
+        <path d="M152 70 l14 -32 l14 32 q-14 6 -28 0z"/>
+        <path d="M1194 50 l16 -36 l16 36 q-16 6 -32 0z"/>
+      </g>
+      <path d="M0 150 Q 240 100 480 145 T 960 140 T 1440 135 V220 H0Z" fill="#e3ecfb"/>
+      <path d="M0 185 Q 300 155 620 180 T 1440 175 V220 H0Z" fill="#eef4ff"/>
+    </svg>
+  </div>
+  <footer>
+    <div>Made with ❤️, cocoa and a little JavaScript by <strong>Joshua Baldwin</strong>. Merry Christmas &amp; Happy Holidays! 🎄</div>
+    <div class="credits">
+      Product images belong to their respective retailers and brands (LEGO via Brickset, VIZ Media, Bandai, UNTUCKit, NVIDIA, IKEA, Limitless TCG).
+      Photos from <a href="https://unsplash.com" rel="noopener">Unsplash</a> and
+      <a href="https://commons.wikimedia.org" rel="noopener">Wikimedia Commons</a>
+      (Northern lights over Mývatn by Giles Laurent, CC BY-SA 4.0). Music: public-domain carols, synthesized live in your browser.
+    </div>
+  </footer>
+
+  <div class="controls">
+    <div class="now-playing" id="now-playing">♪</div>
+    <button class="ctrl alt" id="snow-btn" type="button" aria-pressed="true">❄️ <span>Snow: On</span></button>
+    <button class="ctrl" id="music-btn" type="button" aria-pressed="false">
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span> <span>Play Carols</span>
+    </button>
+  </div>
+
+  <script>
+  (() => {
+    const unsplash = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=75`;
+
+    const TIERS = [
+      {
+        name: "The Stocking Stuffers", sub: "Tier 1 · Realistic & Fun", emoji: "🧦",
+        paper: "#d62839", ribbon: "#ffd76a",
+        items: [
+          {
+            title: "LEGO Shrek, Donkey & Puss in Boots",
+            note: "Set 72423: 1,403 pieces of swamp-dwelling glory. Comes with a “Beware Ogre!” sign.",
+            img: "https://images.brickset.com/sets/large/72423-1.jpg", fit: "contain",
+            link: "https://www.lego.com/en-us/product/72423", fallback: "🧱"
+          },
+          {
+            title: "LEGO One Piece: Battle at Drum Castle",
+            note: "Set 75645: a 1,038-piece Drum Island fortress with Luffy, Nami, Sanji, Vivi, Chopper and Wapol.",
+            img: "https://images.brickset.com/sets/large/75645-1.jpg", fit: "contain",
+            link: "https://www.lego.com/en-us/product/75645", fallback: "🏰"
+          },
+          {
+            title: "One Piece Manga Box Set",
+            note: "Box Set 1: East Blue & Baroque Works, Volumes 1–23. Time for a full reread!",
+            img: "https://shop.viz.com/cdn/shop/files/9781421560748_1.jpg?v=1743521690", fit: "contain",
+            link: "https://shop.viz.com/products/one-piece-box-set-1-east-blue-and-baroque-works-volumes-1-23-with-premium", fallback: "📚"
+          },
+          {
+            title: "One Piece Merch",
+            note: "Figures, hoodies, straw hats, posters… if it has the Straw Hat crew on it, I'm in.",
+            img: unsplash("1765633358974-cde0829a0e42"),
+            link: "https://shop.viz.com/collections/one-piece", fallback: "👒"
+          },
+          {
+            title: "One Piece Trading Cards",
+            note: "Booster packs or a box of OP-18 “The Dominance of God.” Ripping packs on Christmas morning sounds great.",
+            img: "https://gatheringgames.co.uk/cdn/shop/files/one-piece-card-game-the-dominance-of-god-booster-box-op-18-4297426.webp?v=1794411446", fit: "contain",
+            link: "https://en.onepiece-cardgame.com/products/", fallback: "🃏"
+          },
+          {
+            title: "Wrinkle-Free, Untuckable Business Shirts",
+            note: "Super nice shirts that look sharp untucked and come out of the dryer ready to go.",
+            img: "https://www.untuckit.com/cdn/shop/files/DURIF-UNTUCKIT-01096Blu-WF-CHECK-BLUE-4_grande.jpg?v=1743089061", fit: "contain",
+            link: "https://www.untuckit.com/search?q=wrinkle-free", fallback: "👔"
+          },
+          {
+            title: "New Clothes",
+            note: "A wardrobe refresh: comfy, stylish, anything that fits. Gift cards to a favorite store work great too.",
+            img: unsplash("1441984904996-e0b6ba687e04"), fallback: "🧥", chip: "Gift cards welcome"
+          }
+        ]
+      },
+      {
+        name: "Santa's Workshop", sub: "Tier 2 · Big-Ticket Tech & Hobbies", emoji: "🛠️",
+        paper: "#1f7a4d", ribbon: "#f7fbff",
+        items: [
+          {
+            title: "NVIDIA Blackwell GPU",
+            note: "A GeForce RTX 50-series card to power game dev, AI experiments and very shiny frames.",
+            img: "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/rtx-5090/geforce-rtx-5090-learn-more-og-1200x630.jpg",
+            link: "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/", fallback: "🖥️"
+          },
+          {
+            title: "Shelving & Bookcases for the Office",
+            note: "Somewhere to put all the LEGO, manga and cards from Tier 1 😄",
+            img: "https://www.ikea.com/global/assets/range-categorisation/images/billy-bookcases-58288.jpeg",
+            link: "https://www.ikea.com/us/en/cat/bookcases-10382/", fallback: "📚"
+          }
+        ]
+      },
+      {
+        name: "The Elves' Fix-It List", sub: "Tier 3 · Practical Home Maintenance & Repairs", emoji: "🔧",
+        paper: "#2457a6", ribbon: "#d62839",
+        items: [
+          {
+            title: "New Car Windshield",
+            note: "A clear, crack-free view of the road (and the Christmas lights).",
+            img: unsplash("1613042964418-89c800809319"), fallback: "🚗", chip: "Repair fund"
+          },
+          {
+            title: "Backyard Fence Gate Repair",
+            note: "A gate that swings, latches and stays closed. Revolutionary.",
+            img: unsplash("1656483461011-a20df474deae"), fallback: "🚪", chip: "Repair fund"
+          },
+          {
+            title: "Bedroom Set",
+            note: "Bed frame, nightstands and dresser that actually match. Peak grown-up.",
+            img: unsplash("1505693416388-ac5ce068fe85"), fallback: "🛏️", chip: "Contributions welcome"
+          }
+        ]
+      },
+      {
+        name: "Christmas Miracles", sub: "Tier 4 · Major Life Upgrades & Bucket List Experiences", emoji: "🌟",
+        paper: "#6b2fa3", ribbon: "#ffd76a",
+        items: [
+          {
+            title: "Electric Car",
+            note: "Quiet, quick and never visiting a gas station again. Santa's sleigh went electric, why not me?",
+            img: unsplash("1593941707882-a5bba14938c7"), fallback: "⚡", chip: "Dream big"
+          },
+          {
+            title: "Bathroom Remodel",
+            note: "Fresh tile, a modern vanity and a shower worth getting up for.",
+            img: unsplash("1584622650111-993a426fbf0a"), fallback: "🛁", chip: "Dream big"
+          },
+          {
+            title: "Nico Robin Manga Rare (OP-18)",
+            note: "OP18-031: the manga-panel alt art of Robin from OP-18. The chase card of my dreams. ✨",
+            img: "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP18/OP18-031_p2_EN.webp", fit: "contain",
+            link: "https://onepiece.limitlesstcg.com/cards/OP18-031", fallback: "🌸"
+          },
+          {
+            title: "A Trip for Two: Iceland, Japan or the UK",
+            note: "Northern lights, Mt. Fuji or Big Ben. Any of the three would be the trip of a lifetime.",
+            slides: [
+              { label: "Iceland 🇮🇸", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/039_Northern_lights_over_M%C3%BDvatn_%28Iceland%29_Photo_by_Giles_Laurent.jpg/960px-039_Northern_lights_over_M%C3%BDvatn_%28Iceland%29_Photo_by_Giles_Laurent.jpg" },
+              { label: "Japan 🇯🇵", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/12-Chureito-pagoda-and-Mount-Fuji-Japan_%2829677439878%29.jpg/960px-12-Chureito-pagoda-and-Mount-Fuji-Japan_%2829677439878%29.jpg" },
+              { label: "United Kingdom 🇬🇧", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Big_Ben_and_Westminster_Bridge_at_dusk_2017-unsplash.jpg/960px-Big_Ben_and_Westminster_Bridge_at_dusk_2017-unsplash.jpg" }
+            ],
+            fallback: "✈️", chip: "Bucket list"
+          }
+        ]
+      }
+    ];
+
+    const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+    // ---------- render tiers ----------
+    const main = document.getElementById("tiers");
+    const garland = `<svg class="garland" viewBox="0 0 420 26" aria-hidden="true">
+      <path d="M0 4 Q105 30 210 8 T420 4" fill="none" stroke="#1f7a4d" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="60" cy="14" r="5" fill="#d62839"/><circle cx="130" cy="17" r="5" fill="#ffd76a"/>
+      <circle cx="210" cy="8" r="5" fill="#4fc3f7"/><circle cx="290" cy="12" r="5" fill="#d62839"/><circle cx="360" cy="8" r="5" fill="#ffd76a"/>
+    </svg>`;
+
+    main.innerHTML = TIERS.map((tier, t) => `
+      <section class="tier" aria-labelledby="tier-${t}">
+        <div class="tier-head">
+          <span class="tier-badge">${tier.emoji} ${esc(tier.sub)}</span>
+          <h2 id="tier-${t}">${esc(tier.name)}</h2>
+          ${garland}
+        </div>
+        <div class="grid">
+          ${tier.items.map(item => {
+            const media = item.slides
+              ? `<div class="media slides" role="img" aria-label="${esc(item.title)}">
+                   ${item.slides.map((s, i) => `<img src="${s.src}" alt="${esc(s.label)}" data-label="${esc(s.label)}" class="${i === 0 ? "on" : ""}" loading="lazy" referrerpolicy="no-referrer">`).join("")}
+                   <span class="slide-label">${esc(item.slides[0].label)}</span>
+                 </div>`
+              : `<div class="media">
+                   <img src="${item.img}" alt="${esc(item.title)}" class="${item.fit === "contain" ? "contain" : ""}" loading="lazy" referrerpolicy="no-referrer">
+                   <div class="fallback" aria-hidden="true">${item.fallback}</div>
+                 </div>`;
+            return `
+              <article class="gift" style="--paper:${tier.paper};--ribbon:${tier.ribbon}">
+                ${media}
+                <div class="body">
+                  <h3>${esc(item.title)}</h3>
+                  <p>${esc(item.note)}</p>
+                  <div class="actions">
+                    ${item.link ? `<a class="btn" href="${item.link}" target="_blank" rel="noopener">🎁 Find it</a>` : ""}
+                    ${item.chip ? `<span class="chip">${esc(item.chip)}</span>` : ""}
+                  </div>
+                </div>
+                <div class="wrap" aria-hidden="true">
+                  <div class="half l"></div><div class="half r"></div>
+                  <div class="ribbon-h"></div><div class="bow">🎀</div>
+                </div>
+              </article>`;
+          }).join("")}
+        </div>
+      </section>`).join("");
+
+    // broken image -> festive emoji fallback
+    main.querySelectorAll(".media:not(.slides) img").forEach(img => {
+      const mark = () => img.parentElement.classList.add("broken");
+      img.addEventListener("error", mark);
+      if (img.complete && img.naturalWidth === 0 && img.src) mark();
+    });
+
+    // trip slideshow
+    main.querySelectorAll(".slides").forEach(box => {
+      const imgs = [...box.querySelectorAll("img")];
+      const label = box.querySelector(".slide-label");
+      let i = 0;
+      setInterval(() => {
+        imgs[i].classList.remove("on");
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add("on");
+        label.textContent = imgs[i].dataset.label;
+      }, 3500);
+    });
+
+    // ---------- unwrap on scroll ----------
+    const gifts = [...document.querySelectorAll(".gift")];
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      gifts.forEach(g => g.classList.add("open"));
+    } else {
+      const io = new IntersectionObserver(entries => {
+        entries.filter(e => e.isIntersecting).forEach(e => {
+          const siblings = [...e.target.parentElement.children];
+          const delay = 250 + siblings.indexOf(e.target) % 4 * 160;
+          setTimeout(() => e.target.classList.add("open"), delay);
+          io.unobserve(e.target);
+        });
+      }, { threshold: .35 });
+      gifts.forEach(g => io.observe(g));
+    }
+
+    // ---------- tilt + shake + sparkle burst ----------
+    const COLORS = ["#ffd76a", "#ff5c6c", "#7cf0b3", "#8ecbff", "#ffffff"];
+    function sparkle(x, y, opts = {}) {
+      const s = document.createElement("div");
+      s.className = "sparkle";
+      const ang = Math.random() * Math.PI * 2, dist = opts.dist ?? (30 + Math.random() * 70);
+      s.style.left = x + "px"; s.style.top = y + "px";
+      s.style.setProperty("--x", Math.cos(ang) * dist + "px");
+      s.style.setProperty("--y", Math.sin(ang) * dist + (opts.fall ?? 20) + "px");
+      s.style.setProperty("--c", COLORS[Math.random() * COLORS.length | 0]);
+      s.style.setProperty("--d", (opts.dur ?? (.6 + Math.random() * .6)) + "s");
+      if (opts.size) { s.style.width = s.style.height = opts.size + "px"; }
+      document.body.appendChild(s);
+      setTimeout(() => s.remove(), 1400);
+    }
+
+    gifts.forEach(card => {
+      if (!reduceMotion && matchMedia("(pointer: fine)").matches) {
+        card.addEventListener("mousemove", e => {
+          const r = card.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
+          card.style.transform = `perspective(900px) rotateY(${px * 8}deg) rotateX(${-py * 8}deg) translateY(-4px)`;
+        });
+        card.addEventListener("mouseleave", () => { card.style.transform = ""; });
+      }
+      card.querySelector(".media").addEventListener("click", e => {
+        for (let i = 0; i < 26; i++) sparkle(e.clientX, e.clientY, { size: 6 + Math.random() * 6 });
+        if (!reduceMotion) {
+          card.animate([
+            { rotate: "0deg" }, { rotate: "-3deg" }, { rotate: "3deg" }, { rotate: "-2deg" }, { rotate: "2deg" }, { rotate: "0deg" }
+          ], { duration: 500, easing: "ease-in-out" });
+        }
+      });
+    });
+
+    // cursor sparkle trail (desktop only)
+    if (!reduceMotion && matchMedia("(pointer: fine)").matches) {
+      let last = 0;
+      addEventListener("mousemove", e => {
+        const now = performance.now();
+        if (now - last < 45) return;
+        last = now;
+        sparkle(e.clientX, e.clientY, { dist: 6, fall: 22, dur: .9, size: 5 });
+      });
+    }
+
+    // ---------- countdown ----------
+    const cd = { d: document.getElementById("cd-d"), h: document.getElementById("cd-h"), m: document.getElementById("cd-m"), s: document.getElementById("cd-s") };
+    const caption = document.getElementById("cd-caption");
+    const christmas = new Date(2026, 11, 25, 0, 0, 0);
+    function tick() {
+      let diff = christmas - new Date();
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = '<div class="year">🎄 Merry Christmas! 🎄</div>';
+        caption.textContent = "Hope Santa was good to you too.";
+        return;
+      }
+      const pad = n => String(n).padStart(2, "0");
+      cd.d.textContent = Math.floor(diff / 864e5);
+      cd.h.textContent = pad(Math.floor(diff / 36e5) % 24);
+      cd.m.textContent = pad(Math.floor(diff / 6e4) % 60);
+      cd.s.textContent = pad(Math.floor(diff / 1e3) % 60);
+      setTimeout(tick, 1000 - Date.now() % 1000);
+    }
+    tick();
+
+    // ---------- string lights ----------
+    const lights = document.getElementById("lights");
+    const BULB_COLORS = ["#ff4d5e", "#ffd76a", "#4fe39a", "#5ab4ff", "#ff8ad8", "#ff9f43"];
+    function buildLights() {
+      const w = innerWidth;
+      if (!w) return;
+      const gap = w < 600 ? 34 : 44, n = Math.ceil(w / gap) + 1;
+      const sag = 18, swags = Math.max(2, Math.round(w / 320));
+      const y = x => 6 + Math.abs(Math.sin((x / w) * Math.PI * swags)) * sag;
+      let path = "M0 " + y(0);
+      for (let x = 8; x <= w; x += 8) path += ` L${x} ${y(x).toFixed(1)}`;
+      lights.innerHTML = `<svg aria-hidden="true"><path d="${path}" fill="none" stroke="#2f3a2f" stroke-width="2"/></svg>`;
+      for (let i = 0; i < n; i++) {
+        const x = i * gap + gap / 2, b = document.createElement("span");
+        const c = BULB_COLORS[i % BULB_COLORS.length];
+        b.className = "bulb";
+        b.style.cssText = `left:${x - 6}px;top:${y(x) + 5}px;background:${c};color:${c};animation-delay:${(i % 5) * .3 + Math.random() * .4}s;transform:rotate(${(Math.random() * 16 - 8).toFixed(1)}deg)`;
+        lights.appendChild(b);
+      }
+    }
+    buildLights();
+    let resizeT;
+    addEventListener("resize", () => { clearTimeout(resizeT); resizeT = setTimeout(() => { buildLights(); sizeCanvases(); }, 150); });
+
+    // ---------- stars + snow ----------
+    const starC = document.getElementById("stars"), starX = starC.getContext("2d");
+    const snowC = document.getElementById("snow"), snowX = snowC.getContext("2d");
+    let stars = [], flakes = [], snowing = !reduceMotion, wind = 0, dpr = 1;
+
+    function sizeCanvases() {
+      dpr = Math.min(devicePixelRatio || 1, 2);
+      for (const c of [starC, snowC]) { c.width = innerWidth * dpr; c.height = innerHeight * dpr; }
+      starX.setTransform(dpr, 0, 0, dpr, 0, 0); snowX.setTransform(dpr, 0, 0, dpr, 0, 0);
+      stars = Array.from({ length: Math.round(innerWidth * innerHeight / 5000) }, () => ({
+        x: Math.random() * innerWidth, y: Math.random() * innerHeight * .8, r: Math.random() * 1.3 + .2, p: Math.random() * Math.PI * 2
+      }));
+      const target = Math.round(Math.min(220, innerWidth * innerHeight / 7000));
+      while (flakes.length < target) flakes.push(newFlake(true));
+      flakes.length = target;
+    }
+    function newFlake(anywhere) {
+      const r = Math.random() * 2.6 + .8;
+      return { x: Math.random() * innerWidth, y: anywhere ? Math.random() * innerHeight : -10, r, vy: r * .45 + .3, ph: Math.random() * 6.28, sw: Math.random() * .8 + .2, o: Math.random() * .5 + .5 };
+    }
+    addEventListener("mousemove", e => { wind = (e.clientX / innerWidth - .5) * 1.4; });
+
+    let t = 0;
+    function frame() {
+      t += .016;
+      starX.clearRect(0, 0, innerWidth, innerHeight);
+      for (const s of stars) {
+        const a = reduceMotion ? .7 : .45 + .55 * Math.abs(Math.sin(t * 1.3 + s.p));
+        starX.globalAlpha = a; starX.fillStyle = "#fff";
+        starX.beginPath(); starX.arc(s.x, s.y, s.r, 0, 6.283); starX.fill();
+      }
+      snowX.clearRect(0, 0, innerWidth, innerHeight);
+      if (snowing) {
+        snowX.fillStyle = "#fff";
+        for (const f of flakes) {
+          f.y += f.vy; f.ph += .02;
+          f.x += Math.sin(f.ph) * f.sw + wind * f.r * .35;
+          if (f.y > innerHeight + 10) Object.assign(f, newFlake(false));
+          if (f.x > innerWidth + 10) f.x = -10; else if (f.x < -10) f.x = innerWidth + 10;
+          snowX.globalAlpha = f.o;
+          snowX.beginPath(); snowX.arc(f.x, f.y, f.r, 0, 6.283); snowX.fill();
+        }
+      }
+      if (!reduceMotion) requestAnimationFrame(frame);
+    }
+    sizeCanvases();
+    frame();
+
+    const snowBtn = document.getElementById("snow-btn");
+    function setSnowLabel() {
+      snowBtn.querySelector("span").textContent = "Snow: " + (snowing ? "On" : "Off");
+      snowBtn.setAttribute("aria-pressed", snowing);
+    }
+    setSnowLabel();
+    snowBtn.addEventListener("click", () => { snowing = !snowing; setSnowLabel(); if (reduceMotion) frame(); });
+
+    // ---------- music: public-domain carols synthesized with Web Audio ----------
+    // Notes are [midi, beats]; 0 = rest.
+    const SONGS = [
+      {
+        name: "Jingle Bells", bpm: 132, bells: true,
+        notes: [
+          [76,1],[76,1],[76,2],[76,1],[76,1],[76,2],[76,1],[79,1],[72,1.5],[74,.5],[76,4],
+          [77,1],[77,1],[77,1.5],[77,.5],[77,1],[76,1],[76,1],[76,.5],[76,.5],[76,1],[74,1],[74,1],[76,1],[74,2],[79,2],
+          [76,1],[76,1],[76,2],[76,1],[76,1],[76,2],[76,1],[79,1],[72,1.5],[74,.5],[76,4],
+          [77,1],[77,1],[77,1.5],[77,.5],[77,1],[76,1],[76,1],[76,.5],[76,.5],[79,1],[79,1],[77,1],[74,1],[72,4],[0,2]
+        ]
+      },
+      {
+        name: "Deck the Halls", bpm: 112,
+        notes: [
+          [79,1.5],[77,.5],[76,1],[74,1],[72,1],[74,1],[76,1],[72,1],[74,.5],[76,.5],[77,.5],[74,.5],[76,1.5],[74,.5],[72,1],[71,1],[72,2],
+          [79,1.5],[77,.5],[76,1],[74,1],[72,1],[74,1],[76,1],[72,1],[74,.5],[76,.5],[77,.5],[74,.5],[76,1.5],[74,.5],[72,1],[71,1],[72,2],
+          [74,1.5],[76,.5],[77,1],[74,1],[76,1.5],[77,.5],[79,1],[74,1],[76,.5],[78,.5],[79,1],[81,.5],[83,.5],[84,1],[83,1],[81,1],[79,2],
+          [79,1.5],[77,.5],[76,1],[74,1],[72,1],[74,1],[76,1],[72,1],[81,.5],[81,.5],[81,.5],[81,.5],[79,1.5],[77,.5],[76,1],[74,1],[72,2],[0,2]
+        ]
+      },
+      {
+        name: "We Wish You a Merry Christmas", bpm: 150,
+        notes: [
+          [67,1],[72,1],[72,.5],[74,.5],[72,.5],[71,.5],[69,1],[69,1],[69,1],[74,1],[74,.5],[76,.5],[74,.5],[72,.5],[71,1],[67,1],[67,1],
+          [76,1],[76,.5],[77,.5],[76,.5],[74,.5],[72,1],[69,1],[67,.5],[67,.5],[69,1],[74,1],[71,1],[72,3],[0,2]
+        ]
+      },
+      {
+        name: "O Christmas Tree", bpm: 96,
+        notes: [
+          [67,1],[72,.75],[72,.25],[72,1.5],[74,.5],[76,.75],[76,.25],[76,1.5],[76,.5],[74,.5],[76,.5],[77,1],[71,1],[74,1],[72,2],
+          [79,.5],[79,.5],[76,.5],[81,1.5],[79,.5],[79,.5],[77,.5],[77,1.5],[77,.5],[77,.5],[74,.5],[79,1.5],[77,.5],[77,.5],[76,.5],[76,1.5],
+          [67,1],[72,.75],[72,.25],[72,1.5],[74,.5],[76,.75],[76,.25],[76,1.5],[76,.5],[74,.5],[76,.5],[77,1],[71,1],[74,1],[72,2],[0,2]
+        ]
+      }
+    ];
+
+    let actx = null, master = null, playing = false, songIdx = 0, noteIdx = 0, nextTime = 0, timer = null, noiseBuf = null;
+    const musicBtn = document.getElementById("music-btn");
+    const nowPlaying = document.getElementById("now-playing");
+    const mtof = m => 440 * Math.pow(2, (m - 69) / 12);
+
+    function initAudio() {
+      actx = new (window.AudioContext || window.webkitAudioContext)();
+      master = actx.createGain(); master.gain.value = .32;
+      // simple generated reverb
+      const len = actx.sampleRate * 2.2, ir = actx.createBuffer(2, len, actx.sampleRate);
+      for (let ch = 0; ch < 2; ch++) {
+        const d = ir.getChannelData(ch);
+        for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3);
+      }
+      const verb = actx.createConvolver(); verb.buffer = ir;
+      const wet = actx.createGain(); wet.gain.value = .35;
+      master.connect(actx.destination); master.connect(verb); verb.connect(wet); wet.connect(actx.destination);
+      noiseBuf = actx.createBuffer(1, actx.sampleRate * .3, actx.sampleRate);
+      const nd = noiseBuf.getChannelData(0);
+      for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+    }
+
+    // music-box / celesta-ish voice
+    function playNote(midi, time, dur) {
+      const f = mtof(midi);
+      const env = actx.createGain();
+      env.gain.setValueAtTime(0, time);
+      env.gain.linearRampToValueAtTime(.5, time + .008);
+      env.gain.exponentialRampToValueAtTime(.001, time + Math.max(.9, dur * 1.6));
+      env.connect(master);
+      [[1, 1], [2, .35], [3.01, .12], [4.2, .06]].forEach(([mult, amp]) => {
+        const o = actx.createOscillator(), g = actx.createGain();
+        o.type = mult === 1 ? "triangle" : "sine";
+        o.frequency.value = f * mult;
+        g.gain.value = amp;
+        o.connect(g); g.connect(env);
+        o.start(time); o.stop(time + Math.max(1, dur * 1.7));
+      });
+    }
+    // soft bass on downbeats
+    function playBass(midi, time, dur) {
+      const o = actx.createOscillator(), g = actx.createGain();
+      o.type = "sine"; o.frequency.value = mtof(midi);
+      g.gain.setValueAtTime(0, time);
+      g.gain.linearRampToValueAtTime(.18, time + .02);
+      g.gain.exponentialRampToValueAtTime(.001, time + dur);
+      o.connect(g); g.connect(master);
+      o.start(time); o.stop(time + dur + .05);
+    }
+    function sleighBell(time, vol = .12) {
+      const src = actx.createBufferSource(); src.buffer = noiseBuf;
+      const hp = actx.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 6500;
+      const bp = actx.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 9000; bp.Q.value = 2;
+      const g = actx.createGain();
+      g.gain.setValueAtTime(vol, time); g.gain.exponentialRampToValueAtTime(.001, time + .18);
+      src.connect(hp); hp.connect(bp); bp.connect(g); g.connect(master);
+      src.start(time); src.stop(time + .2);
+    }
+
+    let beatPos = 0;
+    function scheduler() {
+      while (nextTime < actx.currentTime + .25) {
+        const song = SONGS[songIdx], beat = 60 / song.bpm;
+        if (noteIdx === 0) { beatPos = 0; showNowPlaying(song.name); }
+        const [midi, beats] = song.notes[noteIdx];
+        const dur = beats * beat;
+        if (midi) {
+          playNote(midi, nextTime, dur);
+          // bass: root of the melody's key (C) or G, alternating on whole beats
+          if (Math.abs(beatPos % 2) < .01) playBass(beatPos % 4 < .01 ? 48 : 43, nextTime, beat * 1.8);
+        }
+        if (song.bells) {
+          for (let b = Math.ceil(beatPos * 2 - 1e-6) / 2; b < beatPos + beats - 1e-6; b += .5) {
+            sleighBell(nextTime + (b - beatPos) * beat, b % 1 === 0 ? .14 : .07);
+          }
+        }
+        beatPos += beats;
+        nextTime += dur;
+        noteIdx++;
+        if (noteIdx >= song.notes.length) { noteIdx = 0; songIdx = (songIdx + 1) % SONGS.length; }
+      }
+    }
+    let npTimer;
+    function showNowPlaying(name) {
+      nowPlaying.textContent = "♪ Now playing: " + name;
+      nowPlaying.classList.add("show");
+      clearTimeout(npTimer);
+      npTimer = setTimeout(() => nowPlaying.classList.remove("show"), 4000);
+    }
+
+    musicBtn.addEventListener("click", async () => {
+      if (!actx) initAudio();
+      if (actx.state === "suspended") await actx.resume();
+      playing = !playing;
+      musicBtn.classList.toggle("playing", playing);
+      musicBtn.setAttribute("aria-pressed", playing);
+      musicBtn.querySelector("span:last-child").textContent = playing ? "Pause Carols" : "Play Carols";
+      if (playing) {
+        master.gain.cancelScheduledValues(actx.currentTime);
+        master.gain.setValueAtTime(.32, actx.currentTime);
+        nextTime = actx.currentTime + .1;
+        timer = setInterval(scheduler, 50);
+        scheduler();
+      } else {
+        clearInterval(timer);
+        master.gain.setTargetAtTime(0, actx.currentTime, .15);
+        nowPlaying.classList.remove("show");
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
