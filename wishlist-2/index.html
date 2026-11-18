@@ -128,27 +128,44 @@
     }
     .section-note { color: var(--muted); font-size: 14px; margin: 0; }
 
-    .list { list-style: none; margin: 0; padding: 0; counter-reset: item; }
+    .list {
+      list-style: none; margin: 24px 0 0; padding: 0; counter-reset: item;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px;
+    }
     .item {
       counter-increment: item;
-      display: grid;
-      grid-template-columns: 56px 1fr auto;
-      gap: 20px; align-items: center;
-      padding: 24px 0;
-      border-top: 1px solid var(--line);
-    }
-    .item:last-child { border-bottom: 1px solid var(--line); }
-    .icon {
-      width: 56px; height: 56px; border-radius: 50%;
-      display: grid; place-items: center;
-      background: var(--surface);
+      display: flex; flex-direction: column;
+      background: var(--bg);
       border: 1px solid var(--line);
-      color: var(--accent);
-      transition: background .25s, color .25s, border-color .25s;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
     }
-    .icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-    .item:hover .icon { background: var(--mint); border-color: var(--mint); color: var(--white); }
-    .stretch .icon { color: var(--accent-2); }
+    .item:hover {
+      transform: translateY(-4px);
+      border-color: var(--thistle);
+      box-shadow: 0 18px 40px -24px rgba(24, 40, 37, .45);
+    }
+    .media {
+      position: relative; aspect-ratio: 4 / 3;
+      background: var(--surface); overflow: hidden;
+    }
+    .media img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .6s ease;
+    }
+    .media img.contain { object-fit: contain; padding: 12px; background: #ffffff; }
+    .item:hover .media img:not(.contain) { transform: scale(1.04); }
+    .icon {
+      position: absolute; inset: 0;
+      display: none; place-items: center;
+      color: var(--accent);
+    }
+    .media.broken img { display: none; }
+    .media.broken .icon { display: grid; }
+    .icon svg { width: 48px; height: 48px; fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+    .card-body { display: flex; flex-direction: column; flex: 1; padding: 20px 20px 22px; }
+    .card-body .meta { margin-top: auto; padding-top: 16px; }
 
     .item h3 {
       margin: 0; font-size: 18px; font-weight: 600; line-height: 1.35;
@@ -163,7 +180,7 @@
     .item p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
     .brand { display: block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-2); font-weight: 600; margin-bottom: 2px; }
 
-    .meta { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+    .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .link {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 14px; font-weight: 600; color: var(--accent);
@@ -187,8 +204,14 @@
       border-radius: 20px;
       background: var(--ink); color: var(--white);
       padding: 48px 40px;
-      display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
+      display: grid; grid-template-columns: 1fr 240px; gap: 40px; align-items: center;
     }
+    .finale-img {
+      position: relative; z-index: 1;
+      width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
+      border-radius: 12px; background: #2a403c; display: block;
+    }
+    .finale .actions { margin-top: 24px; }
     :root[data-theme="dark"] .finale-card { background: #223a36; }
     @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .finale-card { background: #223a36; } }
     .finale-card::before {
@@ -230,11 +253,9 @@
     /* ---------- small screens ---------- */
     @media (max-width: 640px) {
       .hero { padding: 40px 0 44px; }
-      .item { grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
-      .icon { width: 44px; height: 44px; }
-      .icon svg { width: 22px; height: 22px; }
-      .meta { grid-column: 2; flex-direction: row; align-items: center; justify-content: flex-start; flex-wrap: wrap; }
-      .finale-card { grid-template-columns: 1fr; padding: 36px 24px; }
+      .list { gap: 20px; }
+      .finale-card { grid-template-columns: 1fr; padding: 32px 24px; gap: 28px; }
+      .finale-img { max-width: 320px; }
     }
   </style>
 </head>
@@ -266,8 +287,11 @@
           <span class="brand">BoxLunch Exclusive</span>
           <h2 id="finale-title">The Hunger Games Floral Women's Embroidered Crewneck</h2>
           <p>Burgundy fleece with the mockingjay pin and white rose and District symbol embroidery along the hem.</p>
+          <div class="actions">
+            <a class="link" href="https://www.boxlunch.com/product/the-hunger-games-floral-womens-embroidered-crewneck---boxlunch-exclusive/36521483.html" target="_blank" rel="noopener">View <span>→</span></a>
+          </div>
         </div>
-        <a class="link" href="https://www.boxlunch.com/product/the-hunger-games-floral-womens-embroidered-crewneck---boxlunch-exclusive/36521483.html" target="_blank" rel="noopener">View <span>→</span></a>
+        <img class="finale-img" src="https://cdn.media.amplience.net/s/hottopic/36521483_hi?w=600" alt="The Hunger Games Floral Women's Embroidered Crewneck" loading="lazy" referrerpolicy="no-referrer">
       </div>
     </aside>
 
@@ -293,6 +317,8 @@
       horseshoe: '<path d="M6.5 20.5H4.2L3.5 12a8.5 8.5 0 0 1 17 0l-.7 8.5h-2.3"/><path d="M6.5 20.5 7 12a5 5 0 0 1 10 0l.5 8.5"/><path d="M5 15.5h.01M5.6 10h.01M8 6.2h.01M12 4.9h.01M16 6.2h.01M18.4 10h.01M19 15.5h.01"/>'
     };
 
+    const unsplash = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=75`;
+
     const LISTS = [
       {
         id: "list", title: "The List", note: "Everyday favorites",
@@ -300,41 +326,49 @@
           {
             title: "Owala 18 oz Sip Cup", brand: "Owala", icon: "cup",
             note: "The FreeSip Sway: insulated, with a handle and a built-in straw. Any color.",
+            img: "https://cdn.shopify.com/s/files/1/0439/2537/3087/files/OW_Tropical_Mirage_18oz_FreeSip_Sway_SC.png?width=800", fit: "contain",
             link: "https://owalalife.com/en-us/products/freesip-sway"
           },
           {
             title: "Duffle Bag", icon: "bag",
             note: "Spacious, but still easy to carry. Good for weekends away and the gym.",
+            img: unsplash("1473188588951-666fce8e7c68"),
             chip: "Open to styles"
           },
           {
             title: "Barnes & Noble Gift Cards", brand: "Barnes & Noble", icon: "book",
             note: "For books, always books.",
+            img: unsplash("1481627834876-b7833e8f5570"),
             link: "https://www.barnesandnoble.com/pages/gift-cards", chip: "Any amount"
           },
           {
             title: "Loungewear & Exercise Clothes", icon: "shirt",
             note: "Comfortable sets for the house, and pieces to work out in.",
+            img: unsplash("1506629082955-511b1aa562c8"),
             chip: "Gift cards welcome"
           },
           {
             title: "Star Elliot Earrings in Purple", brand: "Linea Design Co", icon: "star",
-            note: "Handmade, wire-wrapped Elliot earrings with the star, in purple.",
-            link: "https://lineadesignco.myshopify.com/search?q=star+elliot"
+            note: "Handmade double-piercing earrings with a purple cat eye glass star and a dainty chain.",
+            img: "https://cdn.shopify.com/s/files/1/0910/2819/3573/files/C9F2EC48-D4A9-4974-BF36-7A92EBEE5568.jpg?v=1790817057&width=800",
+            link: "https://lineadesignco.myshopify.com/products/star-elliot-earrings?variant=53928651489573", chip: "Purple sold out for now"
           },
           {
             title: "Michaels Gift Cards", brand: "Michaels", icon: "yarn",
             note: "For yarn and craft supplies.",
+            img: unsplash("1452860606245-08befc0ff44b"),
             chip: "Any amount"
           },
           {
             title: "Crochet Hook Storage Case", icon: "hooks",
             note: "Something cute to keep all my hooks organized in one place.",
+            img: unsplash("1584992236310-6edddc08acff"),
             link: "https://www.etsy.com/search?q=crochet+hook+case"
           },
           {
             title: "Candles", icon: "candle",
             note: "Any scent except baked goods. No cookies, cakes, or cinnamon rolls, please.",
+            img: unsplash("1603006905003-be475563bc59"),
             chip: "No bakery scents"
           }
         ]
@@ -345,11 +379,13 @@
           {
             title: "Carlie Mini 28mm Three-Hand Brown Leather Watch", brand: "Fossil", icon: "watch",
             note: "A small gold-tone case on a brown leather strap. Style ES5464.",
+            img: "https://fossil.scene7.com/is/image/FossilPartners/ES5464_main?$sfcc_fos_large$", fit: "contain",
             link: "https://www.fossil.com/en-us/products/carlie-mini-28mm-three-hand-brown-leather-watch/ES5464.html"
           },
           {
             title: "Two Ponies", icon: "horseshoe",
             note: "Not one. Two.",
+            img: unsplash("1553284965-83fd3e82fa5a"),
             chip: "Dream big"
           }
         ]
@@ -367,19 +403,35 @@
         <ol class="list">
           ${list.items.map(item => `
             <li class="item reveal">
-              <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONS[item.icon]}</svg></div>
-              <div>
+              <div class="media">
+                <img src="${item.img}" alt="${esc(item.title)}" class="${item.fit === "contain" ? "contain" : ""}" loading="lazy" referrerpolicy="no-referrer">
+                <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONS[item.icon]}</svg></div>
+              </div>
+              <div class="card-body">
                 ${item.brand ? `<span class="brand">${esc(item.brand)}</span>` : ""}
                 <h3>${esc(item.title)}</h3>
                 <p>${esc(item.note)}</p>
-              </div>
-              <div class="meta">
-                ${item.link ? `<a class="link" href="${item.link}" target="_blank" rel="noopener">View <span>→</span></a>` : ""}
-                ${item.chip ? `<span class="chip">${esc(item.chip)}</span>` : ""}
+                <div class="meta">
+                  ${item.link ? `<a class="link" href="${item.link}" target="_blank" rel="noopener">View <span>→</span></a>` : ""}
+                  ${item.chip ? `<span class="chip">${esc(item.chip)}</span>` : ""}
+                </div>
               </div>
             </li>`).join("")}
         </ol>
       </section>`).join("");
+
+    // finale photo: drop it cleanly if it can't load
+    const fin = document.querySelector(".finale-img");
+    const dropFin = () => { fin.remove(); document.querySelector(".finale-card").style.gridTemplateColumns = "1fr"; };
+    fin.addEventListener("error", dropFin);
+    if (fin.complete && fin.naturalWidth === 0) dropFin();
+
+    // broken image -> line icon fallback
+    document.querySelectorAll(".media img").forEach(img => {
+      const mark = () => img.parentElement.classList.add("broken");
+      img.addEventListener("error", mark);
+      if (img.complete && img.naturalWidth === 0) mark();
+    });
 
     // ---------- countdown ----------
     const cd = document.getElementById("countdown");
