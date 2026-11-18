@@ -92,7 +92,6 @@
       border-radius: 14px;
       padding: 14px;
       box-shadow: 0 0 0 1px #000, 0 24px 50px -24px #000, inset 0 0 0 1px rgba(194, 164, 106, .25);
-      transform-style: preserve-3d;
       transition: transform .35s ease, box-shadow .35s ease;
     }
     .card::before {
@@ -129,6 +128,37 @@
     .art .glyph-gold { stroke: var(--gold); }
     .art .glyph-crimson { stroke: var(--crimson-hi); }
     .art .glyph-lilac { stroke: var(--lilac); }
+
+    /* photos, treated to look like they belong in the deck */
+    .art.photo svg { display: none; }
+    .art.photo { background: #f3eef3; isolation: isolate; }
+    .art.photo img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      filter: grayscale(1) contrast(1.25) brightness(.92);
+      transition: filter .6s ease, transform .6s ease;
+    }
+    .art.photo img.contain { object-fit: contain; padding: 16% 12% 10%; }
+    .art.photo.duo img { width: 50%; }
+    .art.photo.duo img.contain { padding: 12% 0 6%; }
+    .art.photo.duo img:first-child { left: 4%; }
+    .art.photo.duo img:nth-child(2) { left: auto; right: 4%; }
+    .art.photo .tint {
+      position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(170deg, #c9a0dc 0%, #9b2246 55%, #2a1633 100%);
+      mix-blend-mode: multiply; transition: opacity .6s ease;
+    }
+    .art.photo::after {
+      z-index: 2;
+      background:
+        radial-gradient(circle at 50% 45%, transparent 45%, rgba(13, 11, 16, .85) 100%),
+        radial-gradient(circle at 50% 120%, rgba(155, 34, 70, .35), transparent 55%);
+    }
+    .card:hover .art.photo img, .card.chosen .art.photo img { filter: grayscale(.15) contrast(1.05) brightness(1); transform: scale(1.04); }
+    .card:hover .art.photo .tint, .card.chosen .art.photo .tint { opacity: .25; }
+    @media (hover: none) {
+      .art.photo img { filter: grayscale(.55) contrast(1.15) brightness(.95); }
+      .art.photo .tint { opacity: .6; }
+    }
 
     .arcana {
       position: relative; text-align: center; margin: 14px 0 0;
@@ -258,6 +288,7 @@
     const CARDS = [
       { n: "0", arcana: "The Fool", art: "pony",
         title: "My Little Pony Cards",
+        img: "https://media.gamestop.com/i/gamestop/20036490/My-Little-Pony-Trading-Card-Game-Nightmare-Night-Collector-Box-NA-CP?w=600&h=600&sm=clamp&fmt=auto", fit: "contain",
         note: "Game cards or collector cards. GameStop and Target both carry them.",
         links: [
           { label: "Target", url: "https://www.target.com/s?searchTerm=my+little+pony+cards" },
@@ -265,10 +296,12 @@
         ] },
       { n: "I", arcana: "The Familiar", art: "paw",
         title: "PetSmart Gift Card",
+        img: "https://s7d2.scene7.com/is/image/PetSmart/WEB-2168901-May24_2CU2_M5-R-GiftCard_DT?fmt=webp&wid=700", fit: "contain",
         note: "Or skip the card: any cat or dog toys, accessories, food, or litter would be appreciated.",
         links: [{ label: "PetSmart", url: "https://www.petsmart.com/gift-cards" }] },
       { n: "X", arcana: "Wheel of Fortune", art: "wheel",
         title: "Target or Walmart Gift Card",
+        img: "https://target.scene7.com/is/image/Target/GUEST_93ac9134-0adc-4296-95bd-a7b7a72f8f4c?wid=700", fit: "contain",
         note: "Either one. Fortune favors the practical.",
         links: [
           { label: "Target", url: "https://www.target.com/c/target-giftcards-gift-cards/-/N-5xsxt" },
@@ -276,35 +309,45 @@
         ] },
       { n: "XIII", arcana: "Death", art: "skull",
         title: "Hot Topic Gift Card",
+        img: "https://cdn.media.amplience.net/s/hottopic/11770204_hi?w=700", fit: "contain",
         note: "The end of my old wardrobe. The start of a better one.",
         links: [{ label: "Hot Topic", url: "https://www.hottopic.com/giftcertpurchase" }] },
       { n: "III", arcana: "The Poet", art: "quill",
         title: "Poetry Books",
-        note: "Anything moody, beautiful, or a little bit haunting.",
-        links: [{ label: "Browse", url: "https://www.amazon.com/s?k=poetry+books" }] },
+        img: "https://cdn.shopify.com/s/files/1/0674/5433/7265/files/9781435154469_p0.jpg?v=1768954372&width=700", fit: "contain",
+        note: "Anything moody, beautiful, or a little bit haunting. Poe would be perfect.",
+        links: [{ label: "Poe", url: "https://www.barnesandnoble.com/w/the-complete-tales-and-poems-of-edgar-allan-poe-edgar-allan-poe/1106658787" },
+          { label: "More Poetry", url: "https://www.amazon.com/s?k=poetry+books" }] },
       { n: "IX", arcana: "The Hermit", art: "eye",
         title: "The DSM-5 (or Any Psychology Book)",
+        img: "https://cdn.shopify.com/s/files/1/0674/5433/7265/files/9780890425763_p0.jpg?v=1765384757&width=700", fit: "contain",
         note: "I really want the DSM-5-TR, but any psychology book is a great pick too.",
-        links: [{ label: "DSM-5-TR", url: "https://www.amazon.com/s?k=DSM-5-TR" },
+        links: [{ label: "DSM-5-TR", url: "https://www.barnesandnoble.com/w/diagnostic-and-statistical-manual-of-mental-disorders-fifth-edition-text-revision-american-psychiatric-association/1140161900" },
           { label: "Psychology", url: "https://www.amazon.com/s?k=psychology+books" }] },
       { n: "XVIII", arcana: "The Moon", art: "moon",
         title: "Goth & Alternative Accessories",
+        img: "https://cdn.media.amplience.net/s/hottopic/32156496_hi?w=700",
         note: "Chokers, rings, chains, spikes, bats, moons. You know the vibe.",
-        links: [{ label: "Hot Topic", url: "https://www.hottopic.com/search?q=goth+accessories" }] },
+        links: [{ label: "Shop Chokers", url: "https://www.hottopic.com/product/goth-lace-choker-necklace-set/32156543.html" },
+          { label: "More", url: "https://www.hottopic.com/search?q=goth+accessories" }] },
       { n: "XV", arcana: "The Shadow", art: "lipstick",
         title: "Black Lipstick & Eyeliner",
+        img: ["https://media.ultainc.com/i/ulta/2578487?w=500&h=500&fmt=auto", "https://media.ultainc.com/i/ulta/2565809?w=500&h=500&fmt=auto"], fit: "contain",
         note: "The darker the better.",
         links: [] },
       { n: "XVII", arcana: "The Star", art: "wand",
         title: "Waterproof False Lash Effect Mascara",
-        note: "Waterproof, with that big false-lash look.",
-        links: [{ label: "Ulta", url: "https://www.ulta.com/search?search=false+lash+effect+waterproof+mascara" }] },
+        img: "https://media.ultainc.com/i/ulta/2547673?w=600&h=600&fmt=auto", fit: "contain",
+        note: "Waterproof, with that big false-lash look. Something like essence Lash Princess.",
+        links: [{ label: "Ulta", url: "https://www.ulta.com/search?search=essence+lash+princess+false+lash+effect+waterproof+mascara" }] },
       { n: "VI", arcana: "The Lovers", art: "lashes",
         title: "False Lashes (Big Ones)",
+        img: "https://media.ultainc.com/i/ulta/77020336?w=600&h=600&fmt=auto", fit: "contain",
         note: "Dramatic and full. Go big.",
         links: [] },
       { n: "XIX", arcana: "The Sun", art: "star",
         title: "Sephora or Ulta Gift Card",
+        img: "https://media.ultainc.com/i/ulta/GS_GiftCard_WK3426_General?w=700&fmt=auto", fit: "contain",
         note: "To restock the makeup bag.",
         links: [
           { label: "Sephora", url: "https://www.sephora.com/beauty/giftcards" },
@@ -317,7 +360,11 @@
     deck.innerHTML = CARDS.map(c => `
       <li class="card">
         <div class="numeral">${esc(c.n)}</div>
-        <div class="art" aria-hidden="true"><svg viewBox="0 0 24 24">${ART[c.art]}</svg></div>
+        <div class="art${c.img ? " photo" : ""}${Array.isArray(c.img) ? " duo" : ""}">
+          ${[].concat(c.img || []).map(src => `<img src="${src}" alt="${esc(c.title)}" class="${c.fit === "contain" ? "contain" : ""}" loading="lazy" referrerpolicy="no-referrer">`).join("")}
+          <span class="tint" aria-hidden="true"></span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">${ART[c.art]}</svg>
+        </div>
         <div class="arcana">${esc(c.arcana)}</div>
         <div class="card-body">
           <h3>${esc(c.title)}</h3>
@@ -328,6 +375,13 @@
 
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const cards = [...deck.children];
+
+    // if a photo fails, fall back to the line illustration
+    deck.querySelectorAll(".art.photo img").forEach(img => {
+      const fail = () => { const a = img.closest(".art"); img.remove(); if (!a.querySelector("img")) a.classList.remove("photo", "duo"); };
+      img.addEventListener("error", fail);
+      if (img.complete && img.naturalWidth === 0) fail();
+    });
 
     // flip cards in as they enter the viewport
     if (!reduce && "IntersectionObserver" in window) {
