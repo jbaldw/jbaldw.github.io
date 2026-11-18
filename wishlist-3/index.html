@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Christmas Wishlist 2026 | Kylie</title>
+  <meta name="description" content="Kylie's 2026 Christmas Wishlist.">
+  <meta name="theme-color" content="#0d0b10">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M62 8a42 42 0 1 0 30 70A36 36 0 0 1 62 8Z' fill='%23c9a0dc'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --void: #0d0b10;
+      --plum: #1c1224;
+      --plum-2: #2a1633;
+      --crimson: #9b2246;
+      --crimson-hi: #c8325f;
+      --bone: #ebe3d1;
+      --bone-dim: #b8ad98;
+      --gold: #c2a46a;
+      --gold-dim: #7d6a45;
+      --lilac: #c9a0dc;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: #0d0b10; }
+    body {
+      margin: 0;
+      font-family: "EB Garamond", Georgia, serif;
+      font-size: 18px; line-height: 1.55;
+      color: var(--bone);
+      background:
+        radial-gradient(900px 520px at 50% -8%, rgba(155, 34, 70, .28), transparent 65%),
+        radial-gradient(700px 500px at 100% 40%, rgba(201, 160, 220, .08), transparent 60%),
+        linear-gradient(180deg, var(--void), var(--plum) 60%, var(--void));
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    #stars { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+
+    .page { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; font-size: 15px; }
+    .topbar a { color: var(--bone-dim); text-decoration: none; letter-spacing: .04em; }
+    .topbar a:hover { color: var(--bone); }
+
+    /* ---------- hero ---------- */
+    .hero { text-align: center; padding: 40px 0 24px; }
+    .phases { display: flex; justify-content: center; gap: 14px; margin-bottom: 26px; }
+    .phases svg { width: 22px; height: 22px; }
+    .eyebrow {
+      font-family: "Cinzel", serif; font-size: 13px; letter-spacing: .36em; text-transform: uppercase; color: var(--gold);
+    }
+    h1 {
+      font-family: "Pirata One", "UnifrakturCook", serif; font-weight: 400;
+      font-size: clamp(54px, 12vw, 120px); line-height: .95; margin: 14px 0 6px;
+      color: var(--bone);
+      text-shadow: 0 0 28px rgba(200, 50, 95, .45), 0 2px 0 #000;
+    }
+    .sub { font-style: italic; color: var(--lilac); font-size: 20px; margin: 0; }
+    .intro { max-width: 600px; margin: 22px auto 0; color: var(--bone-dim); }
+    .hero-actions { margin-top: 28px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center; }
+    .btn {
+      font-family: "Cinzel", serif; font-size: 14px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--bone); background: linear-gradient(180deg, var(--crimson-hi), var(--crimson));
+      border: 1px solid #e8577f55; border-radius: 4px; padding: 12px 22px; cursor: pointer;
+      box-shadow: 0 0 0 1px #000, 0 10px 30px -10px rgba(200, 50, 95, .7);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px #000, 0 14px 36px -10px rgba(200, 50, 95, .9); }
+    .countdown { font-family: "Cinzel", serif; font-size: 14px; letter-spacing: .1em; color: var(--bone-dim); }
+    .countdown b { color: var(--gold); font-size: 20px; }
+
+    .divider { display: flex; align-items: center; gap: 16px; justify-content: center; margin: 44px auto 8px; color: var(--gold-dim); }
+    .divider::before, .divider::after { content: ""; height: 1px; width: min(28vw, 240px); background: linear-gradient(90deg, transparent, var(--gold-dim), transparent); }
+    .divider svg { width: 26px; height: 26px; }
+
+    /* ---------- deck ---------- */
+    .deck-note { text-align: center; color: var(--bone-dim); font-style: italic; margin: 0 0 34px; font-size: 16px; }
+    .deck {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 34px 26px;
+      perspective: 1400px;
+    }
+    .card {
+      position: relative; display: flex; flex-direction: column;
+      background:
+        radial-gradient(120% 80% at 50% 0%, #2c1a36, transparent 70%),
+        linear-gradient(180deg, #1a1220, #120c16);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 0 0 1px #000, 0 24px 50px -24px #000, inset 0 0 0 1px rgba(194, 164, 106, .25);
+      transform-style: preserve-3d;
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .card::before {
+      content: ""; position: absolute; inset: 8px; border-radius: 9px; pointer-events: none;
+      border: 1px solid var(--gold-dim);
+      box-shadow: inset 0 0 0 3px #120c16, inset 0 0 0 4px rgba(194, 164, 106, .35);
+    }
+    .card:hover { transform: translateY(-6px) rotate(-.6deg); box-shadow: 0 0 0 1px #000, 0 30px 60px -22px #000, 0 0 40px -6px rgba(201, 160, 220, .35), inset 0 0 0 1px rgba(194, 164, 106, .4); }
+    .card.chosen {
+      animation: chosen 1.6s ease-in-out 2;
+      box-shadow: 0 0 0 1px #000, 0 0 0 3px var(--gold), 0 0 60px 4px rgba(200, 50, 95, .6);
+    }
+    @keyframes chosen { 50% { transform: translateY(-10px) scale(1.03); } }
+
+    .numeral {
+      position: relative; text-align: center; font-family: "Cinzel", serif; font-weight: 700;
+      font-size: 14px; letter-spacing: .3em; color: var(--gold); padding-top: 6px;
+    }
+    .art {
+      position: relative; margin: 10px 8px 0; aspect-ratio: 1 / 1;
+      border-radius: 999px 999px 8px 8px;
+      background:
+        radial-gradient(circle at 50% 42%, rgba(201, 160, 220, .22), transparent 62%),
+        linear-gradient(180deg, #24172c, #150e19);
+      border: 1px solid var(--gold-dim);
+      display: grid; place-items: center; overflow: hidden;
+    }
+    .art::after {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(155, 34, 70, .35), transparent 55%);
+    }
+    .art svg { position: relative; z-index: 1; width: 58%; height: 58%; fill: none; stroke: var(--bone); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 8px rgba(201, 160, 220, .45)); transition: transform .5s ease; }
+    .card:hover .art svg { transform: scale(1.07); }
+    .art .glyph-gold { stroke: var(--gold); }
+    .art .glyph-crimson { stroke: var(--crimson-hi); }
+    .art .glyph-lilac { stroke: var(--lilac); }
+
+    .arcana {
+      position: relative; text-align: center; margin: 14px 0 0;
+      font-family: "Cinzel", serif; font-weight: 700; font-size: 15px; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .card-body { position: relative; flex: 1; display: flex; flex-direction: column; padding: 8px 10px 10px; text-align: center; }
+    .card h3 { margin: 4px 0 0; font-size: 21px; font-weight: 500; line-height: 1.2; color: var(--bone); }
+    .card p { margin: 8px 0 0; font-size: 16px; color: var(--bone-dim); line-height: 1.45; }
+    .links { margin-top: auto; padding-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .links a {
+      font-family: "Cinzel", serif; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; text-decoration: none;
+      color: var(--bone); border: 1px solid var(--gold-dim); border-radius: 3px; padding: 7px 11px;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .links a:hover { background: var(--gold); color: var(--void); border-color: var(--gold); }
+
+    /* reveal: cards flip in from their backs */
+    .card.hidden { transform: rotateY(90deg); opacity: 0; }
+    .card.shown { transition: transform .8s cubic-bezier(.2, .8, .2, 1), opacity .5s ease, box-shadow .35s ease; }
+
+    /* ---------- footer ---------- */
+    footer { position: relative; text-align: center; padding: 90px 16px 40px; color: var(--bone-dim); font-size: 16px; }
+    footer a { color: var(--lilac); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .lists { margin-top: 8px; font-size: 15px; }
+    .cat { display: block; width: 120px; margin: 0 auto 16px; }
+    .cat .eye { animation: blink 5s infinite; transform-origin: center; transform-box: fill-box; }
+    @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+
+    .bat { position: fixed; z-index: 2; width: 34px; pointer-events: none; opacity: 0; fill: #050307; }
+    .bat.fly { animation: batfly 9s linear forwards; }
+    @keyframes batfly {
+      0% { opacity: 0; transform: translate(-10vw, 0) scale(.8); }
+      10% { opacity: .9; }
+      50% { transform: translate(50vw, -6vh) scale(1); }
+      90% { opacity: .9; }
+      100% { opacity: 0; transform: translate(110vw, 4vh) scale(.8); }
+    }
+    .bat .wing { animation: flap .22s ease-in-out infinite alternate; transform-origin: 50% 40%; transform-box: fill-box; }
+    @keyframes flap { to { transform: scaleY(.45); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card.hidden { transform: none; opacity: 1; }
+      .card, .card.shown, .art svg { transition: none; }
+      .card.chosen { animation: none; }
+      .bat { display: none; }
+      .cat .eye { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+    @media (max-width: 560px) {
+      body { font-size: 17px; }
+      .deck { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <div class="page">
+    <nav class="topbar">
+      <a href="/">← jbaldw.github.io</a>
+    </nav>
+
+    <header class="hero">
+      <div class="phases" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#7d6a45"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 1 0 18Z" fill="#c9a0dc"/><circle cx="12" cy="12" r="9" fill="none" stroke="#7d6a45"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#ebe3d1"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0 0 18Z" fill="#c9a0dc"/><circle cx="12" cy="12" r="9" fill="none" stroke="#7d6a45"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#7d6a45"/></svg>
+      </div>
+      <div class="eyebrow">Christmas 2026</div>
+      <h1>Kylie's Wishlist</h1>
+      <p class="sub">The cards have spoken.</p>
+      <p class="intro">
+        Not as fancy as the others, but here's what I'd love this year. Gift cards are always welcome, and any one of these would make my whole season.
+      </p>
+      <div class="hero-actions">
+        <button class="btn" id="draw" type="button">Draw a Card</button>
+        <span class="countdown" id="countdown"></span>
+      </div>
+    </header>
+
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2 14 10 22 12 14 14 12 22 10 14 2 12 10 10Z"/></svg>
+    </div>
+    <p class="deck-note">Eleven cards. Any of them is a good reading.</p>
+
+    <ol class="deck" id="deck"></ol>
+  </div>
+
+  <footer>
+    <svg class="cat" viewBox="0 0 120 70" aria-hidden="true">
+      <path d="M18 70 C18 44 30 30 44 26 L38 6 L54 20 Q60 19 66 20 L82 6 L76 26 C90 30 102 44 102 70 Z" fill="#050307"/>
+      <ellipse class="eye" cx="49" cy="40" rx="5" ry="6" fill="#c2a46a"/>
+      <ellipse class="eye" cx="71" cy="40" rx="5" ry="6" fill="#c2a46a"/>
+      <path d="M49 36v8M71 36v8" stroke="#050307" stroke-width="2"/>
+    </svg>
+    <div>Merry Christmas &amp; Happy Holidays. 🖤</div>
+    <div class="lists">More lists: <a href="/wishlist/">Joshua</a> · <a href="/wishlist-2/">Mikayla</a> · <a href="/wishlist-4/">Danny</a></div>
+  </footer>
+
+  <svg class="bat" id="bat" viewBox="0 0 64 32" aria-hidden="true">
+    <g class="wing"><path d="M32 14 C24 2 12 2 2 8 C8 10 10 14 9 18 C14 15 19 16 22 20 C25 16 29 16 32 18Z"/><path d="M32 14 C40 2 52 2 62 8 C56 10 54 14 55 18 C50 15 45 16 42 20 C39 16 35 16 32 18Z"/></g>
+    <ellipse cx="32" cy="17" rx="4" ry="6"/><path d="M29 12 30 8 32 11 34 8 35 12Z"/>
+  </svg>
+
+  <script>
+  (() => {
+    // Line illustrations (24x24 viewBox). Classes tint individual strokes.
+    const ART = {
+      pony: '<path d="M7 21v-5.5c0-2 .8-3.6 2-4.6L8 6.5l2.6 2.2c.8-.3 1.6-.4 2.4-.4 3 0 5 2.2 5 5.2 0 1.4-.6 2.3-1.6 2.3-.9 0-1.4-.6-1.4-1.4V21"/><path class="glyph-lilac" d="M10.6 8.7C11 6 13 4 16 4c-1 1-1.2 2-1 3 1-.6 2.4-.6 3.4 0-1.4.4-2.2 1.2-2.4 2.2M8 6.5C6.5 8 6 10 6.4 12.6"/><circle cx="14.6" cy="12.4" r=".7" fill="currentColor"/><path class="glyph-gold" d="M19.5 3.5l.5 1.2 1.2.5-1.2.5-.5 1.2-.5-1.2-1.2-.5 1.2-.5Z"/>',
+      paw: '<ellipse cx="12" cy="16" rx="4.5" ry="3.8"/><ellipse cx="6" cy="10.5" rx="1.8" ry="2.4"/><ellipse cx="9.6" cy="6.8" rx="1.8" ry="2.5"/><ellipse cx="14.4" cy="6.8" rx="1.8" ry="2.5"/><ellipse cx="18" cy="10.5" rx="1.8" ry="2.4"/><path class="glyph-crimson" d="M12 14.6c-.9-.9-2.2-.2-1.8.9.3.8 1.8 1.8 1.8 1.8s1.5-1 1.8-1.8c.4-1.1-.9-1.8-1.8-.9Z"/>',
+      wheel: '<circle cx="12" cy="12" r="8.5"/><circle class="glyph-gold" cx="12" cy="12" r="2.4"/><path d="M12 3.5v6.1M12 14.4v6.1M3.5 12h6.1M14.4 12h6.1M6 6l4.3 4.3M13.7 13.7 18 18M18 6l-4.3 4.3M10.3 13.7 6 18"/><path class="glyph-crimson" d="M12 1.5v1.2M12 21.3v1.2M1.5 12h1.2M21.3 12h1.2"/>',
+      skull: '<path d="M12 3c-4.4 0-7.5 3-7.5 7 0 2.4 1.1 4.2 2.8 5.2V18c0 .8.7 1.5 1.5 1.5h6.4c.8 0 1.5-.7 1.5-1.5v-2.8c1.7-1 2.8-2.8 2.8-5.2 0-4-3.1-7-7.5-7Z"/><circle class="glyph-crimson" cx="9.2" cy="11" r="1.8"/><circle class="glyph-crimson" cx="14.8" cy="11" r="1.8"/><path d="M12 13.6 11 15.6h2Z"/><path d="M10 19.5v-2M12 19.5v-2M14 19.5v-2"/><path class="glyph-gold" d="M5 4.5 3 2.5M19 4.5l2-2"/>',
+      quill: '<path d="M20 3C13 4 8 9 6.5 16.5L5 21"/><path d="M20 3c-1 5-4.4 9.6-9.8 11.2"/><path class="glyph-lilac" d="M17 6.5c-2 .2-4 1-5.6 2.3M18.5 9.5c-1.8.4-3.4 1-4.8 2"/><path class="glyph-gold" d="M3 21h9"/><path class="glyph-crimson" d="M14 21c.6-1 1.6-1.4 2.5-1"/>',
+      eye: '<path d="M2.5 12S6 6.5 12 6.5 21.5 12 21.5 12 18 17.5 12 17.5 2.5 12 2.5 12Z"/><circle class="glyph-lilac" cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><path class="glyph-gold" d="M12 2.5v2M5.5 4.5l1.2 1.6M18.5 4.5l-1.2 1.6M12 21.5v-2"/>',
+      moon: '<path d="M15 3.5a8.5 8.5 0 1 0 5.5 13.6A7 7 0 0 1 15 3.5Z"/><path class="glyph-gold" d="M7 13.5c1.4 2.4 4 3.4 6.4 3M8.5 16.5v2.5M11 17.3v2.4"/><circle class="glyph-crimson" cx="8.5" cy="20" r=".9"/><circle class="glyph-crimson" cx="11" cy="20.6" r=".9"/><path class="glyph-lilac" d="M19 4l.4 1 1 .4-1 .4-.4 1-.4-1-1-.4 1-.4Z"/>',
+      lipstick: '<path d="M9 21h6v-8H9Z"/><path d="M9.6 13V9.2l4.8-3.2V13"/><path class="glyph-crimson" d="M9.6 9.2l4.8-3.2"/><path class="glyph-gold" d="M8 13h8"/><path class="glyph-lilac" d="M4.5 6.5c1.5-.4 3 0 4 1M4 9.5c1.2.1 2.2.6 3 1.4"/>',
+      wand: '<path d="M6 20.5 15.5 7"/><path class="glyph-lilac" d="M15.5 7 18.5 3"/><path d="M15 5.3l2.5 1.8M16 4l2.4 1.7M14 6.6l2.5 1.8M17 2.7l2.3 1.6"/><path class="glyph-crimson" d="M4.5 12.5c.8-1.4 2.2-2.2 3.8-2.2M3.5 16c.6-.9 1.6-1.4 2.6-1.4"/><path class="glyph-gold" d="M20 13l.4 1 1 .4-1 .4-.4 1-.4-1-1-.4 1-.4Z"/>',
+      lashes: '<path d="M3 11.5S6.5 16.5 12 16.5 21 11.5 21 11.5"/><path d="M5 13l-1.8 2.2M7.5 14.6l-1.2 2.8M10.3 15.5l-.6 3M13.7 15.5l.6 3M16.5 14.6l1.2 2.8M19 13l1.8 2.2"/><path class="glyph-lilac" d="M6 8c1.8-1.4 3.8-2 6-2s4.2.6 6 2"/><path class="glyph-gold" d="M12 2.5l.5 1.3 1.3.5-1.3.5-.5 1.3-.5-1.3-1.3-.5 1.3-.5Z"/>',
+      star: '<path d="M12 2.8 14.3 9.4 21.2 9.6 15.7 13.8 17.7 20.5 12 16.6 6.3 20.5 8.3 13.8 2.8 9.6 9.7 9.4Z"/><circle class="glyph-gold" cx="12" cy="12.4" r="2.3"/><path class="glyph-lilac" d="M4 3.5l.3.8.8.3-.8.3-.3.8-.3-.8-.8-.3.8-.3ZM20 2.5l.3.8.8.3-.8.3-.3.8-.3-.8-.8-.3.8-.3Z"/>',
+      book: '<path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5c-3.5-.5-6.5 0-8.5 1.5Z"/><path d="M12 6.5v13"/><path class="glyph-lilac" d="M6 8.6c1.3-.1 2.6.1 3.8.6M6 11.2c1.3-.1 2.6.1 3.8.6M14.2 9.2c1.2-.5 2.5-.7 3.8-.6"/><path class="glyph-crimson" d="M15.5 11.2c.2 1.4 1 2 1.6 2.4M17.1 11.2c-.2 1.4-1 2-1.6 2.4"/>'
+    };
+
+    const CARDS = [
+      { n: "0", arcana: "The Fool", art: "pony",
+        title: "My Little Pony Cards",
+        note: "Game cards or collector cards. GameStop and Target both carry them.",
+        links: [
+          { label: "Target", url: "https://www.target.com/s?searchTerm=my+little+pony+cards" },
+          { label: "GameStop", url: "https://www.gamestop.com/search/?q=my+little+pony+cards" }
+        ] },
+      { n: "I", arcana: "The Familiar", art: "paw",
+        title: "PetSmart Gift Card",
+        note: "Or skip the card: any cat or dog toys, accessories, food, or litter would be appreciated.",
+        links: [{ label: "PetSmart", url: "https://www.petsmart.com/gift-cards" }] },
+      { n: "X", arcana: "Wheel of Fortune", art: "wheel",
+        title: "Target or Walmart Gift Card",
+        note: "Either one. Fortune favors the practical.",
+        links: [
+          { label: "Target", url: "https://www.target.com/c/target-giftcards-gift-cards/-/N-5xsxt" },
+          { label: "Walmart", url: "https://www.walmart.com/cp/gift-cards/96894" }
+        ] },
+      { n: "XIII", arcana: "Death", art: "skull",
+        title: "Hot Topic Gift Card",
+        note: "The end of my old wardrobe. The start of a better one.",
+        links: [{ label: "Hot Topic", url: "https://www.hottopic.com/giftcertpurchase" }] },
+      { n: "III", arcana: "The Poet", art: "quill",
+        title: "Poetry Books",
+        note: "Anything moody, beautiful, or a little bit haunting.",
+        links: [{ label: "Browse", url: "https://www.amazon.com/s?k=poetry+books" }] },
+      { n: "IX", arcana: "The Hermit", art: "eye",
+        title: "The DSM-5 (or Any Psychology Book)",
+        note: "I really want the DSM-5-TR, but any psychology book is a great pick too.",
+        links: [{ label: "DSM-5-TR", url: "https://www.amazon.com/s?k=DSM-5-TR" },
+          { label: "Psychology", url: "https://www.amazon.com/s?k=psychology+books" }] },
+      { n: "XVIII", arcana: "The Moon", art: "moon",
+        title: "Goth & Alternative Accessories",
+        note: "Chokers, rings, chains, spikes, bats, moons. You know the vibe.",
+        links: [{ label: "Hot Topic", url: "https://www.hottopic.com/search?q=goth+accessories" }] },
+      { n: "XV", arcana: "The Shadow", art: "lipstick",
+        title: "Black Lipstick & Eyeliner",
+        note: "The darker the better.",
+        links: [] },
+      { n: "XVII", arcana: "The Star", art: "wand",
+        title: "Waterproof False Lash Effect Mascara",
+        note: "Waterproof, with that big false-lash look.",
+        links: [{ label: "Ulta", url: "https://www.ulta.com/search?search=false+lash+effect+waterproof+mascara" }] },
+      { n: "VI", arcana: "The Lovers", art: "lashes",
+        title: "False Lashes (Big Ones)",
+        note: "Dramatic and full. Go big.",
+        links: [] },
+      { n: "XIX", arcana: "The Sun", art: "star",
+        title: "Sephora or Ulta Gift Card",
+        note: "To restock the makeup bag.",
+        links: [
+          { label: "Sephora", url: "https://www.sephora.com/beauty/giftcards" },
+          { label: "Ulta", url: "https://www.ulta.com/guestservices/gift-cards" }
+        ] }
+    ];
+
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const deck = document.getElementById("deck");
+    deck.innerHTML = CARDS.map(c => `
+      <li class="card">
+        <div class="numeral">${esc(c.n)}</div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 24 24">${ART[c.art]}</svg></div>
+        <div class="arcana">${esc(c.arcana)}</div>
+        <div class="card-body">
+          <h3>${esc(c.title)}</h3>
+          <p>${esc(c.note)}</p>
+          ${c.links.length ? `<div class="links">${c.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>` : ""}
+        </div>
+      </li>`).join("");
+
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const cards = [...deck.children];
+
+    // flip cards in as they enter the viewport
+    if (!reduce && "IntersectionObserver" in window) {
+      cards.forEach(c => c.classList.add("hidden"));
+      const io = new IntersectionObserver(entries => {
+        entries.filter(e => e.isIntersecting).forEach(e => {
+          const i = cards.indexOf(e.target);
+          setTimeout(() => { e.target.classList.add("shown"); e.target.classList.remove("hidden"); }, (i % 4) * 120);
+          io.unobserve(e.target);
+        });
+      }, { threshold: .2 });
+      cards.forEach(c => io.observe(c));
+    }
+
+    // draw a random card
+    let last = -1;
+    document.getElementById("draw").addEventListener("click", () => {
+      let i; do { i = Math.floor(Math.random() * cards.length); } while (i === last && cards.length > 1);
+      last = i;
+      cards.forEach(c => c.classList.remove("chosen"));
+      const c = cards[i];
+      c.classList.remove("hidden"); c.classList.add("shown");
+      c.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+      void c.offsetWidth;
+      c.classList.add("chosen");
+    });
+
+    // countdown
+    const cd = document.getElementById("countdown");
+    const tick = () => {
+      const now = new Date(), y = now.getFullYear();
+      let x = new Date(y, 11, 25);
+      if (now > new Date(y, 11, 26)) x = new Date(y + 1, 11, 25);
+      const d = Math.ceil((x - new Date(y, now.getMonth(), now.getDate())) / 864e5);
+      cd.innerHTML = d <= 0 ? "<b>Merry Christmas</b>" : `<b>${d}</b> ${d === 1 ? "night" : "nights"} until Christmas`;
+    };
+    tick(); setInterval(tick, 6e4);
+
+    // starfield
+    const cv = document.getElementById("stars"), ctx = cv.getContext("2d");
+    let stars = [];
+    const size = () => {
+      cv.width = innerWidth * devicePixelRatio; cv.height = innerHeight * devicePixelRatio;
+      stars = Array.from({ length: Math.round(innerWidth * innerHeight / 9000) }, () => ({
+        x: Math.random() * cv.width, y: Math.random() * cv.height,
+        r: (Math.random() * 1.1 + .3) * devicePixelRatio, p: Math.random() * Math.PI * 2, s: .4 + Math.random()
+      }));
+    };
+    const draw = t => {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      for (const s of stars) {
+        const a = reduce ? .6 : .35 + .35 * Math.sin(t / 1000 * s.s + s.p);
+        ctx.fillStyle = `rgba(235, 227, 209, ${a})`;
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
+      }
+      if (!reduce) requestAnimationFrame(draw);
+    };
+    size(); addEventListener("resize", size); requestAnimationFrame(draw);
+
+    // an occasional bat
+    if (!reduce) {
+      const bat = document.getElementById("bat");
+      const fly = () => {
+        bat.style.top = (10 + Math.random() * 50) + "vh"; bat.style.left = "0";
+        bat.classList.remove("fly"); void bat.getBoundingClientRect(); bat.classList.add("fly");
+      };
+      setTimeout(fly, 2500);
+      setInterval(fly, 22000);
+    }
+  })();
+  </script>
+</body>
+</html>

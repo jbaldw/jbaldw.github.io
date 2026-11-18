@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Christmas Wishlist 2026 | Danny</title>
+  <meta name="description" content="Danny's 2026 Christmas Wishlist.">
+  <meta name="theme-color" content="#0a0618">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'><path d='M3 5h10v1h1v5h-1v1h-3v-1H6v1H3v-1H2V6h1z' fill='%23ff3ea5'/><path d='M4 7h1v1h1v1H5v1H4V9H3V8h1zM11 7h1v1h-1zM12 8h1v1h-1z' fill='%230a0618'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0618;
+      --bg-2: #160b33;
+      --panel: #120a2a;
+      --text: #efeaff;
+      --muted: #a79cc9;
+      --pink: #ff3ea5;
+      --cyan: #22e3ff;
+      --yellow: #ffd23f;
+      --green: #39ff88;
+      --legendary: #ffb22e;
+      --epic: #b86bff;
+      --rare: #3fa8ff;
+      --common: #39ff88;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: #0a0618; }
+    body {
+      margin: 0;
+      font-family: "Chakra Petch", system-ui, sans-serif;
+      font-size: 17px; line-height: 1.5;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 55%, #2a0d45 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    .pixel { font-family: "Press Start 2P", monospace; }
+
+    /* ---------- synthwave backdrop ---------- */
+    .sun {
+      position: fixed; left: 50%; bottom: 30vh; width: min(70vw, 520px); aspect-ratio: 1; transform: translate(-50%, 50%);
+      border-radius: 50%; z-index: 0; pointer-events: none; opacity: .55;
+      background: linear-gradient(180deg, #ffd23f 0%, #ff7a3d 45%, #ff3ea5 80%);
+      -webkit-mask: repeating-linear-gradient(180deg, #000 0 14px, transparent 14px 20px);
+              mask: repeating-linear-gradient(180deg, #000 0 14px, transparent 14px 20px);
+      filter: blur(.3px);
+    }
+    .grid {
+      position: fixed; left: -50%; right: -50%; bottom: 0; height: 32vh; z-index: 0; pointer-events: none;
+      background:
+        linear-gradient(180deg, var(--bg-2), transparent 30%),
+        repeating-linear-gradient(90deg, rgba(255, 62, 165, .55) 0 2px, transparent 2px 80px),
+        repeating-linear-gradient(180deg, rgba(255, 62, 165, .55) 0 2px, transparent 2px 60px);
+      transform: perspective(300px) rotateX(60deg);
+      transform-origin: bottom;
+      animation: drive 2.4s linear infinite;
+    }
+    @keyframes drive { to { background-position: 0 0, 0 0, 0 60px; } }
+    .scanlines {
+      position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .18;
+      background: repeating-linear-gradient(180deg, rgba(0, 0, 0, .7) 0 1px, transparent 1px 3px);
+    }
+
+    .page { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 0 16px 40px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; font-size: 15px; }
+    .topbar a { color: var(--muted); text-decoration: none; }
+    .topbar a:hover { color: var(--cyan); }
+    .coins { font-size: 10px; color: var(--yellow); letter-spacing: .1em; }
+
+    /* ---------- hero ---------- */
+    .hero { text-align: center; padding: 36px 0 10px; }
+    .p2 { font-size: 12px; color: var(--cyan); letter-spacing: .2em; text-shadow: 0 0 10px rgba(34, 227, 255, .7); }
+    h1 {
+      margin: 22px 0 12px; font-size: clamp(30px, 7.5vw, 64px); line-height: 1.15; font-weight: 400;
+      color: #fff;
+      text-shadow: 3px 3px 0 var(--pink), 6px 6px 0 #6a1b9a, 0 0 30px rgba(255, 62, 165, .6);
+    }
+    .tag { color: var(--muted); max-width: 560px; margin: 0 auto; }
+    .press {
+      display: inline-block; margin-top: 28px; font-size: 13px; color: var(--yellow); text-decoration: none;
+      padding: 14px 20px; border: 3px solid var(--yellow); background: rgba(255, 210, 63, .06);
+      box-shadow: 4px 4px 0 #000;
+      animation: blinker 1.1s steps(2, start) infinite;
+    }
+    .press:hover, .press:focus-visible { animation: none; background: var(--yellow); color: var(--bg); }
+    @keyframes blinker { to { visibility: hidden; } }
+
+    /* ---------- HUD ---------- */
+    .hud {
+      margin: 44px auto 0; max-width: 720px;
+      display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center;
+      padding: 18px 20px; background: rgba(18, 10, 42, .85);
+      border: 3px solid var(--cyan); box-shadow: 6px 6px 0 #000, 0 0 30px -6px rgba(34, 227, 255, .6);
+    }
+    .avatar { width: 64px; height: 64px; image-rendering: pixelated; }
+    .hud-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 10px; letter-spacing: .08em; }
+    .hud-row .name { color: #fff; }
+    .hud-row .lvl { color: var(--yellow); }
+    .bar { margin-top: 10px; height: 18px; border: 2px solid #fff; background: #000; padding: 2px; }
+    .fill {
+      height: 100%; width: 0; transition: width 2s cubic-bezier(.2, .8, .2, 1);
+      background: repeating-linear-gradient(90deg, var(--green) 0 10px, #23c96b 10px 12px);
+      box-shadow: 0 0 12px rgba(57, 255, 136, .7);
+    }
+    .bar-label { margin-top: 8px; font-size: 9px; color: var(--muted); letter-spacing: .06em; line-height: 1.6; }
+    .bar-label b { color: var(--green); font-weight: 400; }
+
+    /* ---------- loot ---------- */
+    .section-title { text-align: center; margin: 70px 0 8px; font-size: clamp(16px, 3.4vw, 22px); color: #fff; }
+    .section-title span { color: var(--pink); }
+    .section-sub { text-align: center; color: var(--muted); margin: 0 0 34px; }
+    .loot { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 26px; }
+
+    .slot {
+      --r: var(--rare);
+      position: relative; display: flex; flex-direction: column;
+      background: rgba(18, 10, 42, .92);
+      border: 3px solid var(--r);
+      box-shadow: 6px 6px 0 #000, 0 0 26px -8px var(--r);
+      padding: 16px;
+      transition: transform .2s ease, box-shadow .2s ease;
+      outline: none;
+    }
+    .slot:hover, .slot:focus-within { transform: translate(-2px, -4px); box-shadow: 8px 10px 0 #000, 0 0 40px -4px var(--r); }
+    .slot.legendary { --r: var(--legendary); }
+    .slot.epic { --r: var(--epic); }
+    .slot.rare { --r: var(--rare); }
+    .slot.common { --r: var(--common); }
+    .rarity {
+      position: absolute; top: -13px; left: 14px; padding: 4px 8px; font-size: 8px; letter-spacing: .1em;
+      background: var(--r); color: #0a0618; box-shadow: 3px 3px 0 #000;
+    }
+    .slot.legendary .rarity { animation: shimmer 2.4s ease-in-out infinite; }
+    @keyframes shimmer { 50% { filter: brightness(1.35); } }
+
+    /* stylised gift card (no logos, just colour + type) */
+    .gc {
+      position: relative; aspect-ratio: 1.586; border-radius: 12px; overflow: hidden;
+      padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between;
+      background: var(--gc, linear-gradient(135deg, #333, #111)); color: var(--gc-ink, #fff);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18), 0 14px 30px -14px #000;
+      transform-style: preserve-3d; transition: transform .15s ease-out;
+      margin-top: 6px;
+    }
+    .gc::after {
+      content: ""; position: absolute; inset: -40%; pointer-events: none;
+      background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, .28) 48%, rgba(120, 220, 255, .18) 52%, transparent 62%);
+      transform: translateX(var(--sheen, -60%)); transition: transform .2s ease-out;
+      mix-blend-mode: screen;
+    }
+    .gc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+    .gc-brand { font-family: "Chakra Petch", sans-serif; font-weight: 700; font-size: 26px; line-height: 1; letter-spacing: .02em; }
+    .gc-kind { font-size: 8px; letter-spacing: .12em; opacity: .85; text-align: right; line-height: 1.6; }
+    .gc-chip { width: 38px; height: 28px; border-radius: 6px; background: linear-gradient(135deg, #f6e27a, #b8932f); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25); }
+    .gc-bottom { display: flex; justify-content: space-between; align-items: flex-end; font-size: 10px; letter-spacing: .14em; opacity: .9; }
+    .gc-glyph { width: 46px; height: 46px; opacity: .9; }
+
+    .stats { margin: 16px 0 0; padding: 0; list-style: none; font-size: 15px; }
+    .stats li { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; border-bottom: 1px dashed rgba(167, 156, 201, .25); }
+    .stats li span:first-child { color: var(--muted); }
+    .stats li span:last-child { text-align: right; }
+    .flavor { margin: 12px 0 0; color: #d9d0ff; font-style: italic; }
+    .equip {
+      margin-top: auto; align-self: flex-start;
+      display: inline-flex; gap: 10px; align-items: center;
+      font-family: "Press Start 2P", monospace; font-size: 10px; text-decoration: none; color: #0a0618;
+      background: var(--r); padding: 12px 14px; box-shadow: 4px 4px 0 #000;
+      transition: transform .1s, box-shadow .1s;
+    }
+    .equip:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #000; }
+    .equip:active { transform: translate(4px, 4px); box-shadow: 0 0 0 #000; }
+    .slot-foot { margin-top: 18px; display: flex; }
+
+    /* ---------- footer ---------- */
+    footer { position: relative; z-index: 1; text-align: center; padding: 70px 16px 120px; color: var(--muted); }
+    footer .gg { font-size: 12px; color: #fff; margin-bottom: 14px; }
+    footer a { color: var(--cyan); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .hint { margin-top: 18px; font-size: 14px; color: rgba(167, 156, 201, .55); letter-spacing: .18em; }
+
+    /* ---------- cheat code ---------- */
+    .toast {
+      position: fixed; left: 50%; top: 24px; z-index: 80; transform: translate(-50%, -160%);
+      padding: 16px 18px; font-size: 11px; color: var(--bg); background: var(--green); box-shadow: 6px 6px 0 #000;
+      transition: transform .35s cubic-bezier(.2, 1.4, .4, 1); text-align: center; line-height: 1.7; max-width: calc(100vw - 32px);
+    }
+    .toast.on { transform: translate(-50%, 0); }
+    .px { position: fixed; z-index: 70; width: 8px; height: 8px; pointer-events: none; animation: fall var(--d) linear forwards; }
+    @keyframes fall { to { transform: translate(var(--x), 110vh) rotate(var(--rot)); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .grid, .press, .slot.legendary .rarity { animation: none; }
+      .fill { transition: none; }
+      .slot, .gc, .gc::after { transition: none; }
+      html { scroll-behavior: auto; }
+    }
+    @media (max-width: 560px) {
+      .hud { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+      .hud > div:last-child { width: 100%; }
+      .loot { grid-template-columns: 1fr; }
+      .gc-brand { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sun" aria-hidden="true"></div>
+  <div class="grid" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="page">
+    <nav class="topbar">
+      <a href="/">← jbaldw.github.io</a>
+      <span class="coins pixel" aria-hidden="true">CREDITS 99</span>
+    </nav>
+
+    <header class="hero">
+      <div class="p2 pixel">PLAYER 2 HAS JOINED</div>
+      <h1 class="pixel">DANNY'S<br>WISHLIST</h1>
+      <p class="tag">Christmas 2026 loot table. Every drop on here is a gift card, so pick a slot and equip.</p>
+      <a class="press pixel" href="#loot">PRESS START</a>
+
+      <section class="hud" aria-label="Christmas countdown">
+        <svg class="avatar" viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">
+          <rect width="16" height="16" fill="#22e3ff" opacity=".12"/>
+          <path d="M5 2h6v1h1v4h-1v1H5V7H4V3h1z" fill="#f2c79b"/>
+          <path d="M4 1h8v2H4z M3 2h1v3H3z M12 2h1v3h-1z" fill="#3a2a1a"/>
+          <path d="M6 4h1v1H6zM9 4h1v1H9z" fill="#0a0618"/>
+          <path d="M7 6h2v1H7z" fill="#b5523b"/>
+          <path d="M3 9h10v6H3z" fill="#ff3ea5"/>
+          <path d="M5 11h6v2H5z" fill="#0a0618"/>
+          <path d="M6 11h1v1H6zM9 12h1v1H9z" fill="#22e3ff"/>
+        </svg>
+        <div>
+          <div class="hud-row pixel"><span class="name">DANNY</span><span class="lvl">LVL 99</span></div>
+          <div class="bar" role="progressbar" aria-label="Year progress to Christmas" aria-valuemin="0" aria-valuemax="100" id="xpbar"><div class="fill" id="fill"></div></div>
+          <div class="bar-label pixel" id="xplabel">LOADING...</div>
+        </div>
+      </section>
+    </header>
+
+    <h2 class="section-title pixel" id="loot">SELECT YOUR <span>LOOT</span></h2>
+    <p class="section-sub">Five drops. Any rarity is a win.</p>
+    <ul class="loot" id="lootlist"></ul>
+  </div>
+
+  <footer>
+    <div class="gg pixel">GG. MERRY CHRISTMAS!</div>
+    <div>More lists: <a href="/wishlist/">Joshua</a> · <a href="/wishlist-2/">Mikayla</a> · <a href="/wishlist-3/">Kylie</a></div>
+    <div class="hint" aria-hidden="true">↑ ↑ ↓ ↓ ← → ← → B A</div>
+  </footer>
+
+  <div class="toast pixel" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  (() => {
+    const GLYPH = {
+      steam: '<circle cx="30" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="30" cy="16" r="3.5" fill="currentColor"/><circle cx="14" cy="32" r="6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M19 29 26 22" stroke="currentColor" stroke-width="3"/>',
+      xbox: '<rect x="4" y="14" width="40" height="22" rx="11" fill="none" stroke="currentColor" stroke-width="3"/><path d="M13 21v8M9 25h8" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="22" r="2.2" fill="currentColor"/><circle cx="37" cy="27" r="2.2" fill="currentColor"/>',
+      roblox: '<rect x="12" y="6" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3"/><rect x="8" y="30" width="32" height="12" fill="none" stroke="currentColor" stroke-width="3"/><rect x="18" y="14" width="4" height="4" fill="currentColor"/><rect x="26" y="14" width="4" height="4" fill="currentColor"/><path d="M19 23h10" stroke="currentColor" stroke-width="3"/>',
+      board: '<rect x="4" y="18" width="40" height="10" rx="5" fill="none" stroke="currentColor" stroke-width="3" transform="rotate(-18 24 23)"/><circle cx="13" cy="35" r="3.5" fill="currentColor"/><circle cx="35" cy="28" r="3.5" fill="currentColor"/>',
+      food: '<path d="M8 22c0-8 7-13 16-13s16 5 16 13Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 27h36" stroke="currentColor" stroke-width="3"/><path d="M8 32h32l-3 6H11Z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="18" cy="16" r="1.4" fill="currentColor"/><circle cx="26" cy="14" r="1.4" fill="currentColor"/><circle cx="31" cy="18" r="1.4" fill="currentColor"/>'
+    };
+
+    const LOOT = [
+      { rarity: "legendary", brand: "Steam", kind: "DIGITAL\nGIFT CARD", glyph: "steam",
+        gc: "linear-gradient(135deg, #1b2838 0%, #2a475e 55%, #66c0f4 130%)", ink: "#e6f4ff",
+        stats: [["Type", "Gift card"], ["Platform", "PC"], ["Effect", "+1 game library"]],
+        flavor: "Unlocks a mystery game from the wishlist backlog.",
+        link: "https://store.steampowered.com/digitalgiftcards/" },
+      { rarity: "epic", brand: "Xbox", kind: "GIFT\nCARD", glyph: "xbox",
+        gc: "linear-gradient(135deg, #0e3d0e 0%, #107c10 55%, #5dc21e 120%)", ink: "#f1fff1",
+        stats: [["Type", "Gift card"], ["Platform", "Console, PC"], ["Effect", "Games, Game Pass, add-ons"]],
+        flavor: "Equip for Game Pass. Do not equip for sleep.",
+        link: "https://www.target.com/s?searchTerm=xbox+gift+card" },
+      { rarity: "rare", brand: "Roblox", kind: "GIFT\nCARD", glyph: "roblox",
+        gc: "linear-gradient(135deg, #232527 0%, #393b3d 60%, #e2231a 140%)", ink: "#ffffff",
+        stats: [["Type", "Gift card"], ["Currency", "Robux"], ["Effect", "+Drip for your avatar"]],
+        flavor: "Converts directly into Robux. Spend wisely. Or don't.",
+        link: "https://www.roblox.com/giftcards" },
+      { rarity: "rare", brand: "Zumiez", kind: "GIFT\nCARD", glyph: "board",
+        gc: "linear-gradient(135deg, #0b0b0b 0%, #222 55%, #ffd200 160%)", ink: "#ffd200",
+        stats: [["Type", "Gift card"], ["Slot", "Armor (clothes, shoes)"], ["Effect", "+10 style"]],
+        flavor: "Streetwear and skate gear. Cosmetic only, still worth it.",
+        link: "https://www.zumiez.com/gift-cards.html" },
+      { rarity: "common", brand: "Food", kind: "FAST FOOD /\nRESTAURANT", glyph: "food",
+        gc: "linear-gradient(135deg, #b3121b 0%, #e2381c 55%, #ffc72c 120%)", ink: "#fff7dc",
+        stats: [["Type", "Consumable"], ["Where", "Any fast food or restaurant"], ["Effect", "Restores 100 HP"]],
+        flavor: "Common drop, always useful. Stackable.",
+        link: "https://www.target.com/s?searchTerm=restaurant+gift+card" }
+    ];
+
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    document.getElementById("lootlist").innerHTML = LOOT.map(l => `
+      <li class="slot ${l.rarity}">
+        <span class="rarity pixel">${l.rarity.toUpperCase()}</span>
+        <div class="gc" style="--gc:${l.gc};--gc-ink:${l.ink}" aria-hidden="true">
+          <div class="gc-top">
+            <span class="gc-brand">${esc(l.brand)}</span>
+            <span class="gc-kind pixel">${esc(l.kind).replace("\n", "<br>")}</span>
+          </div>
+          <div class="gc-bottom">
+            <span class="gc-chip"></span>
+            <svg class="gc-glyph" viewBox="0 0 48 48">${GLYPH[l.glyph]}</svg>
+          </div>
+        </div>
+        <ul class="stats">
+          <li><span>Item</span><span><b>${esc(l.brand === "Food" ? "Fast Food or Restaurant Gift Card" : l.brand + " Gift Card")}</b></span></li>
+          ${l.stats.map(([k, v]) => `<li><span>${esc(k)}</span><span>${esc(v)}</span></li>`).join("")}
+        </ul>
+        <p class="flavor">"${esc(l.flavor)}"</p>
+        <div class="slot-foot"><a class="equip" href="${l.link}" target="_blank" rel="noopener">▶ EQUIP</a></div>
+      </li>`).join("");
+
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // XP bar = how far through the year we are, with Christmas as the boss fight
+    const now = new Date(), y = now.getFullYear();
+    let xmas = new Date(y, 11, 25);
+    if (now > new Date(y, 11, 26)) xmas = new Date(y + 1, 11, 25);
+    const start = new Date(xmas.getFullYear(), 0, 1);
+    const pct = Math.min(100, Math.max(0, Math.round((now - start) / (xmas - start) * 100)));
+    const days = Math.ceil((xmas - new Date(y, now.getMonth(), now.getDate())) / 864e5);
+    document.getElementById("xpbar").setAttribute("aria-valuenow", pct);
+    document.getElementById("xplabel").innerHTML = days <= 0
+      ? "<b>BOSS DEFEATED.</b> MERRY CHRISTMAS!"
+      : `XP TO CHRISTMAS: <b>${pct}%</b> · ${days} ${days === 1 ? "DAY" : "DAYS"} LEFT`;
+    requestAnimationFrame(() => setTimeout(() => { document.getElementById("fill").style.width = pct + "%"; }, reduce ? 0 : 300));
+
+    // holo tilt on gift cards (mouse only)
+    if (!reduce && matchMedia("(pointer: fine)").matches) {
+      document.querySelectorAll(".slot").forEach(slot => {
+        const gc = slot.querySelector(".gc");
+        slot.addEventListener("mousemove", e => {
+          const r = gc.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
+          gc.style.transform = `perspective(700px) rotateY(${px * 14}deg) rotateX(${-py * 14}deg)`;
+          gc.style.setProperty("--sheen", `${(px + .5) * 120 - 60}%`);
+        });
+        slot.addEventListener("mouseleave", () => { gc.style.transform = ""; gc.style.setProperty("--sheen", "-60%"); });
+      });
+    }
+
+    // cheat code
+    const CODE = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+    let pos = 0;
+    const toast = document.getElementById("toast");
+    addEventListener("keydown", e => {
+      const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+      pos = k === CODE[pos] ? pos + 1 : (k === CODE[0] ? 1 : 0);
+      if (pos < CODE.length) return;
+      pos = 0;
+      toast.innerHTML = "CHEAT ACTIVATED<br>+30 GIFT CARDS";
+      toast.classList.add("on");
+      setTimeout(() => toast.classList.remove("on"), 3200);
+      if (reduce) return;
+      const colors = ["#ff3ea5", "#22e3ff", "#ffd23f", "#39ff88", "#b86bff"];
+      for (let i = 0; i < 90; i++) {
+        const p = document.createElement("div");
+        p.className = "px";
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.top = -10 - Math.random() * 30 + "vh";
+        p.style.background = colors[i % colors.length];
+        p.style.setProperty("--x", (Math.random() * 30 - 15) + "vw");
+        p.style.setProperty("--rot", (Math.random() * 720 - 360) + "deg");
+        p.style.setProperty("--d", (1.8 + Math.random() * 1.8) + "s");
+        document.body.appendChild(p);
+        setTimeout(() => p.remove(), 4000);
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
