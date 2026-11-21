@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Christmas Wishlist 2026 | Robin</title>
+  <meta name="description" content="Robin's 2026 Christmas Wishlist.">
+  <meta name="theme-color" content="#7f1d2d">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='34' fill='none' stroke='%232f5d50' stroke-width='14'/><circle cx='50' cy='16' r='7' fill='%23a3253a'/><circle cx='80' cy='62' r='7' fill='%23a3253a'/><circle cx='22' cy='68' r='7' fill='%23a3253a'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fbf6ec;
+      --paper: #fffdf8;
+      --linen: #f1e7d6;
+      --cranberry: #a3253a;
+      --cranberry-deep: #7f1d2d;
+      --evergreen: #2f5d50;
+      --evergreen-deep: #1f4239;
+      --gold: #c8a24a;
+      --gold-soft: #e6cf8f;
+      --ink: #3a2a22;
+      --muted: #7a6656;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--cream); }
+    body {
+      margin: 0;
+      font-family: "Lora", Georgia, serif; font-size: 18px; line-height: 1.6;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 500px at 50% -10%, rgba(200, 162, 74, .18), transparent 70%),
+        repeating-linear-gradient(45deg, rgba(163, 37, 58, .035) 0 2px, transparent 2px 14px),
+        var(--cream);
+      min-height: 100vh; overflow-x: hidden;
+    }
+    a { color: inherit; }
+    #snow { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 40; }
+
+    .page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; font-size: 15px; }
+    .topbar a { color: var(--muted); text-decoration: none; }
+    .topbar a:hover { color: var(--cranberry); }
+
+    /* ---------- greeting card ---------- */
+    .stage { display: grid; place-items: center; padding: 24px 0 8px; }
+    .card {
+      position: relative; width: min(420px, 92vw); aspect-ratio: 5 / 7;
+      perspective: 2000px; transition: transform .9s cubic-bezier(.3, .8, .2, 1);
+    }
+    .card.open { transform: translateX(50%); }
+    .inside, .cover {
+      position: absolute; inset: 0; border-radius: 6px;
+      box-shadow: 0 30px 60px -30px rgba(58, 42, 34, .6), 0 2px 0 rgba(0, 0, 0, .04);
+    }
+    .inside {
+      background: var(--paper);
+      display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+      padding: 36px 32px;
+      border: 1px solid #eadfcb;
+    }
+    .inside::before {
+      content: ""; position: absolute; inset: 14px; border: 1px solid var(--gold-soft); border-radius: 3px; pointer-events: none;
+    }
+    .inside .script { font-family: "Pinyon Script", cursive; font-size: 40px; line-height: 1.1; color: var(--cranberry); }
+    .inside p { margin: 14px 0 0; color: var(--muted); font-size: 17px; }
+    .inside .sig { margin-top: 18px; font-family: "Pinyon Script", cursive; font-size: 30px; color: var(--evergreen); }
+    .cover {
+      transform-origin: left center; transform-style: preserve-3d;
+      transition: transform 1.1s cubic-bezier(.3, .8, .2, 1);
+      cursor: pointer;
+    }
+    .card.open .cover { transform: rotateY(-178deg); }
+    .face, .back {
+      position: absolute; inset: 0; border-radius: 6px; backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden;
+    }
+    .face {
+      background:
+        radial-gradient(120% 70% at 50% 0%, rgba(255, 255, 255, .12), transparent 60%),
+        linear-gradient(170deg, var(--cranberry) 0%, var(--cranberry-deep) 100%);
+      color: var(--cream);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+      padding: 30px;
+    }
+    .face::before {
+      content: ""; position: absolute; inset: 14px; border: 1.5px solid var(--gold); border-radius: 3px; pointer-events: none;
+      box-shadow: inset 0 0 0 4px rgba(200, 162, 74, .25);
+    }
+    .face .wreath { width: 56%; max-width: 210px; }
+    .face .to { margin-top: 14px; font-family: "Playfair Display", serif; font-size: 13px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold-soft); }
+    .face h1 {
+      margin: 6px 0 0; font-family: "Pinyon Script", cursive; font-weight: 400;
+      font-size: clamp(54px, 13vw, 74px); line-height: 1; color: #fff;
+      text-shadow: 0 2px 0 rgba(0, 0, 0, .18);
+    }
+    .face .yr { margin-top: 8px; font-family: "Playfair Display", serif; font-style: italic; color: var(--gold-soft); font-size: 18px; }
+    .face .hint { position: absolute; bottom: 26px; left: 0; right: 0; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: rgba(251, 246, 236, .75); }
+    .back {
+      transform: rotateY(180deg);
+      background:
+        repeating-linear-gradient(90deg, rgba(47, 93, 80, .06) 0 10px, transparent 10px 20px),
+        var(--linen);
+      border: 1px solid #e3d5bd;
+    }
+    .back::after {
+      content: "Made with love, just for you"; position: absolute; bottom: 24px; left: 0; right: 0; text-align: center;
+      font-family: "Pinyon Script", cursive; font-size: 22px; color: var(--muted);
+    }
+    .open-btn {
+      margin-top: 26px; font-family: "Playfair Display", serif; font-size: 15px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--cream); background: var(--evergreen); border: none; border-radius: 999px; padding: 13px 26px; cursor: pointer;
+      box-shadow: 0 10px 24px -12px rgba(31, 66, 57, .8), inset 0 0 0 1px rgba(255, 255, 255, .12);
+      transition: background .2s, transform .2s;
+    }
+    .open-btn:hover { background: var(--evergreen-deep); transform: translateY(-2px); }
+
+    /* ---------- intro ---------- */
+    .intro { text-align: center; max-width: 560px; margin: 46px auto 0; }
+    .intro .flourish { color: var(--gold); width: 180px; height: 24px; }
+    .intro p { color: var(--muted); margin: 10px 0 0; }
+    .countdown { margin-top: 14px; font-family: "Playfair Display", serif; font-style: italic; color: var(--cranberry); font-size: 19px; }
+
+    /* ---------- wishes ---------- */
+    h2 {
+      text-align: center; margin: 56px 0 30px;
+      font-family: "Pinyon Script", cursive; font-weight: 400; font-size: clamp(46px, 9vw, 62px); color: var(--evergreen); line-height: 1;
+    }
+    .wishes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .wish {
+      position: relative; background: var(--paper); padding: 14px 14px 22px; text-align: center;
+      border: 1px solid #ecdfc9; border-radius: 4px;
+      box-shadow: 0 22px 40px -26px rgba(58, 42, 34, .55);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .wish:nth-child(1) { transform: rotate(-1.4deg); }
+    .wish:nth-child(3) { transform: rotate(1.2deg); }
+    .wish:hover { transform: translateY(-6px) rotate(0); box-shadow: 0 30px 50px -24px rgba(58, 42, 34, .6); }
+    .bow { position: absolute; top: -18px; left: 50%; width: 52px; transform: translateX(-50%); z-index: 2; }
+    .frame {
+      position: relative; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 2px;
+      background: #fff; box-shadow: inset 0 0 0 1px #efe5d3;
+    }
+    .frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+    .frame img.contain { object-fit: contain; padding: 8%; }
+    .wish:hover .frame img { transform: scale(1.04); }
+    .frame.broken img { display: none; }
+    .frame .fb { display: none; position: absolute; inset: 0; place-items: center; font-size: 64px; background: var(--linen); }
+    .frame.broken .fb { display: grid; }
+    .wish h3 { margin: 18px 6px 0; font-family: "Playfair Display", serif; font-weight: 700; font-size: 21px; line-height: 1.25; color: var(--cranberry-deep); }
+    .wish .where { display: block; margin-top: 4px; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--evergreen); }
+    .wish p { margin: 10px 6px 0; font-size: 16px; color: var(--muted); }
+    .links { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .links a {
+      font-family: "Playfair Display", serif; font-size: 14px; text-decoration: none; color: var(--cranberry);
+      border: 1px solid rgba(163, 37, 58, .35); border-radius: 999px; padding: 7px 14px; transition: background .2s, color .2s;
+    }
+    .links a:hover { background: var(--cranberry); color: var(--cream); border-color: var(--cranberry); }
+
+    /* ---------- footer ---------- */
+    .holly { display: block; width: 90px; margin: 70px auto 0; }
+    footer { position: relative; z-index: 1; text-align: center; padding: 14px 16px 50px; color: var(--muted); font-size: 16px; }
+    footer .script { font-family: "Pinyon Script", cursive; font-size: 34px; color: var(--cranberry); }
+    footer a { color: var(--evergreen); }
+    .lists { margin-top: 6px; }
+    .credit { margin-top: 18px; font-size: 12px; opacity: .8; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card, .cover { transition: none; }
+      html { scroll-behavior: auto; }
+    }
+    @media (max-width: 860px) {
+      .card.open { transform: none; }
+      .card.open .cover { transform: rotateY(-178deg) translateZ(1px); opacity: 0; transition: transform 1.1s, opacity .2s .9s; pointer-events: none; }
+    }
+    @media (max-width: 760px) {
+      .wishes { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; gap: 40px; }
+      .wish:nth-child(n) { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <div class="page">
+    <nav class="topbar">
+      <a href="/">← jbaldw.github.io</a>
+    </nav>
+
+    <section class="stage" aria-label="Greeting card">
+      <div class="card" id="card">
+        <div class="inside">
+          <div class="script">Merry Christmas</div>
+          <p>Just a few little things on my list this year. Nothing fancy, and nothing expected. Spending the season together is the best gift of all.</p>
+          <div class="sig">With love, Robin</div>
+        </div>
+        <div class="cover" id="cover" role="button" tabindex="0" aria-label="Open the card">
+          <div class="face">
+            <svg class="wreath" viewBox="0 0 200 200" aria-hidden="true">
+              <g fill="none" stroke-linecap="round">
+                <circle cx="100" cy="100" r="62" stroke="#1f4239" stroke-width="22"/>
+                <circle cx="100" cy="100" r="62" stroke="#2f5d50" stroke-width="14" stroke-dasharray="6 9"/>
+              </g>
+              <g fill="#3f7a69">
+                <path d="M100 30c8 4 12 12 10 20-8-2-14-10-10-20Z"/><path d="M155 62c-2 9-9 14-17 14 1-8 9-15 17-14Z"/>
+                <path d="M162 120c-7 6-16 6-22 1 6-6 15-7 22-1Z"/><path d="M120 166c-9-1-15-8-15-16 9 1 15 7 15 16Z"/>
+                <path d="M62 160c-2-9 3-17 11-19 2 8-3 16-11 19Z"/><path d="M36 110c4-8 12-12 20-10-2 8-10 13-20 10Z"/>
+                <path d="M50 52c9 1 15 8 15 16-9-1-15-7-15-16Z"/>
+              </g>
+              <g fill="#c8303f">
+                <circle cx="70" cy="44" r="5"/><circle cx="78" cy="40" r="4"/><circle cx="148" cy="88" r="5"/><circle cx="141" cy="96" r="4"/>
+                <circle cx="88" cy="160" r="5"/><circle cx="46" cy="122" r="4.5"/><circle cx="133" cy="146" r="4.5"/><circle cx="118" cy="38" r="4"/>
+              </g>
+              <g fill="#c8a24a">
+                <path d="M100 152c-10-14-30-12-34-4 6 6 22 8 34 4Z"/><path d="M100 152c10-14 30-12 34-4-6 6-22 8-34 4Z"/>
+                <path d="M96 152l-10 28 8-4 4 8 4-32Z"/><path d="M104 152l10 28-8-4-4 8-4-32Z"/>
+                <circle cx="100" cy="152" r="6"/>
+              </g>
+            </svg>
+            <div class="to">A Christmas wishlist for</div>
+            <h1>Robin</h1>
+            <div class="yr">Christmas 2026</div>
+            <div class="hint">Tap to open</div>
+          </div>
+          <div class="back" aria-hidden="true"></div>
+        </div>
+      </div>
+      <button class="open-btn" id="open" type="button">Open the Card</button>
+    </section>
+
+    <div class="intro">
+      <svg class="flourish" viewBox="0 0 180 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <path d="M4 12h62M114 12h62"/><path d="M90 4c-6 0-10 4-10 8s4 8 10 8 10-4 10-8-4-8-10-8Z"/><path d="M66 12c6-6 10-6 14 0M114 12c-6-6-10-6-14 0"/>
+      </svg>
+      <div class="countdown" id="countdown"></div>
+    </div>
+
+    <h2 id="wishes">My Wishes</h2>
+    <ol class="wishes" id="list"></ol>
+
+    <svg class="holly" viewBox="0 0 90 40" aria-hidden="true">
+      <path d="M44 22C34 8 18 6 6 12c8 2 10 8 8 14 8-4 16-2 20 4 2-4 6-8 10-8Z" fill="#2f5d50"/>
+      <path d="M46 22c10-14 26-16 38-10-8 2-10 8-8 14-8-4-16-2-20 4-2-4-6-8-10-8Z" fill="#3f7a69"/>
+      <circle cx="40" cy="26" r="5" fill="#a3253a"/><circle cx="50" cy="26" r="5" fill="#c8303f"/><circle cx="45" cy="18" r="5" fill="#a3253a"/>
+    </svg>
+  </div>
+
+  <footer>
+    <div class="script">Happy Holidays</div>
+    <div class="lists">More lists: <a href="/wishlist/">Joshua</a> · <a href="/wishlist-2/">Mikayla</a> · <a href="/wishlist-3/">Kylie</a> · <a href="/wishlist-4/">Danny</a></div>
+    <div class="credit">Dog yoga photo: “Downward Dog Pose (Doga)” by ErharYaksaa, <a href="https://commons.wikimedia.org/wiki/File:Downward_Dog_Pose_(Doga).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</div>
+  </footer>
+
+  <script>
+  (() => {
+    const WISHES = [
+      {
+        title: "Gift Certificate to Yoga with Dogs", where: "Greensboro, NC",
+        note: "A class (or a few) of yoga with dogs. Stretching, plus puppies. What could be better?",
+        img: "doga.jpg", fit: "contain",
+        fallback: "🐶",
+        links: [{ label: "Paws of Zen Puppy Yoga", url: "https://pawsofzen.com/products/puppy-yoga" }]
+      },
+      {
+        title: "Our State Magazine Subscription", where: "Celebrating North Carolina",
+        note: "A year of North Carolina travel, food, history, and people, delivered every month.",
+        img: "https://cdn.shopify.com/s/files/1/0674/5433/7265/files/2000003292493_p0.jpg?v=1787145126&width=800", fit: "contain",
+        fallback: "📖",
+        links: [
+          { label: "Our State", url: "https://www.ourstate.com/join-the-our-state-family" },
+          { label: "Barnes & Noble", url: "https://www.barnesandnoble.com/w/magazine-our-state-celebrating-north-carolina-one-year-subscription/15316736" }
+        ]
+      },
+      {
+        title: "Chick-fil-A Style Ice Maker", where: "Nugget ice at home",
+        note: "A countertop nugget ice maker, like the GE Profile Opal, for that soft, chewable Chick-fil-A ice.",
+        img: "https://target.scene7.com/is/image/Target/GUEST_503e8df7-f468-4e9a-8260-560abf1d4801?wid=800", fit: "contain",
+        fallback: "🧊",
+        links: [{ label: "GE Profile Opal at Target", url: "https://www.target.com/p/-/A-95025007" }]
+      }
+    ];
+
+    const BOW = '<svg class="bow" viewBox="0 0 52 30" aria-hidden="true"><path d="M26 15C18 2 4 2 3 9c-1 7 12 9 23 6Z" fill="#a3253a"/><path d="M26 15C34 2 48 2 49 9c1 7-12 9-23 6Z" fill="#a3253a"/><path d="M24 15l-8 14 6-2 3 3 1-15Z M28 15l8 14-6-2-3 3-1-15Z" fill="#7f1d2d"/><circle cx="26" cy="15" r="4.5" fill="#c8a24a"/></svg>';
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+    const list = document.getElementById("list");
+    list.innerHTML = WISHES.map(w => `
+      <li class="wish">
+        ${BOW}
+        <div class="frame">
+          <img src="${w.img}" alt="${esc(w.title)}" class="${w.fit === "contain" ? "contain" : ""}" loading="lazy" referrerpolicy="no-referrer">
+          <div class="fb" aria-hidden="true">${w.fallback}</div>
+        </div>
+        <h3>${esc(w.title)}</h3>
+        <span class="where">${esc(w.where)}</span>
+        <p>${esc(w.note)}</p>
+        <div class="links">${w.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>
+      </li>`).join("");
+    list.querySelectorAll(".frame img").forEach(img => {
+      const mark = () => img.parentElement.classList.add("broken");
+      img.addEventListener("error", mark);
+      if (img.complete && img.naturalWidth === 0) mark();
+    });
+
+    // open / close the card
+    const card = document.getElementById("card"), btn = document.getElementById("open"), cover = document.getElementById("cover");
+    const toggle = () => {
+      const open = card.classList.toggle("open");
+      btn.textContent = open ? "Close the Card" : "Open the Card";
+      cover.setAttribute("aria-label", open ? "Close the card" : "Open the card");
+    };
+    btn.addEventListener("click", toggle);
+    cover.addEventListener("click", toggle);
+    cover.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+    document.querySelector(".inside").addEventListener("click", () => { if (card.classList.contains("open") && innerWidth <= 860) toggle(); });
+
+    // countdown
+    const cd = document.getElementById("countdown");
+    const tick = () => {
+      const now = new Date(), y = now.getFullYear();
+      let x = new Date(y, 11, 25);
+      if (now > new Date(y, 11, 26)) x = new Date(y + 1, 11, 25);
+      const d = Math.ceil((x - new Date(y, now.getMonth(), now.getDate())) / 864e5);
+      cd.textContent = d <= 0 ? "Merry Christmas!" : `${d} ${d === 1 ? "day" : "days"} until Christmas`;
+    };
+    tick(); setInterval(tick, 6e4);
+
+    // gentle snowfall
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) {
+      const cv = document.getElementById("snow"), ctx = cv.getContext("2d");
+      let flakes = [];
+      const size = () => {
+        cv.width = innerWidth * devicePixelRatio; cv.height = innerHeight * devicePixelRatio;
+        flakes = Array.from({ length: Math.min(90, Math.round(innerWidth / 14)) }, () => ({
+          x: Math.random() * cv.width, y: Math.random() * cv.height,
+          r: (1 + Math.random() * 2.4) * devicePixelRatio, v: (.3 + Math.random() * .7) * devicePixelRatio, p: Math.random() * 6
+        }));
+      };
+      const step = () => {
+        ctx.clearRect(0, 0, cv.width, cv.height);
+        for (const f of flakes) {
+          f.y += f.v; f.p += .01; f.x += Math.sin(f.p) * .4 * devicePixelRatio;
+          if (f.y > cv.height + 5) { f.y = -5; f.x = Math.random() * cv.width; }
+          ctx.fillStyle = "rgba(200, 162, 74, .35)";
+          ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = "rgba(255, 255, 255, .9)";
+          ctx.beginPath(); ctx.arc(f.x, f.y, f.r * .7, 0, Math.PI * 2); ctx.fill();
+        }
+        requestAnimationFrame(step);
+      };
+      size(); addEventListener("resize", size); requestAnimationFrame(step);
+    }
+  })();
+  </script>
+</body>
+</html>
