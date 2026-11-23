@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Christmas Wishlist 2026 | Liam</title>
+  <meta name="description" content="Liam's 2026 Christmas Wishlist.">
+  <meta name="theme-color" content="#cc0000">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23cc0000'/><path d='M50 22c-6 10-6 20 0 30 6-10 6-20 0-30ZM30 38c-2 9 2 16 10 20 1-9-3-16-10-20ZM70 38c2 9-2 16-10 20-1-9 3-16 10-20ZM50 56c-14 0-20 12-14 20 4 5 10 2 14 2s10 3 14-2c6-8 0-20-14-20Z' fill='%23fff'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #cc0000;
+      --red-deep: #990000;
+      --black: #141414;
+      --coal: #1f1f1f;
+      --white: #ffffff;
+      --snow: #f4f4f4;
+      --silver: #b9b9b9;
+      --gray: #6b6b6b;
+      --brick: #8a2b1d;
+      --pine: #1e4d3a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--black); }
+    body {
+      margin: 0;
+      font-family: "Barlow", system-ui, sans-serif; font-size: 17px; line-height: 1.55;
+      color: var(--white); background: var(--black);
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    #snow { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 30; }
+
+    /* buffalo plaid in Pack colours */
+    .plaid {
+      background-color: var(--red);
+      background-image:
+        linear-gradient(90deg, rgba(0, 0, 0, .55) 50%, transparent 50%),
+        linear-gradient(rgba(0, 0, 0, .55) 50%, transparent 50%);
+      background-size: 56px 56px;
+    }
+
+    /* ---------- hero ---------- */
+    .hero { position: relative; overflow: hidden; }
+    .sky {
+      position: relative; padding: 18px 16px 0; min-height: 600px;
+      background: radial-gradient(1000px 520px at 72% 8%, #3a0a0a 0%, #160606 45%, var(--black) 75%);
+    }
+    .topbar { position: relative; z-index: 3; max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 15px; }
+    .topbar a { color: var(--silver); text-decoration: none; }
+    .topbar a:hover { color: var(--white); }
+    .tag { font-family: "Oswald", sans-serif; font-size: 13px; letter-spacing: .2em; color: var(--silver); }
+
+    .moon {
+      position: absolute; right: max(6vw, calc(50% - 470px)); top: 70px; width: 170px; height: 170px; border-radius: 50%;
+      background: radial-gradient(circle at 38% 36%, #fffdf2, #f1ead2 60%, #d9d0b3);
+      box-shadow: 0 0 60px 18px rgba(255, 245, 220, .18), 0 0 160px 60px rgba(204, 0, 0, .12);
+    }
+    .moon::before, .moon::after { content: ""; position: absolute; border-radius: 50%; background: rgba(180, 168, 136, .35); }
+    .moon::before { width: 34px; height: 34px; left: 40px; top: 52px; }
+    .moon::after { width: 20px; height: 20px; left: 98px; top: 100px; }
+
+    .hero-text { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; padding: 70px 0 0; }
+    .eyebrow { font-family: "Oswald", sans-serif; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--red); font-size: 14px; }
+    h1 {
+      margin: 10px 0 0; font-family: "Graduate", "Oswald", serif; font-weight: 400;
+      font-size: clamp(44px, 9vw, 96px); line-height: .98; text-transform: uppercase; letter-spacing: .01em;
+      color: var(--white);
+      text-shadow: 4px 4px 0 var(--red), 8px 8px 0 #000;
+    }
+    h1 .howl { display: block; color: var(--white); font-size: .62em; margin-top: 8px; }
+    .lede { max-width: 470px; margin: 22px 0 0; color: #d7d7d7; }
+
+    .scoreboard {
+      display: inline-grid; grid-template-columns: repeat(3, auto); gap: 4px; margin-top: 26px;
+      background: #000; border: 3px solid #2a2a2a; border-radius: 8px; padding: 8px; box-shadow: 0 0 0 2px var(--red), 0 18px 40px -16px #000;
+    }
+    .sb-cell { text-align: center; padding: 6px 14px; background: #0b0b0b; border-radius: 4px; }
+    .sb-num { font-family: "Oswald", monospace; font-weight: 700; font-size: 34px; line-height: 1; color: #ffcf33; text-shadow: 0 0 10px rgba(255, 207, 51, .6); font-variant-numeric: tabular-nums; }
+    .sb-num.red { color: #ff3b3b; text-shadow: 0 0 10px rgba(255, 59, 59, .6); }
+    .sb-lbl { margin-top: 4px; font-family: "Oswald", sans-serif; font-size: 11px; letter-spacing: .18em; color: var(--silver); }
+
+    .hill { position: absolute; left: 0; right: 0; bottom: -1px; z-index: 1; width: 100%; height: 220px; display: block; }
+    .wolf { cursor: pointer; pointer-events: auto; transform-origin: 900px 154px; transform-box: view-box; }
+    .wolf:hover, .wolf.howling { animation: howl 1.2s ease-in-out; }
+    @keyframes howl { 30%, 70% { transform: rotate(-5deg) translateY(-2px); } }
+    .awoo {
+      position: absolute; z-index: 3; right: max(8vw, calc(50% - 430px)); bottom: 210px;
+      font-family: "Graduate", serif; font-size: 26px; color: var(--white); opacity: 0; transform: translateY(10px);
+      transition: opacity .3s, transform .3s; pointer-events: none; text-shadow: 2px 2px 0 var(--red);
+    }
+    .awoo.on { opacity: 1; transform: none; }
+
+    .stripe { height: 28px; }
+
+    /* ---------- lineup ---------- */
+    main { background: var(--snow); color: var(--black); padding: 10px 16px 70px; position: relative; }
+    main::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+      background-image:
+        linear-gradient(90deg, rgba(138, 43, 29, .05) 1px, transparent 1px),
+        linear-gradient(rgba(138, 43, 29, .05) 1px, transparent 1px);
+      background-size: 48px 16px;
+    }
+    .wrap { position: relative; max-width: 1080px; margin: 0 auto; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 56px 0 24px; border-bottom: 4px solid var(--black); padding-bottom: 10px; }
+    h2 { margin: 0; font-family: "Graduate", serif; font-weight: 400; font-size: clamp(28px, 5vw, 42px); text-transform: uppercase; color: var(--black); }
+    h2 span { color: var(--red); }
+    .section-head p { margin: 0; font-family: "Oswald", sans-serif; letter-spacing: .14em; text-transform: uppercase; font-size: 14px; color: var(--gray); }
+
+    .roster { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+    .player {
+      position: relative; display: flex; flex-direction: column; background: var(--white);
+      border-radius: 10px; overflow: hidden; border: 2px solid var(--black);
+      box-shadow: 6px 6px 0 var(--black);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .player:hover { transform: translate(-3px, -3px); box-shadow: 10px 10px 0 var(--red); }
+    .jersey {
+      position: absolute; top: 10px; left: 10px; z-index: 2; width: 52px; height: 56px;
+      display: grid; place-items: center; padding-top: 8px;
+      font-family: "Graduate", serif; font-size: 24px; color: var(--white);
+      background: var(--red); border: 2px solid var(--black);
+      clip-path: polygon(22% 0, 36% 8%, 64% 8%, 78% 0, 100% 14%, 92% 34%, 82% 30%, 82% 100%, 18% 100%, 18% 30%, 8% 34%, 0 14%);
+    }
+    .shot { position: relative; aspect-ratio: 4 / 3; background: #fff; border-bottom: 2px solid var(--black); overflow: hidden; }
+    .shot img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+    .shot img.contain { object-fit: contain; padding: 10% 8% 6%; }
+    .player:hover .shot img { transform: scale(1.05); }
+    .shot.broken img { display: none; }
+    .shot .fb { display: none; position: absolute; inset: 0; place-items: center; font-size: 60px; }
+    .shot.broken .fb { display: grid; }
+    .info { flex: 1; display: flex; flex-direction: column; padding: 16px 18px 18px; }
+    .pos { font-family: "Oswald", sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--red); }
+    .player h3 { margin: 4px 0 0; font-family: "Oswald", sans-serif; font-weight: 700; font-size: 22px; line-height: 1.15; text-transform: uppercase; color: var(--black); }
+    .player p { margin: 8px 0 0; color: #444; font-size: 15px; }
+    .cta {
+      margin-top: auto; padding-top: 16px;
+    }
+    .cta a {
+      display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      font-family: "Oswald", sans-serif; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 14px;
+      color: var(--white); background: var(--black); padding: 10px 16px; border-radius: 4px;
+      transition: background .2s;
+    }
+    .cta a:hover { background: var(--red); }
+
+    /* dream season: big feature */
+    .dream {
+      display: grid; grid-template-columns: 1.3fr 1fr; overflow: hidden; border-radius: 12px; border: 3px solid var(--black);
+      box-shadow: 8px 8px 0 var(--red); background: var(--black); color: var(--white);
+    }
+    .dream .shot { aspect-ratio: auto; min-height: 320px; border-bottom: 0; border-right: 3px solid var(--black); background: #222; }
+    .dream .info { padding: 30px 30px 32px; justify-content: center; }
+    .dream .pos { color: #ff5252; }
+    .dream h3 { margin: 4px 0 0; font-family: "Oswald", sans-serif; font-weight: 700; text-transform: uppercase; line-height: 1.1; color: var(--white); font-size: clamp(28px, 4vw, 40px); }
+    .dream p { color: #d0d0d0; font-size: 16px; }
+    .spec { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .spec span { font-family: "Oswald", sans-serif; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; padding: 6px 10px; border: 1px solid #444; border-radius: 3px; color: var(--silver); }
+    .dream .cta a { background: var(--red); }
+    .dream .cta a:hover { background: var(--white); color: var(--black); }
+
+    /* paw trail */
+    .paws { display: flex; gap: 26px; justify-content: center; margin: 40px 0 0; }
+    .paws svg { width: 26px; height: 26px; fill: var(--red); opacity: 0; transform: translateY(6px); transition: opacity .4s, transform .4s; }
+    .paws svg:nth-child(even) { margin-top: 18px; }
+    .paws.in svg { opacity: .85; transform: none; }
+
+    /* ---------- footer ---------- */
+    footer { text-align: center; padding: 44px 16px 50px; color: var(--silver); font-size: 15px; background: var(--black); }
+    footer .big { font-family: "Graduate", serif; font-size: 26px; color: var(--white); text-transform: uppercase; }
+    footer .big span { color: var(--red); }
+    footer a { color: var(--white); }
+    footer a:hover { color: #ff5252; }
+    .lists { margin-top: 8px; }
+    .credit { margin-top: 16px; font-size: 12px; opacity: .7; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .wolf:hover, .wolf.howling { animation: none; }
+      .paws svg { opacity: .85; transform: none; transition: none; }
+      .player, .shot img { transition: none; }
+      html { scroll-behavior: auto; }
+    }
+    @media (max-width: 760px) {
+      .sky { min-height: 640px; }
+      .tag { display: none; }
+      .moon { width: 110px; height: 110px; top: 60px; right: 16px; }
+      .moon::before { left: 26px; top: 34px; width: 22px; height: 22px; }
+      .moon::after { left: 64px; top: 66px; width: 14px; height: 14px; }
+      .hero-text { padding-top: 120px; }
+      .dream { grid-template-columns: 1fr; }
+      .dream .shot { min-height: 220px; border-right: 0; border-bottom: 3px solid var(--black); }
+      .dream .info { padding: 22px 20px 24px; }
+      .awoo { right: 18px; bottom: 150px; font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <header class="hero">
+    <div class="sky">
+      <nav class="topbar">
+        <a href="/">← jbaldw.github.io</a>
+        <span class="tag">RALEIGH, N.C. · EST. THE PACK</span>
+      </nav>
+      <div class="moon" aria-hidden="true"></div>
+
+      <div class="hero-text">
+        <div class="eyebrow">Christmas 2026 · Home Game</div>
+        <h1>Liam's<span class="howl">Howl-iday Wishlist</span></h1>
+        <p class="lede">The Pack is back for the holidays. Here's the starting lineup for this year's wishlist, plus one dream-season pick.</p>
+        <div class="scoreboard" aria-live="polite">
+          <div class="sb-cell"><div class="sb-num red" id="sb-days">--</div><div class="sb-lbl">DAYS</div></div>
+          <div class="sb-cell"><div class="sb-num" id="sb-hrs">--</div><div class="sb-lbl">HRS</div></div>
+          <div class="sb-cell"><div class="sb-num" id="sb-min">--</div><div class="sb-lbl">KICKOFF</div></div>
+        </div>
+      </div>
+
+      <div class="awoo" id="awoo" aria-hidden="true">AWOOOO!</div>
+      <svg class="hill" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <path d="M0 150 Q 260 110 520 140 T 1040 120 T 1440 130 V220 H0Z" fill="#2a2a2a"/>
+        <g fill="#0e0e0e">
+          <path d="M120 140 l26 -66 l26 66z M128 104 l18 -44 l18 44z"/>
+          <path d="M210 146 l18 -46 l18 46z"/>
+          <path d="M1260 128 l30 -74 l30 74z M1268 90 l22 -52 l22 52z"/>
+          <path d="M1340 134 l18 -44 l18 44z"/>
+        </g>
+        <g class="wolf" id="wolf" stroke="rgba(255, 236, 214, .45)" stroke-width="1.5" stroke-linejoin="round" style="filter: drop-shadow(0 0 6px rgba(204, 0, 0, .55))">
+          <path d="M870 154 Q 838 156 826 138 Q 846 146 872 144 Z" fill="#0b0b0b"/>
+          <path d="M864 154 Q 860 126 882 112 Q 892 94 902 80 L 906 64 L 898 48 L 911 56 L 914 44 L 921 58 L 946 30 L 951 37 L 929 64 Q 925 80 931 98 Q 937 122 932 142 L 934 154 L 922 154 L 919 134 L 911 154 Z" fill="#0b0b0b"/>
+        </g>
+        <path d="M0 175 Q 300 145 640 170 T 1440 160 V220 H0Z" fill="#e9e9e9"/>
+        <path d="M0 196 Q 360 178 760 194 T 1440 190 V220 H0Z" fill="#f4f4f4"/>
+      </svg>
+    </div>
+    <div class="stripe plaid" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Starting <span>Lineup</span></h2>
+        <p>Four picks. All starters.</p>
+      </div>
+      <ol class="roster" id="roster"></ol>
+
+      <div class="section-head">
+        <h2>Dream <span>Season</span></h2>
+        <p>If Santa's feeling generous</p>
+      </div>
+      <div id="dream"></div>
+
+      <div class="paws" id="paws" aria-hidden="true"></div>
+    </div>
+  </main>
+
+  <div class="stripe plaid" aria-hidden="true"></div>
+  <footer>
+    <div class="big">Merry Christmas from <span>the Pack</span></div>
+    <div class="lists">More lists: <a href="/wishlist/">Joshua</a> · <a href="/wishlist-2/">Mikayla</a> · <a href="/wishlist-3/">Kylie</a> · <a href="/wishlist-4/">Danny</a> · <a href="/wishlist-5/">Robin</a></div>
+    <div class="credit">Photos of the Civic Si (by HJUdall) and the NVMe SSD (by User5515) are public domain via Wikimedia Commons. Not affiliated with NC State University.</div>
+  </footer>
+
+  <script>
+  (() => {
+    const LINEUP = [
+      {
+        pos: "Navigation", title: "Phone Car Mount",
+        note: "iOttie Auto Sense Lite wireless charging mount. Dash, windshield, and air vent combo, auto-clamping, in black.",
+        img: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6678/6678784_sd.jpg", fit: "contain", fb: "📱",
+        link: "https://www.bestbuy.com/product/iottie-auto-sense-lite-wireless-charging-car-mount-dash-windshield-air-vent-combo-auto-clamping-black/J3R8F29F64/sku/6678784",
+        label: "Best Buy"
+      },
+      {
+        pos: "Special Teams", title: "SSD Storage Expansion for PS5",
+        note: "An M.2 NVMe SSD with a heatsink for the PS5's expansion slot. More room for more games.",
+        img: "nvme-ssd.jpg", fit: "contain", fb: "💾",
+        link: "https://www.amazon.com/dp/B0FGP7W3NJ",
+        label: "Amazon"
+      },
+      {
+        pos: "Quarterback", title: "Ghost of Yōtei Complete Edition",
+        note: "For the PS5. The Complete Edition, please.",
+        img: "https://media.gamestop.com/i/gamestop/20037993?h=700&w=700&sm=clamp&fmt=auto", fit: "contain", fb: "🗡️",
+        link: "https://www.amazon.com/dp/B0HGZ6277X",
+        label: "Amazon"
+      },
+      {
+        pos: "Wide Receiver", title: "LEGO Ocarina of Time: The Final Battle",
+        note: "Set 77093. Link, Zelda, and Ganon, ready for the final showdown.",
+        img: "https://images.brickset.com/sets/large/77093-1.jpg", fit: "contain", fb: "🧱",
+        link: "https://www.lego.com/en-us/product/ocarina-of-time-the-final-battle-77093",
+        label: "LEGO"
+      }
+    ];
+    const DREAM = {
+      pos: "First-Round Pick", title: "2025 Honda Civic Si",
+      note: "Six-speed manual. Turbocharged and actually fun to drive. A guy can dream.",
+      specs: ["2025", "Manual transmission", "Turbo 1.5L"],
+      img: "civic-si.jpg", fb: "🚗",
+      link: "https://www.carvana.com/vehicle/4874187",
+      label: "View on Carvana"
+    };
+
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const shot = i => `<div class="shot"><img src="${i.img}" alt="${esc(i.title)}" class="${i.fit === "contain" ? "contain" : ""}" loading="lazy" referrerpolicy="no-referrer"><div class="fb" aria-hidden="true">${i.fb}</div></div>`;
+
+    document.getElementById("roster").innerHTML = LINEUP.map((i, n) => `
+      <li class="player">
+        <div class="jersey" aria-hidden="true">${n + 1}</div>
+        ${shot(i)}
+        <div class="info">
+          <span class="pos">${esc(i.pos)}</span>
+          <h3>${esc(i.title)}</h3>
+          <p>${esc(i.note)}</p>
+          <div class="cta"><a href="${i.link}" target="_blank" rel="noopener">${esc(i.label)} →</a></div>
+        </div>
+      </li>`).join("");
+
+    document.getElementById("dream").innerHTML = `
+      <article class="dream">
+        ${shot(DREAM)}
+        <div class="info">
+          <span class="pos">${esc(DREAM.pos)}</span>
+          <h3>${esc(DREAM.title)}</h3>
+          <p>${esc(DREAM.note)}</p>
+          <div class="spec">${DREAM.specs.map(s => `<span>${esc(s)}</span>`).join("")}</div>
+          <div class="cta"><a href="${DREAM.link}" target="_blank" rel="noopener">${esc(DREAM.label)} →</a></div>
+        </div>
+      </article>`;
+
+    document.querySelectorAll(".shot img").forEach(img => {
+      const mark = () => img.parentElement.classList.add("broken");
+      img.addEventListener("error", mark);
+      if (img.complete && img.naturalWidth === 0) mark();
+    });
+
+    // scoreboard countdown
+    const pad = n => String(n).padStart(2, "0");
+    const tick = () => {
+      const now = new Date(), y = now.getFullYear();
+      let x = new Date(y, 11, 25);
+      if (now > new Date(y, 11, 26)) x = new Date(y + 1, 11, 25);
+      const ms = Math.max(0, x - now);
+      document.getElementById("sb-days").textContent = Math.floor(ms / 864e5);
+      document.getElementById("sb-hrs").textContent = pad(Math.floor(ms / 36e5) % 24);
+      document.getElementById("sb-min").textContent = pad(Math.floor(ms / 6e4) % 60);
+    };
+    tick(); setInterval(tick, 1e4);
+
+    // the wolf howls when you tap it (and once on load)
+    const wolf = document.getElementById("wolf"), awoo = document.getElementById("awoo");
+    const howl = () => {
+      wolf.classList.remove("howling"); void wolf.getBoundingClientRect(); wolf.classList.add("howling");
+      awoo.classList.add("on"); setTimeout(() => awoo.classList.remove("on"), 1400);
+    };
+    wolf.addEventListener("click", howl);
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) setTimeout(howl, 1200);
+
+    // paw-print trail
+    const PAW = '<svg viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="5" ry="4.2"/><ellipse cx="5.5" cy="10" rx="2" ry="2.6"/><ellipse cx="9.5" cy="6" rx="2" ry="2.7"/><ellipse cx="14.5" cy="6" rx="2" ry="2.7"/><ellipse cx="18.5" cy="10" rx="2" ry="2.6"/></svg>';
+    const paws = document.getElementById("paws");
+    paws.innerHTML = PAW.repeat(7);
+    [...paws.children].forEach((p, i) => p.style.transitionDelay = (i * .15) + "s");
+    if ("IntersectionObserver" in window && !reduce) {
+      new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { paws.classList.add("in"); o.disconnect(); } }), { threshold: .5 }).observe(paws);
+    } else paws.classList.add("in");
+
+    // snow
+    if (!reduce) {
+      const cv = document.getElementById("snow"), ctx = cv.getContext("2d");
+      let flakes = [];
+      const size = () => {
+        cv.width = innerWidth * devicePixelRatio; cv.height = innerHeight * devicePixelRatio;
+        flakes = Array.from({ length: Math.min(110, Math.round(innerWidth / 12)) }, () => ({
+          x: Math.random() * cv.width, y: Math.random() * cv.height,
+          r: (.8 + Math.random() * 2.2) * devicePixelRatio, v: (.4 + Math.random() * .9) * devicePixelRatio, p: Math.random() * 6
+        }));
+      };
+      const step = () => {
+        ctx.clearRect(0, 0, cv.width, cv.height);
+        ctx.fillStyle = "rgba(255, 255, 255, .85)";
+        for (const f of flakes) {
+          f.y += f.v; f.p += .012; f.x += Math.sin(f.p) * .5 * devicePixelRatio;
+          if (f.y > cv.height + 4) { f.y = -4; f.x = Math.random() * cv.width; }
+          ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2); ctx.fill();
+        }
+        requestAnimationFrame(step);
+      };
+      size(); addEventListener("resize", size); requestAnimationFrame(step);
+    }
+  })();
+  </script>
+</body>
+</html>
