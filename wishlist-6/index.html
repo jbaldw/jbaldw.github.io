@@ -84,11 +84,13 @@
     .sb-lbl { margin-top: 4px; font-family: "Oswald", sans-serif; font-size: 11px; letter-spacing: .18em; color: var(--silver); }
 
     .hill { position: absolute; left: 0; right: 0; bottom: -1px; z-index: 1; width: 100%; height: 220px; display: block; }
-    .wolf { cursor: pointer; pointer-events: auto; transform-origin: 900px 154px; transform-box: view-box; }
+    .wolfwrap { position: absolute; z-index: 2; left: calc(50% + 110px); bottom: 62px; width: 104px; }
+    .wolf { display: block; width: 100%; height: auto; cursor: pointer; overflow: visible; transform-origin: 40% 100%; filter: drop-shadow(0 0 8px rgba(204, 0, 0, .55)); }
+    .wolf:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
     .wolf:hover, .wolf.howling { animation: howl 1.2s ease-in-out; }
-    @keyframes howl { 30%, 70% { transform: rotate(-5deg) translateY(-2px); } }
+    @keyframes howl { 30%, 70% { transform: rotate(-6deg) translateY(-3px); } }
     .awoo {
-      position: absolute; z-index: 3; right: max(8vw, calc(50% - 430px)); bottom: 210px;
+      position: absolute; z-index: 3; left: 70%; bottom: 100%; white-space: nowrap;
       font-family: "Graduate", serif; font-size: 26px; color: var(--white); opacity: 0; transform: translateY(10px);
       transition: opacity .3s, transform .3s; pointer-events: none; text-shadow: 2px 2px 0 var(--red);
     }
@@ -185,7 +187,7 @@
       html { scroll-behavior: auto; }
     }
     @media (max-width: 760px) {
-      .sky { min-height: 640px; }
+      .sky { min-height: 720px; }
       .tag { display: none; }
       .moon { width: 110px; height: 110px; top: 60px; right: 16px; }
       .moon::before { left: 26px; top: 34px; width: 22px; height: 22px; }
@@ -194,7 +196,8 @@
       .dream { grid-template-columns: 1fr; }
       .dream .shot { min-height: 220px; border-right: 0; border-bottom: 3px solid var(--black); }
       .dream .info { padding: 22px 20px 24px; }
-      .awoo { right: 18px; bottom: 150px; font-size: 20px; }
+      .wolfwrap { left: calc(50% - 40px); bottom: 58px; width: 80px; }
+      .awoo { left: 88%; bottom: 72%; font-size: 17px; }
     }
   </style>
 </head>
@@ -220,7 +223,6 @@
         </div>
       </div>
 
-      <div class="awoo" id="awoo" aria-hidden="true">AWOOOO!</div>
       <svg class="hill" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
         <path d="M0 150 Q 260 110 520 140 T 1040 120 T 1440 130 V220 H0Z" fill="#2a2a2a"/>
         <g fill="#0e0e0e">
@@ -229,13 +231,18 @@
           <path d="M1260 128 l30 -74 l30 74z M1268 90 l22 -52 l22 52z"/>
           <path d="M1340 134 l18 -44 l18 44z"/>
         </g>
-        <g class="wolf" id="wolf" stroke="rgba(255, 236, 214, .45)" stroke-width="1.5" stroke-linejoin="round" style="filter: drop-shadow(0 0 6px rgba(204, 0, 0, .55))">
-          <path d="M870 154 Q 838 156 826 138 Q 846 146 872 144 Z" fill="#0b0b0b"/>
-          <path d="M864 154 Q 860 126 882 112 Q 892 94 902 80 L 906 64 L 898 48 L 911 56 L 914 44 L 921 58 L 946 30 L 951 37 L 929 64 Q 925 80 931 98 Q 937 122 932 142 L 934 154 L 922 154 L 919 134 L 911 154 Z" fill="#0b0b0b"/>
-        </g>
         <path d="M0 175 Q 300 145 640 170 T 1440 160 V220 H0Z" fill="#e9e9e9"/>
         <path d="M0 196 Q 360 178 760 194 T 1440 190 V220 H0Z" fill="#f4f4f4"/>
       </svg>
+      <div class="wolfwrap">
+        <div class="awoo" id="awoo" aria-hidden="true">AWOOOO!</div>
+        <svg class="wolf" id="wolf" viewBox="0 0 120 140" role="button" tabindex="0" aria-label="Make the wolf howl">
+          <g fill="#0b0b0b" stroke="rgba(255, 236, 214, .5)" stroke-width="1" stroke-linejoin="round">
+            <path d="M26 140 C14 132 12 110 24 94 C32 82 40 72 45 60 C47 50 46 40 50 32 C52 28 54 26 56 25 L54 9 L63 21 L68 7 L72 22 C78 19 84 15 90 11 L101 5 L104 9 L94 17 L102 19 L99 24 C93 27 87 31 82 36 L84 44 L79 47 L84 53 L79 57 L83 64 L79 68 C82 84 82 100 81 116 L82 136 L88 140 L70 140 L69 116 C64 122 58 126 52 128 L55 136 L60 140 Z"/>
+            <path d="M28 136 C14 140 4 134 1 122 C8 130 18 131 28 128 Z"/>
+          </g>
+        </svg>
+      </div>
     </div>
     <div class="stripe plaid" aria-hidden="true"></div>
   </header>
@@ -359,6 +366,7 @@
       awoo.classList.add("on"); setTimeout(() => awoo.classList.remove("on"), 1400);
     };
     wolf.addEventListener("click", howl);
+    wolf.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); howl(); } });
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!reduce) setTimeout(howl, 1200);
 
