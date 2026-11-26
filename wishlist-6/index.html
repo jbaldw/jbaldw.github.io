@@ -150,6 +150,43 @@
     }
     .cta a:hover { background: var(--red); }
 
+    /* season tickets: gift cards */
+    .tickets { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+    .tickets li { display: flex; flex-direction: column; gap: 14px; }
+    .gcard {
+      position: relative; aspect-ratio: 1.586; border-radius: 14px; overflow: hidden; padding: 18px 20px;
+      background: var(--g); color: #fff; border: 2px solid var(--black); box-shadow: 6px 6px 0 var(--black);
+      display: flex; flex-direction: column; transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .gcard::after {
+      content: ""; position: absolute; inset: -40%; pointer-events: none;
+      background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, .22) 50%, transparent 60%);
+      transform: translateX(-40%); transition: transform .6s ease;
+    }
+    .tickets li:hover .gcard { transform: translate(-3px, -3px) rotate(-1deg); box-shadow: 9px 9px 0 var(--red); }
+    .tickets li:hover .gcard::after { transform: translateX(40%); }
+    .gc-name { font-family: "Oswald", sans-serif; font-weight: 700; font-size: 30px; line-height: 1; letter-spacing: .02em; }
+    .gc-kind { margin-top: 4px; font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; opacity: .85; }
+    .gc-icon { position: absolute; right: 16px; bottom: 14px; width: 52px; height: 52px; fill: none; stroke: rgba(255, 255, 255, .9); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .gc-icon .dot { fill: rgba(255, 255, 255, .9); }
+    .gcard::before { content: ""; position: absolute; left: 20px; bottom: 18px; width: 40px; height: 30px; border-radius: 6px; background: linear-gradient(135deg, #f6e27a, #b8932f); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25); }
+    .tk {
+      align-self: flex-start; text-decoration: none; font-family: "Oswald", sans-serif; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 14px;
+      color: var(--white); background: var(--black); padding: 10px 16px; border-radius: 4px; transition: background .2s;
+    }
+    .tk:hover { background: var(--red); }
+
+    /* measurables: sizes */
+    .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+    .stat {
+      display: flex; flex-direction: column; align-items: center; text-align: center; padding: 22px 18px 20px;
+      background: var(--black); color: var(--white); border-radius: 10px; border: 2px solid var(--black); box-shadow: 6px 6px 0 var(--red);
+    }
+    .stat-lbl { font-family: "Oswald", sans-serif; font-weight: 600; font-size: 14px; letter-spacing: .24em; text-transform: uppercase; color: #ff5252; }
+    .stat-val { margin-top: 6px; font-family: "Oswald", monospace; font-weight: 700; font-size: 64px; line-height: 1; color: #ffcf33; text-shadow: 0 0 14px rgba(255, 207, 51, .45); font-variant-numeric: tabular-nums; }
+    .stat-val small { font-size: .5em; margin: 0 6px; color: var(--silver); text-shadow: none; vertical-align: middle; }
+    .stat-sub { margin-top: 8px; font-size: 14px; color: var(--silver); }
+
     /* dream season: big feature */
     .dream {
       display: grid; grid-template-columns: 1.3fr 1fr; overflow: hidden; border-radius: 12px; border: 3px solid var(--black);
@@ -194,6 +231,8 @@
       .moon::after { left: 64px; top: 66px; width: 14px; height: 14px; }
       .hero-text { padding-top: 120px; }
       .dream { grid-template-columns: 1fr; }
+      .tickets li { width: 100%; max-width: 300px; }
+      .tickets { gap: 28px; }
       .dream .shot { min-height: 220px; border-right: 0; border-bottom: 3px solid var(--black); }
       .dream .info { padding: 22px 20px 24px; }
       .wolfwrap { left: calc(50% - 40px); bottom: 58px; width: 80px; }
@@ -254,6 +293,51 @@
         <p>Four picks. All starters.</p>
       </div>
       <ol class="roster" id="roster"></ol>
+
+      <div class="section-head">
+        <h2>Season <span>Tickets</span></h2>
+        <p>Gift cards always make the cut</p>
+      </div>
+      <ul class="tickets">
+        <li>
+          <div class="gcard" style="--g: linear-gradient(135deg, #00439c 0%, #0070d1 60%, #3fa9ff 130%)">
+            <span class="gc-name">PlayStation</span><span class="gc-kind">Gift Card</span>
+            <svg class="gc-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l7 11H17Z"/><circle cx="35" cy="24" r="6"/><rect x="7" y="18" width="12" height="12" rx="1"/><path d="M19 32l10 10M29 32l-10 10"/></svg>
+          </div>
+          <a class="tk" href="https://www.playstation.com/en-us/playstation-gift-cards/" target="_blank" rel="noopener">PlayStation →</a>
+        </li>
+        <li>
+          <div class="gcard" style="--g: linear-gradient(135deg, #b00000 0%, #e01b1b 60%, #ff5a5a 130%)">
+            <span class="gc-name">Target</span><span class="gc-kind">GiftCard</span>
+            <svg class="gc-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="3" class="dot"/></svg>
+          </div>
+          <a class="tk" href="https://www.target.com/c/target-giftcards-gift-cards/-/N-5xsxt" target="_blank" rel="noopener">Target →</a>
+        </li>
+        <li>
+          <div class="gcard" style="--g: linear-gradient(135deg, #131921 0%, #232f3e 60%, #37475a 130%)">
+            <span class="gc-name">Amazon</span><span class="gc-kind">Gift Card</span>
+            <svg class="gc-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 28c9 7 23 8 32 1" stroke="#ff9900"/><path d="M34 26l6 3-2 6" stroke="#ff9900"/><rect x="12" y="10" width="24" height="12" rx="2"/></svg>
+          </div>
+          <a class="tk" href="https://www.amazon.com/gift-cards/b?node=2238192011" target="_blank" rel="noopener">Amazon →</a>
+        </li>
+      </ul>
+
+      <div class="section-head">
+        <h2>The <span>Measurables</span></h2>
+        <p>For anything to wear</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-lbl">Pants</span>
+          <span class="stat-val">32<small>×</small>34</span>
+          <span class="stat-sub">Waist × Length</span>
+        </div>
+        <div class="stat">
+          <span class="stat-lbl">Shirts</span>
+          <span class="stat-val">XL</span>
+          <span class="stat-sub">Tees, hoodies, button-ups</span>
+        </div>
+      </div>
 
       <div class="section-head">
         <h2>Dream <span>Season</span></h2>
