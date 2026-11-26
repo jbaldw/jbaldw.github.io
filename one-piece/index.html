@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grand Line Log | A One Piece Fan Page</title>
+  <meta name="description" content="A fan page for One Piece: the Straw Hat crew, the sagas, and a wanted poster maker.">
+  <meta name="theme-color" content="#0b3a5b">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><ellipse cx='50' cy='62' rx='46' ry='14' fill='%23e9c46a'/><path d='M22 60c0-22 12-34 28-34s28 12 28 34Z' fill='%23f2d58a'/><path d='M23 54h54v8H23z' fill='%23d62828'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=IM+Fell+English:ital@0;1&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sea: #0b3a5b;
+      --sea-deep: #061f33;
+      --sea-light: #1f6f9b;
+      --foam: #e8f6ff;
+      --straw: #e9c46a;
+      --straw-deep: #c99a2e;
+      --red: #d62828;
+      --red-deep: #9d1c1c;
+      --parchment: #f3e3bf;
+      --parchment-dark: #d9c08c;
+      --ink: #2b1d0e;
+      --muted: #6b5a44;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--sea-deep); }
+    body { margin: 0; font-family: "Nunito", system-ui, sans-serif; font-size: 17px; line-height: 1.6; color: var(--ink); background: var(--parchment); overflow-x: hidden; }
+    a { color: inherit; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    h2 {
+      font-family: "Bangers", Impact, sans-serif; font-weight: 400; letter-spacing: .04em;
+      font-size: clamp(40px, 7vw, 64px); line-height: 1; margin: 0; color: var(--sea);
+      text-shadow: 3px 3px 0 var(--straw);
+    }
+    .kicker { font-family: "IM Fell English", serif; font-style: italic; color: var(--muted); font-size: 19px; margin: 8px 0 0; }
+
+    /* ---------- hero ---------- */
+    .hero {
+      position: relative; overflow: hidden; color: #fff;
+      background: linear-gradient(180deg, #14325a 0%, #3d3f7a 30%, #9a4f7e 52%, #f2845c 70%, #ffc97a 80%, #ffdf9e 86%);
+      min-height: 780px;
+    }
+    .topbar { position: relative; z-index: 5; display: flex; justify-content: space-between; align-items: center; padding: 20px 16px; max-width: 1100px; margin: 0 auto; font-size: 15px; }
+    .topbar a { color: rgba(255, 255, 255, .9); text-decoration: none; text-shadow: 0 1px 2px rgba(0, 0, 0, .3); }
+    .topbar nav { display: flex; gap: 18px; flex-wrap: wrap; justify-content: flex-end; }
+    .sun {
+      position: absolute; z-index: 1; left: 50%; bottom: 120px; width: 220px; height: 220px; margin-left: -110px; border-radius: 50%;
+      background: radial-gradient(circle, #fff6d6 0%, #ffd27a 45%, #ff9f5a 75%, transparent 76%);
+      filter: blur(.5px); opacity: .95;
+    }
+    .gulls { position: absolute; top: 120px; left: 0; right: 0; height: 80px; pointer-events: none; }
+    .gull { position: absolute; width: 34px; fill: none; stroke: #f6e7c4; stroke-width: 2.2; stroke-linecap: round; animation: glide 26s linear infinite; }
+    .gull:nth-child(2) { width: 24px; top: 30px; animation-duration: 34s; animation-delay: -12s; }
+    .gull:nth-child(3) { width: 18px; top: 10px; animation-duration: 40s; animation-delay: -22s; }
+    @keyframes glide { from { transform: translateX(-10vw); } to { transform: translateX(110vw); } }
+
+    .hero-copy { position: relative; z-index: 4; text-align: center; padding: 40px 16px 0; }
+    .hero-copy .eyebrow { font-family: "IM Fell English", serif; font-style: italic; font-size: 20px; color: #fff; text-shadow: 0 2px 6px rgba(0, 0, 0, .35); }
+    h1 {
+      margin: 6px 0 0; font-family: "Bangers", Impact, sans-serif; font-weight: 400;
+      font-size: clamp(64px, 15vw, 150px); line-height: .9; letter-spacing: .03em;
+      color: var(--straw); -webkit-text-stroke: 3px var(--ink); paint-order: stroke fill;
+      text-shadow: 6px 6px 0 var(--red), 10px 10px 0 rgba(0, 0, 0, .25);
+      transform: rotate(-2deg);
+    }
+    .hero-copy p { max-width: 560px; margin: 18px auto 0; font-size: 18px; text-shadow: 0 1px 4px rgba(0, 0, 0, .45); }
+    .hat {
+      position: relative; z-index: 4; display: block; width: 130px; margin: 0 auto 4px; cursor: pointer;
+      filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .3)); transition: transform .3s;
+    }
+    .hat:hover { transform: rotate(-8deg) translateY(-4px); }
+    .hat.spin { animation: hatspin .9s cubic-bezier(.3, 1.4, .5, 1); }
+    @keyframes hatspin { 50% { transform: translateY(-50px) rotate(200deg); } 100% { transform: rotate(360deg); } }
+
+    .ship { position: absolute; z-index: 5; bottom: 96px; left: 50%; width: 230px; margin-left: -115px; animation: bob 4s ease-in-out infinite; }
+    @keyframes bob { 50% { transform: translateY(-8px) rotate(1.5deg); } }
+    .waves { position: absolute; left: 0; right: 0; bottom: 0; height: 200px; z-index: 4; }
+    .waves svg { position: absolute; left: 0; width: 200%; height: 100%; }
+    .w1 { animation: drift 14s linear infinite; opacity: .55; }
+    .w2 { animation: drift 9s linear infinite reverse; opacity: .8; bottom: -20px; }
+    .w3 { animation: drift 18s linear infinite; bottom: -50px; }
+    @keyframes drift { to { transform: translateX(-50%); } }
+
+    /* ---------- crew ---------- */
+    section { padding: 80px 0; }
+    .crew { background: var(--parchment); background-image: radial-gradient(rgba(43, 29, 14, .06) 1px, transparent 1px); background-size: 18px 18px; }
+    .crew-grid { list-style: none; margin: 34px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
+    .mate {
+      position: relative; background: #fffaf0; border: 3px solid var(--ink); border-radius: 12px; padding: 18px 18px 20px;
+      box-shadow: 6px 6px 0 var(--ink); transition: transform .2s, box-shadow .2s; overflow: hidden;
+    }
+    .mate:hover { transform: translate(-3px, -3px) rotate(-.5deg); box-shadow: 9px 9px 0 var(--red); }
+    .mate .num { position: absolute; top: 10px; right: 14px; font-family: "Bangers", sans-serif; font-size: 34px; color: rgba(43, 29, 14, .12); }
+    .badge {
+      width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; font-size: 26px;
+      background: var(--c, var(--straw)); border: 3px solid var(--ink); box-shadow: 2px 2px 0 var(--ink);
+    }
+    .mate h3 { margin: 12px 0 0; font-family: "Bangers", sans-serif; font-weight: 400; font-size: 28px; letter-spacing: .04em; line-height: 1.05; color: var(--sea); }
+    .role { display: inline-block; margin-top: 4px; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+    .dream { margin: 10px 0 0; font-family: "IM Fell English", serif; font-style: italic; font-size: 18px; color: var(--muted); line-height: 1.4; }
+    .dream b { font-style: normal; font-family: "Nunito", sans-serif; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); display: block; margin-bottom: 2px; }
+
+    /* ---------- voyage ---------- */
+    .voyage { position: relative; background: linear-gradient(180deg, var(--sea) 0%, var(--sea-deep) 100%); color: var(--foam); overflow: hidden; }
+    .voyage h2 { color: #fff; text-shadow: 3px 3px 0 var(--red); }
+    .voyage .kicker { color: #a9cde6; }
+    .route { position: relative; margin: 48px 0 0; padding: 0 0 0 46px; }
+    .stops { list-style: none; margin: 0; padding: 0; }
+    .route::before { content: ""; position: absolute; left: 18px; top: 6px; bottom: 6px; border-left: 3px dashed rgba(233, 196, 106, .55); }
+    .route-ship { position: absolute; left: 3px; top: 0; width: 34px; transition: top .25s linear; z-index: 2; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .5)); }
+    .stop { position: relative; margin: 0 0 26px; padding: 16px 18px; background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .12); border-radius: 10px; backdrop-filter: blur(2px); }
+    .stop::before { content: ""; position: absolute; left: -35px; top: 22px; width: 14px; height: 14px; border-radius: 50%; background: var(--sea-deep); border: 3px solid var(--straw); }
+    .stop.reached::before { background: var(--straw); }
+    .stop h3 { margin: 0; font-family: "Bangers", sans-serif; font-weight: 400; font-size: 26px; letter-spacing: .05em; color: var(--straw); }
+    .stop .sea { font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #7fb7da; }
+    .stop p { margin: 6px 0 0; color: #d7e9f5; font-size: 16px; }
+
+    /* ---------- poster maker ---------- */
+    .bounty { background: #e7d3a6; background-image: repeating-linear-gradient(90deg, rgba(43, 29, 14, .03) 0 2px, transparent 2px 9px); }
+    .maker { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-top: 34px; }
+    .form { background: #fffaf0; border: 3px solid var(--ink); border-radius: 12px; padding: 24px; box-shadow: 6px 6px 0 var(--ink); }
+    .form label { display: block; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; margin: 16px 0 6px; }
+    .form label:first-child { margin-top: 0; }
+    .form input, .form select {
+      width: 100%; font: inherit; font-size: 18px; padding: 10px 12px; border: 2px solid var(--ink); border-radius: 8px; background: #fff; color: var(--ink);
+    }
+    .form input:focus, .form select:focus { outline: 3px solid var(--straw); outline-offset: 1px; }
+    .btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+    .btn {
+      font-family: "Bangers", sans-serif; font-size: 22px; letter-spacing: .06em; padding: 10px 18px; cursor: pointer;
+      border: 3px solid var(--ink); border-radius: 8px; background: var(--red); color: #fff; box-shadow: 3px 3px 0 var(--ink);
+      transition: transform .1s, box-shadow .1s;
+    }
+    .btn.alt { background: var(--straw); color: var(--ink); }
+    .btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--ink); }
+    .btn:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+    .fine { margin-top: 14px; font-size: 14px; color: var(--muted); }
+    #poster { width: 100%; max-width: 440px; height: auto; display: block; margin: 0 auto; box-shadow: 0 30px 50px -24px rgba(43, 29, 14, .8); transform: rotate(1.5deg); border-radius: 2px; }
+
+    /* ---------- footer ---------- */
+    footer { background: var(--sea-deep); color: #a9cde6; text-align: center; padding: 50px 16px 60px; font-size: 15px; }
+    footer .big { font-family: "Bangers", sans-serif; font-size: 34px; letter-spacing: .05em; color: var(--straw); }
+    footer a { color: #fff; }
+    footer .fine { color: #6f93ad; font-size: 13px; max-width: 640px; margin: 16px auto 0; }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gull, .ship, .w1, .w2, .w3, .hat.spin { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .route-ship { transition: none; }
+      html { scroll-behavior: auto; }
+    }
+    @media (max-width: 820px) {
+      .maker { grid-template-columns: 1fr; }
+      .topbar nav { display: none; }
+      .hero { min-height: 760px; }
+      .ship { width: 160px; margin-left: -80px; bottom: 92px; }
+      .sun { width: 160px; height: 160px; margin-left: -80px; bottom: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="topbar">
+      <a href="/">← jbaldw.github.io</a>
+      <nav><a href="#crew">The Crew</a><a href="#voyage">The Voyage</a><a href="#bounty">Wanted Posters</a></nav>
+    </div>
+    <div class="sun" aria-hidden="true"></div>
+    <div class="gulls" aria-hidden="true">
+      <svg class="gull" viewBox="0 0 40 14"><path d="M2 10 Q 10 0 20 9 Q 30 0 38 10"/></svg>
+      <svg class="gull" viewBox="0 0 40 14"><path d="M2 10 Q 10 0 20 9 Q 30 0 38 10"/></svg>
+      <svg class="gull" viewBox="0 0 40 14"><path d="M2 10 Q 10 0 20 9 Q 30 0 38 10"/></svg>
+    </div>
+
+    <div class="hero-copy">
+      <svg class="hat" id="hat" viewBox="0 0 200 110" role="button" tabindex="0" aria-label="Toss the straw hat">
+        <ellipse cx="100" cy="84" rx="96" ry="22" fill="#e9c46a" stroke="#2b1d0e" stroke-width="4"/>
+        <path d="M48 80 C 48 34 70 14 100 14 S 152 34 152 80 Z" fill="#f2d58a" stroke="#2b1d0e" stroke-width="4"/>
+        <path d="M50 64 C 80 72 120 72 150 64 L 151 78 C 120 86 80 86 49 78 Z" fill="#d62828" stroke="#2b1d0e" stroke-width="3.5"/>
+        <g stroke="#c99a2e" stroke-width="2" fill="none" opacity=".7"><path d="M70 30 C 80 40 82 52 80 60M100 18v42M130 30 C 120 40 118 52 120 60"/><path d="M22 84 C 60 96 140 96 178 84"/></g>
+      </svg>
+      <div class="eyebrow">A fan page for the greatest adventure on the seas</div>
+      <h1>One Piece</h1>
+      <p>Wealth, fame, power… and a crew of misfits chasing their dreams across the Grand Line. Here's to the Straw Hats.</p>
+    </div>
+
+    <svg class="ship" viewBox="0 0 240 200" aria-hidden="true">
+      <path d="M118 20 V 140" stroke="#3b2a1a" stroke-width="6"/>
+      <path d="M118 30 C 168 40 178 80 170 118 L 118 118 Z" fill="#fffaf0" stroke="#3b2a1a" stroke-width="4"/>
+      <path d="M116 44 C 82 54 76 86 82 112 L 116 112 Z" fill="#f4ede0" stroke="#3b2a1a" stroke-width="4"/>
+      <path d="M118 16 l26 8 -26 8 Z" fill="#d62828"/>
+      <circle cx="146" cy="78" r="16" fill="#e9c46a" stroke="#3b2a1a" stroke-width="3"/>
+      <path d="M140 82 q6 6 12 0" fill="none" stroke="#3b2a1a" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M20 140 H 214 C 210 170 186 184 150 186 H 70 C 44 184 26 170 20 140 Z" fill="#e9a23b" stroke="#3b2a1a" stroke-width="4"/>
+      <path d="M30 156 H 206" stroke="#3b2a1a" stroke-width="3"/>
+      <circle cx="226" cy="134" r="16" fill="#ffd166" stroke="#3b2a1a" stroke-width="4"/>
+      <g stroke="#e9a23b" stroke-width="4" stroke-linecap="round"><path d="M226 110v-6M244 116l5-4M250 134h6M208 116l-5-4"/></g>
+      <circle cx="221" cy="131" r="2" fill="#3b2a1a"/><circle cx="231" cy="131" r="2" fill="#3b2a1a"/>
+      <path d="M220 139 q6 5 12 0" fill="none" stroke="#3b2a1a" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+
+    <div class="waves" aria-hidden="true">
+      <svg class="w1" viewBox="0 0 2880 200" preserveAspectRatio="none"><path d="M0 90 Q 180 50 360 90 T 720 90 T 1080 90 T 1440 90 T 1800 90 T 2160 90 T 2520 90 T 2880 90 V200 H0Z" fill="#2b7fb0"/></svg>
+      <svg class="w2" viewBox="0 0 2880 200" preserveAspectRatio="none"><path d="M0 110 Q 240 70 480 110 T 960 110 T 1440 110 T 1920 110 T 2400 110 T 2880 110 V200 H0Z" fill="#165b86"/></svg>
+      <svg class="w3" viewBox="0 0 2880 200" preserveAspectRatio="none"><path d="M0 120 Q 160 90 320 120 T 640 120 T 960 120 T 1280 120 T 1600 120 T 1920 120 T 2240 120 T 2560 120 T 2880 120 V200 H0Z" fill="#0b3a5b"/><path d="M0 120 Q 160 90 320 120 T 640 120 T 960 120 T 1280 120 T 1600 120 T 1920 120 T 2240 120 T 2560 120 T 2880 120" fill="none" stroke="#e8f6ff" stroke-width="4" stroke-dasharray="2 22" stroke-linecap="round" opacity=".6"/></svg>
+    </div>
+  </header>
+
+  <section class="crew" id="crew">
+    <div class="wrap">
+      <h2 class="reveal">The Straw Hat Crew</h2>
+      <p class="kicker reveal">Ten dreamers, one ship. Listed in the order they joined.</p>
+      <ol class="crew-grid" id="crew-grid"></ol>
+    </div>
+  </section>
+
+  <section class="voyage" id="voyage">
+    <div class="wrap">
+      <h2 class="reveal">The Voyage So Far</h2>
+      <p class="kicker reveal">From a tiny village in the East Blue toward the end of the Grand Line. Scroll to set sail.</p>
+      <div class="route" id="route">
+        <svg class="route-ship" id="route-ship" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4v24" stroke="#fff" stroke-width="2.5"/><path d="M21 6c10 3 12 12 10 19H21Z" fill="#fffaf0"/><path d="M4 28h32c-2 6-7 8-14 8H14c-6 0-9-3-10-8Z" fill="#e9a23b"/><circle cx="36" cy="27" r="4" fill="#ffd166"/></svg>
+        <ol class="stops" id="stops"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="bounty" id="bounty">
+    <div class="wrap">
+      <h2 class="reveal">Make Your Wanted Poster</h2>
+      <p class="kicker reveal">Every pirate worth their salt has a bounty. Find out what the Marines think yours is worth.</p>
+      <div class="maker">
+        <form class="form" id="form" autocomplete="off">
+          <label for="pname">Pirate name</label>
+          <input id="pname" maxlength="22" placeholder="Your name" value="Joshua">
+          <label for="epithet">Epithet</label>
+          <input id="epithet" maxlength="24" placeholder="Leave blank for a random one">
+          <label for="prole">Role on the crew</label>
+          <select id="prole">
+            <option value="1.6">Captain</option>
+            <option value="1.25">Swordsman</option>
+            <option value="1.0">Navigator</option>
+            <option value="1.05">Sniper</option>
+            <option value="1.2">Cook</option>
+            <option value="0.9">Doctor</option>
+            <option value="1.1">Archaeologist</option>
+            <option value="1.1">Shipwright</option>
+            <option value="1.0">Musician</option>
+            <option value="1.15">Helmsman</option>
+          </select>
+          <div class="btns">
+            <button class="btn" type="submit">Print Poster</button>
+            <button class="btn alt" type="button" id="dl">Download</button>
+          </div>
+          <p class="fine">Your bounty is decided by your name and role, so the same pirate always gets the same price on their head. Change the epithet to reroll your legend.</p>
+        </form>
+        <canvas id="poster" width="600" height="860" role="img" aria-label="Your wanted poster"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="big">The One Piece is real!</div>
+    <div>Back to <a href="/">jbaldw.github.io</a></div>
+    <p class="fine">An unofficial fan page made for fun. One Piece is created by Eiichiro Oda, serialized by Shueisha in Weekly Shōnen Jump, and animated by Toei Animation. All illustrations on this page are original, and nothing here is affiliated with or endorsed by them.</p>
+  </footer>
+
+  <script>
+  (() => {
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+    // ---------- crew ----------
+    const CREW = [
+      { name: "Monkey D. Luffy", role: "Captain", icon: "👒", c: "#d62828", dream: "To find the One Piece and become King of the Pirates." },
+      { name: "Roronoa Zoro", role: "Swordsman", icon: "⚔️", c: "#7cb342", dream: "To become the world's greatest swordsman." },
+      { name: "Nami", role: "Navigator", icon: "🍊", c: "#f4a261", dream: "To draw a map of the entire world." },
+      { name: "Usopp", role: "Sniper", icon: "🎯", c: "#e9c46a", dream: "To become a brave warrior of the sea." },
+      { name: "Sanji", role: "Cook", icon: "🍖", c: "#ffd166", dream: "To find the All Blue, where fish from every sea gather." },
+      { name: "Tony Tony Chopper", role: "Doctor", icon: "🩺", c: "#f7a1c4", dream: "To become a doctor who can cure any disease." },
+      { name: "Nico Robin", role: "Archaeologist", icon: "📜", c: "#9d8df1", dream: "To uncover the true history of the world." },
+      { name: "Franky", role: "Shipwright", icon: "🔧", c: "#4cc9f0", dream: "To see the ship he built sail to the end of the world." },
+      { name: "Brook", role: "Musician", icon: "🎻", c: "#cfd8dc", dream: "To reunite with Laboon, the whale he promised to return to." },
+      { name: "Jinbe", role: "Helmsman", icon: "🌊", c: "#5aa9e6", dream: "To stand by Luffy as he becomes King of the Pirates." }
+    ];
+    document.getElementById("crew-grid").innerHTML = CREW.map((m, i) => `
+      <li class="mate reveal">
+        <span class="num" aria-hidden="true">#${i + 1}</span>
+        <div class="badge" style="--c:${m.c}" aria-hidden="true">${m.icon}</div>
+        <h3>${esc(m.name)}</h3>
+        <span class="role">${esc(m.role)}</span>
+        <p class="dream"><b>Dream</b>${esc(m.dream)}</p>
+      </li>`).join("");
+
+    // ---------- voyage ----------
+    const SAGAS = [
+      { name: "East Blue", sea: "East Blue", note: "Luffy sets out from Foosha Village and gathers his first crewmates, from Zoro and Nami to Usopp and Sanji." },
+      { name: "Alabasta", sea: "Paradise", note: "Into the Grand Line, and a desert kingdom on the brink of civil war." },
+      { name: "Sky Island", sea: "Paradise", note: "A voyage straight up to the islands in the clouds." },
+      { name: "Water 7", sea: "Paradise", note: "The city of shipwrights, a farewell to an old friend, and a fight to get Robin back." },
+      { name: "Thriller Bark", sea: "Paradise", note: "A haunted ship island, and a new musician joins the crew." },
+      { name: "Summit War", sea: "Paradise", note: "A rescue mission that shakes the whole world, and the crew's hardest moment." },
+      { name: "Fish-Man Island", sea: "New World", note: "Two years later, the crew reunites and dives ten thousand meters under the sea." },
+      { name: "Dressrosa", sea: "New World", note: "A colosseum, a toy kingdom, and a warlord's secrets." },
+      { name: "Whole Cake Island", sea: "New World", note: "Sanji's family, a wedding gone wrong, and a sweet but deadly empire." },
+      { name: "Wano Country", sea: "New World", note: "A closed-off samurai land and a raid on the strongest creature in the world." },
+      { name: "Final Saga", sea: "New World", note: "The last stretch of the journey toward Laugh Tale and the One Piece." }
+    ];
+    const route = document.getElementById("route");
+    document.getElementById("stops").insertAdjacentHTML("beforeend", SAGAS.map(s => `
+      <li class="stop reveal"><span class="sea">${esc(s.sea)}</span><h3>${esc(s.name)}</h3><p>${esc(s.note)}</p></li>`).join(""));
+    const ship = document.getElementById("route-ship"), stops = [...route.querySelectorAll(".stop")];
+    const sail = () => {
+      const r = route.getBoundingClientRect();
+      const t = Math.min(1, Math.max(0, (innerHeight * .55 - r.top) / r.height));
+      const y = t * (r.height - 40);
+      ship.style.top = y + "px";
+      stops.forEach(s => s.classList.toggle("reached", s.offsetTop <= y + 20));
+    };
+    addEventListener("scroll", sail, { passive: true }); addEventListener("resize", sail); sail();
+
+    // ---------- reveal ----------
+    const rev = document.querySelectorAll(".reveal");
+    if (reduce || !("IntersectionObserver" in window)) rev.forEach(e => e.classList.add("in"));
+    else {
+      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .15 });
+      rev.forEach(e => io.observe(e));
+    }
+
+    // ---------- hat toss ----------
+    const hat = document.getElementById("hat");
+    const toss = () => { if (reduce) return; hat.classList.remove("spin"); void hat.getBoundingClientRect(); hat.classList.add("spin"); };
+    hat.addEventListener("click", toss);
+    hat.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toss(); } });
+
+    // ---------- wanted poster ----------
+    const EPITHETS = ["Thousand Waves", "Iron Compass", "Storm Chaser", "Grand Line Ghost", "Sea King Tamer", "Red Sky", "Midnight Tide",
+      "Golden Anchor", "Cannonball", "Wild Current", "Laughing Gull", "Hurricane", "Sunrise", "Salt Fist", "Tidebreaker", "Lucky Seven"];
+    const hash = s => { let h = 2166136261; for (const ch of s) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+    const cv = document.getElementById("poster"), ctx = cv.getContext("2d");
+    const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+
+    function draw() {
+      const name = (document.getElementById("pname").value.trim() || "Nameless").slice(0, 22);
+      const sel = document.getElementById("prole");
+      const role = sel.options[sel.selectedIndex].text;
+      const mult = parseFloat(sel.value);
+      let ep = document.getElementById("epithet").value.trim();
+      const h = hash(name.toLowerCase() + "|" + role);
+      if (!ep) ep = EPITHETS[h % EPITHETS.length];
+      const base = 30 + (hash(name.toLowerCase() + ep) % 2970);
+      const bounty = Math.round(base * mult) * 1000000;
+
+      const W = cv.width, H = cv.height;
+      // paper
+      const g = ctx.createRadialGradient(W / 2, H / 2, 80, W / 2, H / 2, 560);
+      g.addColorStop(0, "#f6e7c4"); g.addColorStop(1, "#d8bd86");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+      let seed = h;
+      const rnd = () => (seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) / 4294967296;
+      ctx.fillStyle = "rgba(90, 60, 20, .08)";
+      for (let i = 0; i < 260; i++) { ctx.beginPath(); ctx.arc(rnd() * W, rnd() * H, rnd() * 3, 0, 7); ctx.fill(); }
+      ctx.strokeStyle = "rgba(60, 40, 15, .5)"; ctx.lineWidth = 3; ctx.strokeRect(18, 18, W - 36, H - 36);
+
+      ctx.textAlign = "center"; ctx.fillStyle = "#2b1d0e";
+      ctx.font = "120px Bangers, Impact, sans-serif"; ctx.fillText("WANTED", W / 2, 140);
+
+      // portrait: original silhouette in a straw hat
+      const px = 70, py = 165, pw = W - 140, ph = 380;
+      ctx.fillStyle = "#c9ab72"; ctx.fillRect(px, py, pw, ph);
+      ctx.save(); ctx.beginPath(); ctx.rect(px, py, pw, ph); ctx.clip();
+      const sky = ctx.createLinearGradient(0, py, 0, py + ph); sky.addColorStop(0, "#e4cfa0"); sky.addColorStop(1, "#b8955a");
+      ctx.fillStyle = sky; ctx.fillRect(px, py, pw, ph);
+      const cx = W / 2;
+      ctx.fillStyle = "#3a2814";
+      ctx.beginPath(); ctx.ellipse(cx, py + ph + 40, 190, 170, 0, Math.PI, 0); ctx.fill();          // shoulders
+      ctx.beginPath(); ctx.ellipse(cx, py + 230, 92, 108, 0, 0, 7); ctx.fill();                       // head
+      ctx.fillStyle = "#e9c46a";
+      ctx.beginPath(); ctx.ellipse(cx, py + 160, 170, 34, 0, 0, 7); ctx.fill();                        // brim
+      ctx.beginPath(); ctx.moveTo(cx - 100, py + 158); ctx.bezierCurveTo(cx - 100, py + 60, cx + 100, py + 60, cx + 100, py + 158); ctx.fill(); // crown
+      ctx.fillStyle = "#b52020"; ctx.fillRect(cx - 101, py + 132, 202, 22);                            // band
+      ctx.fillStyle = "#f6e7c4";
+      ctx.beginPath(); ctx.ellipse(cx - 34, py + 240, 13, 8, 0, 0, 7); ctx.ellipse(cx + 34, py + 240, 13, 8, 0, 0, 7); ctx.fill();
+      ctx.strokeStyle = "#f6e7c4"; ctx.lineWidth = 6; ctx.lineCap = "round";
+      ctx.beginPath(); ctx.arc(cx, py + 268, 34, .15 * Math.PI, .85 * Math.PI); ctx.stroke();          // grin
+      ctx.restore();
+      ctx.strokeStyle = "#2b1d0e"; ctx.lineWidth = 4; ctx.strokeRect(px, py, pw, ph);
+
+      ctx.fillStyle = "#2b1d0e";
+      ctx.font = "italic 30px 'IM Fell English', Georgia, serif"; ctx.fillText("DEAD OR ALIVE", W / 2, py + ph + 52);
+      ctx.font = "26px 'IM Fell English', Georgia, serif";
+      ctx.fillText(`“${ep}”`, W / 2, py + ph + 96);
+      let size = 64; ctx.font = `${size}px Bangers, Impact, sans-serif`;
+      while (ctx.measureText(name.toUpperCase()).width > W - 110 && size > 30) { size -= 2; ctx.font = `${size}px Bangers, Impact, sans-serif`; }
+      ctx.fillText(name.toUpperCase(), W / 2, py + ph + 160);
+
+      // bounty with a berry-style sign
+      const amt = bounty.toLocaleString("en-US") + "-";
+      ctx.font = "60px Bangers, Impact, sans-serif";
+      const tw = ctx.measureText(amt).width, bx = W / 2 - (tw + 50) / 2;
+      ctx.textAlign = "left"; ctx.fillText(amt, bx + 50, py + ph + 236);
+      ctx.font = "62px Bangers, Impact, sans-serif"; ctx.fillText("B", bx, py + ph + 236);
+      ctx.fillRect(bx - 4, py + ph + 196, 36, 5); ctx.fillRect(bx - 4, py + ph + 212, 36, 5);
+      ctx.textAlign = "center";
+      ctx.font = "18px Nunito, sans-serif"; ctx.fillStyle = "rgba(43, 29, 14, .7)";
+      ctx.fillText(`${role.toUpperCase()} · MARINE HEADQUARTERS`, W / 2, H - 40);
+      cv.setAttribute("aria-label", `Wanted poster for ${name}, "${ep}", bounty ${bounty.toLocaleString("en-US")} berries`);
+    }
+
+    document.getElementById("form").addEventListener("submit", e => { e.preventDefault(); draw(); });
+    ["pname", "epithet", "prole"].forEach(id => document.getElementById(id).addEventListener("input", draw));
+    document.getElementById("dl").addEventListener("click", () => {
+      draw();
+      const a = document.createElement("a");
+      a.download = "wanted-" + (document.getElementById("pname").value.trim() || "pirate").replace(/[^a-z0-9]+/gi, "-").toLowerCase() + ".png";
+      a.href = cv.toDataURL("image/png"); a.click();
+    });
+    draw(); fontsReady.then(draw);
+  })();
+  </script>
+</body>
+</html>
